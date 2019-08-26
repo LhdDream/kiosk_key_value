@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/my_redies.dir/main.cpp.o CMakeFiles/my_redies.dir/net/ae_epoll.cc.o CMakeFiles/my_redies.dir/net/Socket.cc.o CMakeFiles/my_redies.dir/net/Acceptor.cc.o CMakeFiles/my_redies.dir/base/dict.cc.o  -o my_redies 
