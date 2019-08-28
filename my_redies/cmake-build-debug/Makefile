@@ -177,33 +177,6 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-net/Acceptor.o: net/Acceptor.cc.o
-
-.PHONY : net/Acceptor.o
-
-# target to build an object file
-net/Acceptor.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/net/Acceptor.cc.o
-.PHONY : net/Acceptor.cc.o
-
-net/Acceptor.i: net/Acceptor.cc.i
-
-.PHONY : net/Acceptor.i
-
-# target to preprocess a source file
-net/Acceptor.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/net/Acceptor.cc.i
-.PHONY : net/Acceptor.cc.i
-
-net/Acceptor.s: net/Acceptor.cc.s
-
-.PHONY : net/Acceptor.s
-
-# target to generate assembly for a file
-net/Acceptor.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/net/Acceptor.cc.s
-.PHONY : net/Acceptor.cc.s
-
 net/Socket.o: net/Socket.cc.o
 
 .PHONY : net/Socket.o
@@ -231,32 +204,113 @@ net/Socket.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/net/Socket.cc.s
 .PHONY : net/Socket.cc.s
 
-net/ae_epoll.o: net/ae_epoll.cc.o
+src/Tcpconnection.o: src/Tcpconnection.cc.o
 
-.PHONY : net/ae_epoll.o
+.PHONY : src/Tcpconnection.o
 
 # target to build an object file
-net/ae_epoll.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/net/ae_epoll.cc.o
-.PHONY : net/ae_epoll.cc.o
+src/Tcpconnection.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Tcpconnection.cc.o
+.PHONY : src/Tcpconnection.cc.o
 
-net/ae_epoll.i: net/ae_epoll.cc.i
+src/Tcpconnection.i: src/Tcpconnection.cc.i
 
-.PHONY : net/ae_epoll.i
+.PHONY : src/Tcpconnection.i
 
 # target to preprocess a source file
-net/ae_epoll.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/net/ae_epoll.cc.i
-.PHONY : net/ae_epoll.cc.i
+src/Tcpconnection.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Tcpconnection.cc.i
+.PHONY : src/Tcpconnection.cc.i
 
-net/ae_epoll.s: net/ae_epoll.cc.s
+src/Tcpconnection.s: src/Tcpconnection.cc.s
 
-.PHONY : net/ae_epoll.s
+.PHONY : src/Tcpconnection.s
 
 # target to generate assembly for a file
-net/ae_epoll.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/net/ae_epoll.cc.s
-.PHONY : net/ae_epoll.cc.s
+src/Tcpconnection.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Tcpconnection.cc.s
+.PHONY : src/Tcpconnection.cc.s
+
+src/aeChannel.o: src/aeChannel.cc.o
+
+.PHONY : src/aeChannel.o
+
+# target to build an object file
+src/aeChannel.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/aeChannel.cc.o
+.PHONY : src/aeChannel.cc.o
+
+src/aeChannel.i: src/aeChannel.cc.i
+
+.PHONY : src/aeChannel.i
+
+# target to preprocess a source file
+src/aeChannel.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/aeChannel.cc.i
+.PHONY : src/aeChannel.cc.i
+
+src/aeChannel.s: src/aeChannel.cc.s
+
+.PHONY : src/aeChannel.s
+
+# target to generate assembly for a file
+src/aeChannel.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/aeChannel.cc.s
+.PHONY : src/aeChannel.cc.s
+
+src/aeEventloop.o: src/aeEventloop.cc.o
+
+.PHONY : src/aeEventloop.o
+
+# target to build an object file
+src/aeEventloop.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/aeEventloop.cc.o
+.PHONY : src/aeEventloop.cc.o
+
+src/aeEventloop.i: src/aeEventloop.cc.i
+
+.PHONY : src/aeEventloop.i
+
+# target to preprocess a source file
+src/aeEventloop.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/aeEventloop.cc.i
+.PHONY : src/aeEventloop.cc.i
+
+src/aeEventloop.s: src/aeEventloop.cc.s
+
+.PHONY : src/aeEventloop.s
+
+# target to generate assembly for a file
+src/aeEventloop.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/aeEventloop.cc.s
+.PHONY : src/aeEventloop.cc.s
+
+src/timeevents_.o: src/timeevents_.cc.o
+
+.PHONY : src/timeevents_.o
+
+# target to build an object file
+src/timeevents_.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/timeevents_.cc.o
+.PHONY : src/timeevents_.cc.o
+
+src/timeevents_.i: src/timeevents_.cc.i
+
+.PHONY : src/timeevents_.i
+
+# target to preprocess a source file
+src/timeevents_.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/timeevents_.cc.i
+.PHONY : src/timeevents_.cc.i
+
+src/timeevents_.s: src/timeevents_.cc.s
+
+.PHONY : src/timeevents_.s
+
+# target to generate assembly for a file
+src/timeevents_.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/timeevents_.cc.s
+.PHONY : src/timeevents_.cc.s
 
 # Help Target
 help:
@@ -273,15 +327,21 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... net/Acceptor.o"
-	@echo "... net/Acceptor.i"
-	@echo "... net/Acceptor.s"
 	@echo "... net/Socket.o"
 	@echo "... net/Socket.i"
 	@echo "... net/Socket.s"
-	@echo "... net/ae_epoll.o"
-	@echo "... net/ae_epoll.i"
-	@echo "... net/ae_epoll.s"
+	@echo "... src/Tcpconnection.o"
+	@echo "... src/Tcpconnection.i"
+	@echo "... src/Tcpconnection.s"
+	@echo "... src/aeChannel.o"
+	@echo "... src/aeChannel.i"
+	@echo "... src/aeChannel.s"
+	@echo "... src/aeEventloop.o"
+	@echo "... src/aeEventloop.i"
+	@echo "... src/aeEventloop.s"
+	@echo "... src/timeevents_.o"
+	@echo "... src/timeevents_.i"
+	@echo "... src/timeevents_.s"
 .PHONY : help
 
 

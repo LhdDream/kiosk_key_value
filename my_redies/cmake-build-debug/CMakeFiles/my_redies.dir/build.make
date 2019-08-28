@@ -70,22 +70,9 @@ CMakeFiles/my_redies.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/main.cpp -o CMakeFiles/my_redies.dir/main.cpp.s
 
-CMakeFiles/my_redies.dir/net/ae_epoll.cc.o: CMakeFiles/my_redies.dir/flags.make
-CMakeFiles/my_redies.dir/net/ae_epoll.cc.o: ../net/ae_epoll.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/my_redies.dir/net/ae_epoll.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/net/ae_epoll.cc.o -c /home/kiosk/CLionProjects/my_redies/net/ae_epoll.cc
-
-CMakeFiles/my_redies.dir/net/ae_epoll.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_redies.dir/net/ae_epoll.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiosk/CLionProjects/my_redies/net/ae_epoll.cc > CMakeFiles/my_redies.dir/net/ae_epoll.cc.i
-
-CMakeFiles/my_redies.dir/net/ae_epoll.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/net/ae_epoll.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/net/ae_epoll.cc -o CMakeFiles/my_redies.dir/net/ae_epoll.cc.s
-
 CMakeFiles/my_redies.dir/net/Socket.cc.o: CMakeFiles/my_redies.dir/flags.make
 CMakeFiles/my_redies.dir/net/Socket.cc.o: ../net/Socket.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/my_redies.dir/net/Socket.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/my_redies.dir/net/Socket.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/net/Socket.cc.o -c /home/kiosk/CLionProjects/my_redies/net/Socket.cc
 
 CMakeFiles/my_redies.dir/net/Socket.cc.i: cmake_force
@@ -96,22 +83,9 @@ CMakeFiles/my_redies.dir/net/Socket.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/net/Socket.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/net/Socket.cc -o CMakeFiles/my_redies.dir/net/Socket.cc.s
 
-CMakeFiles/my_redies.dir/net/Acceptor.cc.o: CMakeFiles/my_redies.dir/flags.make
-CMakeFiles/my_redies.dir/net/Acceptor.cc.o: ../net/Acceptor.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/my_redies.dir/net/Acceptor.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/net/Acceptor.cc.o -c /home/kiosk/CLionProjects/my_redies/net/Acceptor.cc
-
-CMakeFiles/my_redies.dir/net/Acceptor.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_redies.dir/net/Acceptor.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiosk/CLionProjects/my_redies/net/Acceptor.cc > CMakeFiles/my_redies.dir/net/Acceptor.cc.i
-
-CMakeFiles/my_redies.dir/net/Acceptor.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/net/Acceptor.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/net/Acceptor.cc -o CMakeFiles/my_redies.dir/net/Acceptor.cc.s
-
 CMakeFiles/my_redies.dir/base/dict.cc.o: CMakeFiles/my_redies.dir/flags.make
 CMakeFiles/my_redies.dir/base/dict.cc.o: ../base/dict.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/my_redies.dir/base/dict.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/my_redies.dir/base/dict.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/base/dict.cc.o -c /home/kiosk/CLionProjects/my_redies/base/dict.cc
 
 CMakeFiles/my_redies.dir/base/dict.cc.i: cmake_force
@@ -122,25 +96,81 @@ CMakeFiles/my_redies.dir/base/dict.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/base/dict.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/base/dict.cc -o CMakeFiles/my_redies.dir/base/dict.cc.s
 
+CMakeFiles/my_redies.dir/src/aeEventloop.cc.o: CMakeFiles/my_redies.dir/flags.make
+CMakeFiles/my_redies.dir/src/aeEventloop.cc.o: ../src/aeEventloop.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/my_redies.dir/src/aeEventloop.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/src/aeEventloop.cc.o -c /home/kiosk/CLionProjects/my_redies/src/aeEventloop.cc
+
+CMakeFiles/my_redies.dir/src/aeEventloop.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_redies.dir/src/aeEventloop.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiosk/CLionProjects/my_redies/src/aeEventloop.cc > CMakeFiles/my_redies.dir/src/aeEventloop.cc.i
+
+CMakeFiles/my_redies.dir/src/aeEventloop.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/src/aeEventloop.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/src/aeEventloop.cc -o CMakeFiles/my_redies.dir/src/aeEventloop.cc.s
+
+CMakeFiles/my_redies.dir/src/timeevents_.cc.o: CMakeFiles/my_redies.dir/flags.make
+CMakeFiles/my_redies.dir/src/timeevents_.cc.o: ../src/timeevents_.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/my_redies.dir/src/timeevents_.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/src/timeevents_.cc.o -c /home/kiosk/CLionProjects/my_redies/src/timeevents_.cc
+
+CMakeFiles/my_redies.dir/src/timeevents_.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_redies.dir/src/timeevents_.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiosk/CLionProjects/my_redies/src/timeevents_.cc > CMakeFiles/my_redies.dir/src/timeevents_.cc.i
+
+CMakeFiles/my_redies.dir/src/timeevents_.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/src/timeevents_.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/src/timeevents_.cc -o CMakeFiles/my_redies.dir/src/timeevents_.cc.s
+
+CMakeFiles/my_redies.dir/src/aeChannel.cc.o: CMakeFiles/my_redies.dir/flags.make
+CMakeFiles/my_redies.dir/src/aeChannel.cc.o: ../src/aeChannel.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/my_redies.dir/src/aeChannel.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/src/aeChannel.cc.o -c /home/kiosk/CLionProjects/my_redies/src/aeChannel.cc
+
+CMakeFiles/my_redies.dir/src/aeChannel.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_redies.dir/src/aeChannel.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiosk/CLionProjects/my_redies/src/aeChannel.cc > CMakeFiles/my_redies.dir/src/aeChannel.cc.i
+
+CMakeFiles/my_redies.dir/src/aeChannel.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/src/aeChannel.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/src/aeChannel.cc -o CMakeFiles/my_redies.dir/src/aeChannel.cc.s
+
+CMakeFiles/my_redies.dir/src/Tcpconnection.cc.o: CMakeFiles/my_redies.dir/flags.make
+CMakeFiles/my_redies.dir/src/Tcpconnection.cc.o: ../src/Tcpconnection.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/my_redies.dir/src/Tcpconnection.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/src/Tcpconnection.cc.o -c /home/kiosk/CLionProjects/my_redies/src/Tcpconnection.cc
+
+CMakeFiles/my_redies.dir/src/Tcpconnection.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_redies.dir/src/Tcpconnection.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiosk/CLionProjects/my_redies/src/Tcpconnection.cc > CMakeFiles/my_redies.dir/src/Tcpconnection.cc.i
+
+CMakeFiles/my_redies.dir/src/Tcpconnection.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/src/Tcpconnection.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/src/Tcpconnection.cc -o CMakeFiles/my_redies.dir/src/Tcpconnection.cc.s
+
 # Object files for target my_redies
 my_redies_OBJECTS = \
 "CMakeFiles/my_redies.dir/main.cpp.o" \
-"CMakeFiles/my_redies.dir/net/ae_epoll.cc.o" \
 "CMakeFiles/my_redies.dir/net/Socket.cc.o" \
-"CMakeFiles/my_redies.dir/net/Acceptor.cc.o" \
-"CMakeFiles/my_redies.dir/base/dict.cc.o"
+"CMakeFiles/my_redies.dir/base/dict.cc.o" \
+"CMakeFiles/my_redies.dir/src/aeEventloop.cc.o" \
+"CMakeFiles/my_redies.dir/src/timeevents_.cc.o" \
+"CMakeFiles/my_redies.dir/src/aeChannel.cc.o" \
+"CMakeFiles/my_redies.dir/src/Tcpconnection.cc.o"
 
 # External object files for target my_redies
 my_redies_EXTERNAL_OBJECTS =
 
 my_redies: CMakeFiles/my_redies.dir/main.cpp.o
-my_redies: CMakeFiles/my_redies.dir/net/ae_epoll.cc.o
 my_redies: CMakeFiles/my_redies.dir/net/Socket.cc.o
-my_redies: CMakeFiles/my_redies.dir/net/Acceptor.cc.o
 my_redies: CMakeFiles/my_redies.dir/base/dict.cc.o
+my_redies: CMakeFiles/my_redies.dir/src/aeEventloop.cc.o
+my_redies: CMakeFiles/my_redies.dir/src/timeevents_.cc.o
+my_redies: CMakeFiles/my_redies.dir/src/aeChannel.cc.o
+my_redies: CMakeFiles/my_redies.dir/src/Tcpconnection.cc.o
 my_redies: CMakeFiles/my_redies.dir/build.make
 my_redies: CMakeFiles/my_redies.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable my_redies"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable my_redies"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/my_redies.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

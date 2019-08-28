@@ -14,12 +14,16 @@ class Socket
 public:
     //shutdown 会让对端把应该发的数据收到
     Socket(const char * ip ,const uint16_t port);
+    Socket(int sockfd){sockfd_ = sockfd;}
     int fd() { return sockfd_; }
     int listen();
     int bindaddress();
     int accept();
+    int alive(int reuse);
+    int setTcpNolay(int reuse);
     void shutdownWrite();
-    ~Socket();
+    int defalutconnect();
+    ~Socket() {};
 private:
     int sockfd_;
     struct sockaddr_in address_;

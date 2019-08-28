@@ -96,37 +96,34 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/main.cpp">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/net/Acceptor.cc">
-			<Option target="my_redies"/>
-		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/net/Acceptor.h">
-			<Option target="my_redies"/>
-		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/net/Socket.cc">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/net/Socket.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/net/ae_epoll.cc">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/Tcpconnection.cc">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/net/ae_epoll.h">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/Tcpconnection.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/net/anet.h">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/aeChannel.cc">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/net/server.h">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/aeChannel.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/acChannelfd.h">
-			<Option target="my_redies"/>
-		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/acChanneltime.h">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/aeEventloop.cc">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/aeEventloop.h">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/timeevents_.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/timeevents_.h">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/CMakeLists.txt">
