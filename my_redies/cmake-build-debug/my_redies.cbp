@@ -93,6 +93,12 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/state.h">
 			<Option target="my_redies"/>
 		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/ziplist.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/ziplist.h">
+			<Option target="my_redies"/>
+		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/main.cpp">
 			<Option target="my_redies"/>
 		</Unit>
@@ -124,6 +130,9 @@
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/timeevents_.h">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/snappy.cc">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/CMakeLists.txt">

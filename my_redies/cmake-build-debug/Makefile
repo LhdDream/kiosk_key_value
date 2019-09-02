@@ -150,6 +150,33 @@ base/dict.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/dict.cc.s
 .PHONY : base/dict.cc.s
 
+base/ziplist.o: base/ziplist.cc.o
+
+.PHONY : base/ziplist.o
+
+# target to build an object file
+base/ziplist.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/ziplist.cc.o
+.PHONY : base/ziplist.cc.o
+
+base/ziplist.i: base/ziplist.cc.i
+
+.PHONY : base/ziplist.i
+
+# target to preprocess a source file
+base/ziplist.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/ziplist.cc.i
+.PHONY : base/ziplist.cc.i
+
+base/ziplist.s: base/ziplist.cc.s
+
+.PHONY : base/ziplist.s
+
+# target to generate assembly for a file
+base/ziplist.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/ziplist.cc.s
+.PHONY : base/ziplist.cc.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -312,6 +339,33 @@ src/timeevents_.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/timeevents_.cc.s
 .PHONY : src/timeevents_.cc.s
 
+test/snappy.o: test/snappy.cc.o
+
+.PHONY : test/snappy.o
+
+# target to build an object file
+test/snappy.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/snappy.cc.o
+.PHONY : test/snappy.cc.o
+
+test/snappy.i: test/snappy.cc.i
+
+.PHONY : test/snappy.i
+
+# target to preprocess a source file
+test/snappy.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/snappy.cc.i
+.PHONY : test/snappy.cc.i
+
+test/snappy.s: test/snappy.cc.s
+
+.PHONY : test/snappy.s
+
+# target to generate assembly for a file
+test/snappy.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/snappy.cc.s
+.PHONY : test/snappy.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -324,6 +378,9 @@ help:
 	@echo "... base/dict.o"
 	@echo "... base/dict.i"
 	@echo "... base/dict.s"
+	@echo "... base/ziplist.o"
+	@echo "... base/ziplist.i"
+	@echo "... base/ziplist.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -342,6 +399,9 @@ help:
 	@echo "... src/timeevents_.o"
 	@echo "... src/timeevents_.i"
 	@echo "... src/timeevents_.s"
+	@echo "... test/snappy.o"
+	@echo "... test/snappy.i"
+	@echo "... test/snappy.s"
 .PHONY : help
 
 
