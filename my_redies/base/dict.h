@@ -20,8 +20,8 @@ public:
 
     };
     ~dict(){};
-    using  dictEntry = std::unordered_map<boost::any,boost::any>;
-    using  dictpair = std::pair<boost::any,boost::any>;
+    using  dictEntry = std::unordered_map<std::string,boost::any>;
+    using  dictpair = std::pair<std::string,boost::any>;
     dictpair *dictFind(const void * key);
     int dictRehash();//每4096之后进行一次重哈希操作
     int dictAdd(void * key,void * val); //插入一个新的key和value

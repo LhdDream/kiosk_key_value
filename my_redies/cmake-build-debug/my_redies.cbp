@@ -84,10 +84,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/deconding.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/deconding.h">
+			<Option target="my_redies"/>
+		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/dict.cc">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/dict.h">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/skiplist.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/skiplist.h">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/state.h">
@@ -133,6 +145,12 @@
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/snappy.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/util/Prena.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/util/Prena.h">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/CMakeLists.txt">

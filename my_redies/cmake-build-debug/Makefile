@@ -123,6 +123,33 @@ my_redies/fast:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/build
 .PHONY : my_redies/fast
 
+base/deconding.o: base/deconding.cc.o
+
+.PHONY : base/deconding.o
+
+# target to build an object file
+base/deconding.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/deconding.cc.o
+.PHONY : base/deconding.cc.o
+
+base/deconding.i: base/deconding.cc.i
+
+.PHONY : base/deconding.i
+
+# target to preprocess a source file
+base/deconding.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/deconding.cc.i
+.PHONY : base/deconding.cc.i
+
+base/deconding.s: base/deconding.cc.s
+
+.PHONY : base/deconding.s
+
+# target to generate assembly for a file
+base/deconding.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/deconding.cc.s
+.PHONY : base/deconding.cc.s
+
 base/dict.o: base/dict.cc.o
 
 .PHONY : base/dict.o
@@ -149,6 +176,33 @@ base/dict.s: base/dict.cc.s
 base/dict.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/dict.cc.s
 .PHONY : base/dict.cc.s
+
+base/skiplist.o: base/skiplist.cc.o
+
+.PHONY : base/skiplist.o
+
+# target to build an object file
+base/skiplist.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/skiplist.cc.o
+.PHONY : base/skiplist.cc.o
+
+base/skiplist.i: base/skiplist.cc.i
+
+.PHONY : base/skiplist.i
+
+# target to preprocess a source file
+base/skiplist.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/skiplist.cc.i
+.PHONY : base/skiplist.cc.i
+
+base/skiplist.s: base/skiplist.cc.s
+
+.PHONY : base/skiplist.s
+
+# target to generate assembly for a file
+base/skiplist.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/skiplist.cc.s
+.PHONY : base/skiplist.cc.s
 
 base/ziplist.o: base/ziplist.cc.o
 
@@ -366,6 +420,33 @@ test/snappy.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/snappy.cc.s
 .PHONY : test/snappy.cc.s
 
+util/Prena.o: util/Prena.cc.o
+
+.PHONY : util/Prena.o
+
+# target to build an object file
+util/Prena.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/Prena.cc.o
+.PHONY : util/Prena.cc.o
+
+util/Prena.i: util/Prena.cc.i
+
+.PHONY : util/Prena.i
+
+# target to preprocess a source file
+util/Prena.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/Prena.cc.i
+.PHONY : util/Prena.cc.i
+
+util/Prena.s: util/Prena.cc.s
+
+.PHONY : util/Prena.s
+
+# target to generate assembly for a file
+util/Prena.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/Prena.cc.s
+.PHONY : util/Prena.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -375,9 +456,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... my_redies"
 	@echo "... edit_cache"
+	@echo "... base/deconding.o"
+	@echo "... base/deconding.i"
+	@echo "... base/deconding.s"
 	@echo "... base/dict.o"
 	@echo "... base/dict.i"
 	@echo "... base/dict.s"
+	@echo "... base/skiplist.o"
+	@echo "... base/skiplist.i"
+	@echo "... base/skiplist.s"
 	@echo "... base/ziplist.o"
 	@echo "... base/ziplist.i"
 	@echo "... base/ziplist.s"
@@ -402,6 +489,9 @@ help:
 	@echo "... test/snappy.o"
 	@echo "... test/snappy.i"
 	@echo "... test/snappy.s"
+	@echo "... util/Prena.o"
+	@echo "... util/Prena.i"
+	@echo "... util/Prena.s"
 .PHONY : help
 
 

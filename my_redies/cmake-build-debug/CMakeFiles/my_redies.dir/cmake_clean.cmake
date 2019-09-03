@@ -8,6 +8,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_redies.dir/src/Tcpconnection.cc.o"
   "CMakeFiles/my_redies.dir/base/ziplist.cc.o"
   "CMakeFiles/my_redies.dir/test/snappy.cc.o"
+  "CMakeFiles/my_redies.dir/base/deconding.cc.o"
+  "CMakeFiles/my_redies.dir/base/skiplist.cc.o"
+  "CMakeFiles/my_redies.dir/util/Prena.cc.o"
   "my_redies.pdb"
   "my_redies"
 )
