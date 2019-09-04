@@ -8,7 +8,7 @@
 #include <memory>
 #include <vector>
 #include <unordered_map> // 哈希表
-#include <boost/any.hpp>
+#include <boost/spirit/home/support/detail/hold_any.hpp>
 //实现哈希表
 //dict 的特点，在于重哈希,采用增量方式的哈希，在需要扩展内存的时候
 //避免一次性对于所有的key进行重哈希，
@@ -20,8 +20,8 @@ public:
 
     };
     ~dict(){};
-    using  dictEntry = std::unordered_map<std::string,boost::any>;
-    using  dictpair = std::pair<std::string,boost::any>;
+    using  dictEntry = std::unordered_map<std::string,boost::spirit::hold_any>;
+    using  dictpair = std::pair<std::string,boost::spirit::hold_any>;
     dictpair *dictFind(const void * key);
     int dictRehash();//每4096之后进行一次重哈希操作
     int dictAdd(void * key,void * val); //插入一个新的key和value

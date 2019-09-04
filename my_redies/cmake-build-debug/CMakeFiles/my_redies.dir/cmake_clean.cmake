@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_redies.dir/base/deconding.cc.o"
   "CMakeFiles/my_redies.dir/base/skiplist.cc.o"
   "CMakeFiles/my_redies.dir/util/Prena.cc.o"
+  "CMakeFiles/my_redies.dir/test/anytest.cc.o"
   "my_redies.pdb"
   "my_redies"
 )

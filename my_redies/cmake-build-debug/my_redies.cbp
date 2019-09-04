@@ -144,6 +144,9 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/timeevents_.h">
 			<Option target="my_redies"/>
 		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/anytest.cc">
+			<Option target="my_redies"/>
+		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/snappy.cc">
 			<Option target="my_redies"/>
 		</Unit>

@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kiosk/CLionProjects/my_redies/src/aeChannel.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/aeChannel.cc.o"
   "/home/kiosk/CLionProjects/my_redies/src/aeEventloop.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/aeEventloop.cc.o"
   "/home/kiosk/CLionProjects/my_redies/src/timeevents_.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/timeevents_.cc.o"
+  "/home/kiosk/CLionProjects/my_redies/test/anytest.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/anytest.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/snappy.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/snappy.cc.o"
   "/home/kiosk/CLionProjects/my_redies/util/Prena.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/util/Prena.cc.o"
   )

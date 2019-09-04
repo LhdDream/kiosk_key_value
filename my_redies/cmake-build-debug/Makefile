@@ -393,6 +393,33 @@ src/timeevents_.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/timeevents_.cc.s
 .PHONY : src/timeevents_.cc.s
 
+test/anytest.o: test/anytest.cc.o
+
+.PHONY : test/anytest.o
+
+# target to build an object file
+test/anytest.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/anytest.cc.o
+.PHONY : test/anytest.cc.o
+
+test/anytest.i: test/anytest.cc.i
+
+.PHONY : test/anytest.i
+
+# target to preprocess a source file
+test/anytest.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/anytest.cc.i
+.PHONY : test/anytest.cc.i
+
+test/anytest.s: test/anytest.cc.s
+
+.PHONY : test/anytest.s
+
+# target to generate assembly for a file
+test/anytest.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/anytest.cc.s
+.PHONY : test/anytest.cc.s
+
 test/snappy.o: test/snappy.cc.o
 
 .PHONY : test/snappy.o
@@ -486,6 +513,9 @@ help:
 	@echo "... src/timeevents_.o"
 	@echo "... src/timeevents_.i"
 	@echo "... src/timeevents_.s"
+	@echo "... test/anytest.o"
+	@echo "... test/anytest.i"
+	@echo "... test/anytest.s"
 	@echo "... test/snappy.o"
 	@echo "... test/snappy.i"
 	@echo "... test/snappy.s"
