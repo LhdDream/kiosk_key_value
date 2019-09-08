@@ -96,6 +96,9 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/dict.h">
 			<Option target="my_redies"/>
 		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/random.h">
+			<Option target="my_redies"/>
+		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/skiplist.cc">
 			<Option target="my_redies"/>
 		</Unit>
@@ -147,7 +150,16 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/anytest.cc">
 			<Option target="my_redies"/>
 		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/random.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/skiplisttest.cc">
+			<Option target="my_redies"/>
+		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/snappy.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/test.cc">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/util/Prena.cc">

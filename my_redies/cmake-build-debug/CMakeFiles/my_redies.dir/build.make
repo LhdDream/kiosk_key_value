@@ -226,6 +226,45 @@ CMakeFiles/my_redies.dir/test/anytest.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/test/anytest.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/test/anytest.cc -o CMakeFiles/my_redies.dir/test/anytest.cc.s
 
+CMakeFiles/my_redies.dir/test/test.cc.o: CMakeFiles/my_redies.dir/flags.make
+CMakeFiles/my_redies.dir/test/test.cc.o: ../test/test.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/my_redies.dir/test/test.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/test/test.cc.o -c /home/kiosk/CLionProjects/my_redies/test/test.cc
+
+CMakeFiles/my_redies.dir/test/test.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_redies.dir/test/test.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiosk/CLionProjects/my_redies/test/test.cc > CMakeFiles/my_redies.dir/test/test.cc.i
+
+CMakeFiles/my_redies.dir/test/test.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/test/test.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/test/test.cc -o CMakeFiles/my_redies.dir/test/test.cc.s
+
+CMakeFiles/my_redies.dir/test/random.cc.o: CMakeFiles/my_redies.dir/flags.make
+CMakeFiles/my_redies.dir/test/random.cc.o: ../test/random.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/my_redies.dir/test/random.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/test/random.cc.o -c /home/kiosk/CLionProjects/my_redies/test/random.cc
+
+CMakeFiles/my_redies.dir/test/random.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_redies.dir/test/random.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiosk/CLionProjects/my_redies/test/random.cc > CMakeFiles/my_redies.dir/test/random.cc.i
+
+CMakeFiles/my_redies.dir/test/random.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/test/random.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/test/random.cc -o CMakeFiles/my_redies.dir/test/random.cc.s
+
+CMakeFiles/my_redies.dir/test/skiplisttest.cc.o: CMakeFiles/my_redies.dir/flags.make
+CMakeFiles/my_redies.dir/test/skiplisttest.cc.o: ../test/skiplisttest.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/my_redies.dir/test/skiplisttest.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/test/skiplisttest.cc.o -c /home/kiosk/CLionProjects/my_redies/test/skiplisttest.cc
+
+CMakeFiles/my_redies.dir/test/skiplisttest.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_redies.dir/test/skiplisttest.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiosk/CLionProjects/my_redies/test/skiplisttest.cc > CMakeFiles/my_redies.dir/test/skiplisttest.cc.i
+
+CMakeFiles/my_redies.dir/test/skiplisttest.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/test/skiplisttest.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/test/skiplisttest.cc -o CMakeFiles/my_redies.dir/test/skiplisttest.cc.s
+
 # Object files for target my_redies
 my_redies_OBJECTS = \
 "CMakeFiles/my_redies.dir/main.cpp.o" \
@@ -240,7 +279,10 @@ my_redies_OBJECTS = \
 "CMakeFiles/my_redies.dir/base/deconding.cc.o" \
 "CMakeFiles/my_redies.dir/base/skiplist.cc.o" \
 "CMakeFiles/my_redies.dir/util/Prena.cc.o" \
-"CMakeFiles/my_redies.dir/test/anytest.cc.o"
+"CMakeFiles/my_redies.dir/test/anytest.cc.o" \
+"CMakeFiles/my_redies.dir/test/test.cc.o" \
+"CMakeFiles/my_redies.dir/test/random.cc.o" \
+"CMakeFiles/my_redies.dir/test/skiplisttest.cc.o"
 
 # External object files for target my_redies
 my_redies_EXTERNAL_OBJECTS =
@@ -258,9 +300,12 @@ my_redies: CMakeFiles/my_redies.dir/base/deconding.cc.o
 my_redies: CMakeFiles/my_redies.dir/base/skiplist.cc.o
 my_redies: CMakeFiles/my_redies.dir/util/Prena.cc.o
 my_redies: CMakeFiles/my_redies.dir/test/anytest.cc.o
+my_redies: CMakeFiles/my_redies.dir/test/test.cc.o
+my_redies: CMakeFiles/my_redies.dir/test/random.cc.o
+my_redies: CMakeFiles/my_redies.dir/test/skiplisttest.cc.o
 my_redies: CMakeFiles/my_redies.dir/build.make
 my_redies: CMakeFiles/my_redies.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable my_redies"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable my_redies"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/my_redies.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

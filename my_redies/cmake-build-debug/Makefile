@@ -420,6 +420,60 @@ test/anytest.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/anytest.cc.s
 .PHONY : test/anytest.cc.s
 
+test/random.o: test/random.cc.o
+
+.PHONY : test/random.o
+
+# target to build an object file
+test/random.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/random.cc.o
+.PHONY : test/random.cc.o
+
+test/random.i: test/random.cc.i
+
+.PHONY : test/random.i
+
+# target to preprocess a source file
+test/random.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/random.cc.i
+.PHONY : test/random.cc.i
+
+test/random.s: test/random.cc.s
+
+.PHONY : test/random.s
+
+# target to generate assembly for a file
+test/random.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/random.cc.s
+.PHONY : test/random.cc.s
+
+test/skiplisttest.o: test/skiplisttest.cc.o
+
+.PHONY : test/skiplisttest.o
+
+# target to build an object file
+test/skiplisttest.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/skiplisttest.cc.o
+.PHONY : test/skiplisttest.cc.o
+
+test/skiplisttest.i: test/skiplisttest.cc.i
+
+.PHONY : test/skiplisttest.i
+
+# target to preprocess a source file
+test/skiplisttest.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/skiplisttest.cc.i
+.PHONY : test/skiplisttest.cc.i
+
+test/skiplisttest.s: test/skiplisttest.cc.s
+
+.PHONY : test/skiplisttest.s
+
+# target to generate assembly for a file
+test/skiplisttest.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/skiplisttest.cc.s
+.PHONY : test/skiplisttest.cc.s
+
 test/snappy.o: test/snappy.cc.o
 
 .PHONY : test/snappy.o
@@ -446,6 +500,33 @@ test/snappy.s: test/snappy.cc.s
 test/snappy.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/snappy.cc.s
 .PHONY : test/snappy.cc.s
+
+test/test.o: test/test.cc.o
+
+.PHONY : test/test.o
+
+# target to build an object file
+test/test.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/test.cc.o
+.PHONY : test/test.cc.o
+
+test/test.i: test/test.cc.i
+
+.PHONY : test/test.i
+
+# target to preprocess a source file
+test/test.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/test.cc.i
+.PHONY : test/test.cc.i
+
+test/test.s: test/test.cc.s
+
+.PHONY : test/test.s
+
+# target to generate assembly for a file
+test/test.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/test.cc.s
+.PHONY : test/test.cc.s
 
 util/Prena.o: util/Prena.cc.o
 
@@ -516,9 +597,18 @@ help:
 	@echo "... test/anytest.o"
 	@echo "... test/anytest.i"
 	@echo "... test/anytest.s"
+	@echo "... test/random.o"
+	@echo "... test/random.i"
+	@echo "... test/random.s"
+	@echo "... test/skiplisttest.o"
+	@echo "... test/skiplisttest.i"
+	@echo "... test/skiplisttest.s"
 	@echo "... test/snappy.o"
 	@echo "... test/snappy.i"
 	@echo "... test/snappy.s"
+	@echo "... test/test.o"
+	@echo "... test/test.i"
+	@echo "... test/test.s"
 	@echo "... util/Prena.o"
 	@echo "... util/Prena.i"
 	@echo "... util/Prena.s"

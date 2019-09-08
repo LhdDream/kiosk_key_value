@@ -32,9 +32,9 @@ public:
 private:
     char * allocateFallback(size_t bytes);
     char * allocateNewBlock(size_t block_bytes);
-    std::unique_ptr<char> alloc_ptr; //用来指向没有使用的起始地址
+    char * alloc_ptr; //用来指向没有使用的起始地址
     size_t alloc_bytes_reamining_; // 当前所指向的内存块中还有多少内容可以进行使用
-    std::vector<std::unique_ptr<char >> blocks;
+    std::vector<char *> blocks;
     std::atomic<size_t> memory_usage;// 已经使用的内存
 };
 //if 0 bytes are requested , we should not allow processing
@@ -42,8 +42,8 @@ inline  char * Prena::allocate(size_t bytes) {
     assert(bytes > 0 );
     if(bytes <= alloc_bytes_reamining_)
     {
-        char * result = alloc_ptr.get();
-        alloc_ptr.reset(alloc_ptr.get() + bytes);
+        char * result = alloc_ptr;
+        alloc_ptr = alloc_ptr + bytes;
         alloc_bytes_reamining_ -= bytes;
         return result;
     }

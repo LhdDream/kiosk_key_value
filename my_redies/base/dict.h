@@ -19,15 +19,17 @@ public:
     {
 
     };
-    ~dict(){};
+    ~dict(){
+            delete  ht;
+    };
     using  dictEntry = std::unordered_map<std::string,boost::spirit::hold_any>;
     using  dictpair = std::pair<std::string,boost::spirit::hold_any>;
-    dictpair *dictFind(const void * key);
+    dictpair *dictFind(std::string &&key);
     int dictRehash();//每4096之后进行一次重哈希操作
-    int dictAdd(void * key,void * val); //插入一个新的key和value
-    int dictdel(void * key);
+    int dictAdd(std::string &&key,void * val); //插入一个新的key和value
+    int dictdel(std::string &&key);
 private:
-   std::unique_ptr<dictEntry> ht;
+   dictEntry  * ht;
    //目前正在进行的安全迭代器的数量
    int iterators;
 };

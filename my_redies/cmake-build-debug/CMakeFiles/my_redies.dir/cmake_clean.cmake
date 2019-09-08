@@ -12,6 +12,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_redies.dir/base/skiplist.cc.o"
   "CMakeFiles/my_redies.dir/util/Prena.cc.o"
   "CMakeFiles/my_redies.dir/test/anytest.cc.o"
+  "CMakeFiles/my_redies.dir/test/test.cc.o"
+  "CMakeFiles/my_redies.dir/test/random.cc.o"
+  "CMakeFiles/my_redies.dir/test/skiplisttest.cc.o"
   "my_redies.pdb"
   "my_redies"
 )
