@@ -6,8 +6,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kiosk/CLionProjects/my_redies/base/deconding.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/base/deconding.cc.o"
   "/home/kiosk/CLionProjects/my_redies/base/dict.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/base/dict.cc.o"
+  "/home/kiosk/CLionProjects/my_redies/base/sds.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/base/sds.cc.o"
   "/home/kiosk/CLionProjects/my_redies/base/skiplist.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/base/skiplist.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/base/ziplist.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/base/ziplist.cc.o"
   "/home/kiosk/CLionProjects/my_redies/main.cpp" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/main.cpp.o"
   "/home/kiosk/CLionProjects/my_redies/net/Socket.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/net/Socket.cc.o"
   "/home/kiosk/CLionProjects/my_redies/src/Tcpconnection.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/Tcpconnection.cc.o"

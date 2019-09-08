@@ -6,7 +6,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_redies.dir/src/timeevents_.cc.o"
   "CMakeFiles/my_redies.dir/src/aeChannel.cc.o"
   "CMakeFiles/my_redies.dir/src/Tcpconnection.cc.o"
-  "CMakeFiles/my_redies.dir/base/ziplist.cc.o"
   "CMakeFiles/my_redies.dir/test/snappy.cc.o"
   "CMakeFiles/my_redies.dir/base/deconding.cc.o"
   "CMakeFiles/my_redies.dir/base/skiplist.cc.o"
@@ -15,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_redies.dir/test/test.cc.o"
   "CMakeFiles/my_redies.dir/test/random.cc.o"
   "CMakeFiles/my_redies.dir/test/skiplisttest.cc.o"
+  "CMakeFiles/my_redies.dir/base/sds.cc.o"
   "my_redies.pdb"
   "my_redies"
 )

@@ -177,6 +177,33 @@ base/dict.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/dict.cc.s
 .PHONY : base/dict.cc.s
 
+base/sds.o: base/sds.cc.o
+
+.PHONY : base/sds.o
+
+# target to build an object file
+base/sds.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/sds.cc.o
+.PHONY : base/sds.cc.o
+
+base/sds.i: base/sds.cc.i
+
+.PHONY : base/sds.i
+
+# target to preprocess a source file
+base/sds.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/sds.cc.i
+.PHONY : base/sds.cc.i
+
+base/sds.s: base/sds.cc.s
+
+.PHONY : base/sds.s
+
+# target to generate assembly for a file
+base/sds.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/sds.cc.s
+.PHONY : base/sds.cc.s
+
 base/skiplist.o: base/skiplist.cc.o
 
 .PHONY : base/skiplist.o
@@ -203,33 +230,6 @@ base/skiplist.s: base/skiplist.cc.s
 base/skiplist.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/skiplist.cc.s
 .PHONY : base/skiplist.cc.s
-
-base/ziplist.o: base/ziplist.cc.o
-
-.PHONY : base/ziplist.o
-
-# target to build an object file
-base/ziplist.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/ziplist.cc.o
-.PHONY : base/ziplist.cc.o
-
-base/ziplist.i: base/ziplist.cc.i
-
-.PHONY : base/ziplist.i
-
-# target to preprocess a source file
-base/ziplist.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/ziplist.cc.i
-.PHONY : base/ziplist.cc.i
-
-base/ziplist.s: base/ziplist.cc.s
-
-.PHONY : base/ziplist.s
-
-# target to generate assembly for a file
-base/ziplist.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/ziplist.cc.s
-.PHONY : base/ziplist.cc.s
 
 main.o: main.cpp.o
 
@@ -570,12 +570,12 @@ help:
 	@echo "... base/dict.o"
 	@echo "... base/dict.i"
 	@echo "... base/dict.s"
+	@echo "... base/sds.o"
+	@echo "... base/sds.i"
+	@echo "... base/sds.s"
 	@echo "... base/skiplist.o"
 	@echo "... base/skiplist.i"
 	@echo "... base/skiplist.s"
-	@echo "... base/ziplist.o"
-	@echo "... base/ziplist.i"
-	@echo "... base/ziplist.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

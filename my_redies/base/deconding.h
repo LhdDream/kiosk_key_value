@@ -9,5 +9,11 @@
 //compress 压缩
 //uncompress 解压缩
 //特殊编码的linklist 提高存储效率，存储字符串或者整数
+//这里进行编码的压缩
+//snappy
+class deconding{
+public:
+private:
+};
 #endif //MY_REDIES_ZIPLIST_H
 
