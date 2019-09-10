@@ -393,6 +393,33 @@ test/anytest.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/anytest.cc.s
 .PHONY : test/anytest.cc.s
 
+test/coding.o: test/coding.cc.o
+
+.PHONY : test/coding.o
+
+# target to build an object file
+test/coding.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/coding.cc.o
+.PHONY : test/coding.cc.o
+
+test/coding.i: test/coding.cc.i
+
+.PHONY : test/coding.i
+
+# target to preprocess a source file
+test/coding.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/coding.cc.i
+.PHONY : test/coding.cc.i
+
+test/coding.s: test/coding.cc.s
+
+.PHONY : test/coding.s
+
+# target to generate assembly for a file
+test/coding.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/coding.cc.s
+.PHONY : test/coding.cc.s
+
 test/random.o: test/random.cc.o
 
 .PHONY : test/random.o
@@ -567,6 +594,9 @@ help:
 	@echo "... test/anytest.o"
 	@echo "... test/anytest.i"
 	@echo "... test/anytest.s"
+	@echo "... test/coding.o"
+	@echo "... test/coding.i"
+	@echo "... test/coding.s"
 	@echo "... test/random.o"
 	@echo "... test/random.i"
 	@echo "... test/random.s"

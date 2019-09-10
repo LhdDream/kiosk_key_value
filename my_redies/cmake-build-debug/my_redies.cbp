@@ -147,6 +147,9 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/anytest.cc">
 			<Option target="my_redies"/>
 		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/coding.cc">
+			<Option target="my_redies"/>
+		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/random.cc">
 			<Option target="my_redies"/>
 		</Unit>

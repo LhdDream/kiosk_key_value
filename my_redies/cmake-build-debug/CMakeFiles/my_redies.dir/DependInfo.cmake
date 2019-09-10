@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kiosk/CLionProjects/my_redies/src/aeEventloop.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/aeEventloop.cc.o"
   "/home/kiosk/CLionProjects/my_redies/src/timeevents_.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/timeevents_.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/anytest.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/anytest.cc.o"
+  "/home/kiosk/CLionProjects/my_redies/test/coding.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/coding.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/random.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/random.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/skiplisttest.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/skiplisttest.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/snappy.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/snappy.cc.o"

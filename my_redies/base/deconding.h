@@ -30,12 +30,12 @@ namespace deconding{
     //这里的string底部是以sds方式来进行实现
     //进行底层的压缩
     //转化为二进制来进行存储节省宽度　编码为varint
-    char * EncodeInt32(sds *dst ,uint32_t value);
-    char * EncodeInt64(sds * dst, uint64_t value);
-    const char * EncodeSds(sds * dst, std::string value);
-    uint32_t  DecodeInt32(const char * ptr);
-    uint64_t DecodeInt64(const char * ptr);
-    std::string DecodeSds(const char * ptr);
+    unsigned char * EncodeInt32(char *intput  ,uint32_t value);
+    unsigned char * EncodeInt64(char *intput , uint64_t value);
+    const char * EncodeSds(char *intput , std::string value);
+    uint32_t  DecodeInt32(const unsigned char * ptr);
+    uint64_t DecodeInt64(const unsigned char * ptr);
+    std::string DecodeSds(const unsigned char * ptr);
 }
 #endif //MY_REDIES_ZIPLIST_H
 
