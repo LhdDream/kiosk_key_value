@@ -9,9 +9,11 @@
 #include <vector>
 #include <unordered_map> // 哈希表
 #include <boost/spirit/home/support/detail/hold_any.hpp>
+#include "skiplist.h"
 //实现哈希表
 //dict 的特点，在于重哈希,采用增量方式的哈希，在需要扩展内存的时候
 //避免一次性对于所有的key进行重哈希，
+//使用哈希键
 class dict
 {
 public:

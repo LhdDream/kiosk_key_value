@@ -73,7 +73,7 @@ bool skiplist<Key>::Delete(const Key &key) {
 
 
 template <typename  Key>
-typename skiplist<Key>::node * skiplist<Key>::Findlessthan(const Key &key) const
+typename skiplist<Key>::node * skiplist<Key>::Findlessthan(const Key &key, node ** prev) const
 {
     //找到小于key的结点
     node * temp = head_;
@@ -85,6 +85,7 @@ typename skiplist<Key>::node * skiplist<Key>::Findlessthan(const Key &key) const
         node * next = temp->next(level);
         //在这里需要判断它的next值存在不存在如果不存在的话，则为nullptr
         if (next == nullptr || (next->key >= key)) {
+            if(prev != nullptr ) prev[level] = temp;
             if (level == 0) {
                return temp;
             } else {

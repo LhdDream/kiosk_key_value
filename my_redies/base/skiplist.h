@@ -83,7 +83,7 @@ private:
         return max_height_.load(std::memory_order_relaxed);
     }
     bool Equal(const Key &a , const Key &b) { return a == b ;}
-    node * Findlessthan(const Key & key) const ;// 找到比这个key小的上一个元素
+    node * Findlessthan(const Key & key,node ** prev) const ;// 找到比这个key小的上一个元素
     //return the last element
     node *newnode(const Key& key,int height);
 

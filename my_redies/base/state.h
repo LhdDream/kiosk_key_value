@@ -11,9 +11,9 @@ const int DICT_ERR  = 1;
  * 事件执行状态
  */
 // 成功
-#define AE_OK 0
+const int  AE_OK = 0 ;
 // 出错
-#define AE_ERR -1
+const int AE_ERR  = -1;
 
 /*
  * 文件事件状态

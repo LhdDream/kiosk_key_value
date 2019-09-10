@@ -99,9 +99,6 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/random.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/sds.cc">
-			<Option target="my_redies"/>
-		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/sds.h">
 			<Option target="my_redies"/>
 		</Unit>

@@ -177,33 +177,6 @@ base/dict.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/dict.cc.s
 .PHONY : base/dict.cc.s
 
-base/sds.o: base/sds.cc.o
-
-.PHONY : base/sds.o
-
-# target to build an object file
-base/sds.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/sds.cc.o
-.PHONY : base/sds.cc.o
-
-base/sds.i: base/sds.cc.i
-
-.PHONY : base/sds.i
-
-# target to preprocess a source file
-base/sds.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/sds.cc.i
-.PHONY : base/sds.cc.i
-
-base/sds.s: base/sds.cc.s
-
-.PHONY : base/sds.s
-
-# target to generate assembly for a file
-base/sds.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/sds.cc.s
-.PHONY : base/sds.cc.s
-
 base/skiplist.o: base/skiplist.cc.o
 
 .PHONY : base/skiplist.o
@@ -570,9 +543,6 @@ help:
 	@echo "... base/dict.o"
 	@echo "... base/dict.i"
 	@echo "... base/dict.s"
-	@echo "... base/sds.o"
-	@echo "... base/sds.i"
-	@echo "... base/sds.s"
 	@echo "... base/skiplist.o"
 	@echo "... base/skiplist.i"
 	@echo "... base/skiplist.s"
