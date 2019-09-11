@@ -15,6 +15,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_redies.dir/test/random.cc.o"
   "CMakeFiles/my_redies.dir/test/skiplisttest.cc.o"
   "CMakeFiles/my_redies.dir/test/coding.cc.o"
+  "CMakeFiles/my_redies.dir/src/Cache.cc.o"
   "my_redies.pdb"
   "my_redies"
 )

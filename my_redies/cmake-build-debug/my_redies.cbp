@@ -120,6 +120,12 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/net/Socket.h">
 			<Option target="my_redies"/>
 		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/Cache.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/Cache.h">
+			<Option target="my_redies"/>
+		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/Tcpconnection.cc">
 			<Option target="my_redies"/>
 		</Unit>

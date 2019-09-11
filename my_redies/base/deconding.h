@@ -9,7 +9,9 @@
 #include "sds.h"
 #include "dict.h"
 #include <string>
-#include <set>
+#include <vector>
+#include <any>
+#include <map>
 //compress 压缩
 //uncompress 解压缩
 //特殊编码的linklist 提高存储效率，存储字符串或者整数
@@ -25,17 +27,21 @@ namespace deconding{
     void SetInt64(std::string * dst ,uint64_t value);
     void Setsds(std::string  *dst, std::string value);
     //整数集合 intset
-    void Setintset(std::string * dst,std::set<int> value);
+    void SetIntset(std::map <std::string  , std::string > *,std::vector<std::any> value);
     //内部以sds进行存储
     //这里的string底部是以sds方式来进行实现
     //进行底层的压缩
     //转化为二进制来进行存储节省宽度　编码为varint
-    unsigned char * EncodeInt32(char *intput  ,uint32_t value);
-    unsigned char * EncodeInt64(char *intput , uint64_t value);
-    const char * EncodeSds(char *intput , std::string value);
-    uint32_t  DecodeInt32(const unsigned char * ptr);
-    uint64_t DecodeInt64(const unsigned char * ptr);
-    std::string DecodeSds(const unsigned char * ptr);
+    unsigned char * EncodeInt32(unsigned char *intput  ,uint32_t value);
+    unsigned char * EncodeInt64(unsigned char *intput , uint64_t value);
+    const char * EncodeSds(std::string value);
+    uint32_t  DecodeInt32(const  char * ptr);
+    uint64_t DecodeInt64(const char * ptr);
+    std::string DecodeSds(sds  * ptr);
+    bool GetInt32(sds * input,uint32_t * value);
+    bool GetInt64(sds * input ,uint64_t * value);
+    bool GetSds(sds * input , sds * value);
+    bool Getset(std::map <std::string  , std::string > *,std::vector<std::any> value);
 }
 #endif //MY_REDIES_ZIPLIST_H
 

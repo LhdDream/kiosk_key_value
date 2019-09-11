@@ -258,6 +258,33 @@ net/Socket.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/net/Socket.cc.s
 .PHONY : net/Socket.cc.s
 
+src/Cache.o: src/Cache.cc.o
+
+.PHONY : src/Cache.o
+
+# target to build an object file
+src/Cache.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Cache.cc.o
+.PHONY : src/Cache.cc.o
+
+src/Cache.i: src/Cache.cc.i
+
+.PHONY : src/Cache.i
+
+# target to preprocess a source file
+src/Cache.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Cache.cc.i
+.PHONY : src/Cache.cc.i
+
+src/Cache.s: src/Cache.cc.s
+
+.PHONY : src/Cache.s
+
+# target to generate assembly for a file
+src/Cache.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Cache.cc.s
+.PHONY : src/Cache.cc.s
+
 src/Tcpconnection.o: src/Tcpconnection.cc.o
 
 .PHONY : src/Tcpconnection.o
@@ -579,6 +606,9 @@ help:
 	@echo "... net/Socket.o"
 	@echo "... net/Socket.i"
 	@echo "... net/Socket.s"
+	@echo "... src/Cache.o"
+	@echo "... src/Cache.i"
+	@echo "... src/Cache.s"
 	@echo "... src/Tcpconnection.o"
 	@echo "... src/Tcpconnection.i"
 	@echo "... src/Tcpconnection.s"
