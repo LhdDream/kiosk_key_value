@@ -61,7 +61,8 @@ public:
     skiplist(const skiplist&) = delete;
     skiplist&operator=(const skiplist&) = delete;
     ~skiplist(){
-        printf("delete\n");
+        delete prena_;
+        delete head_;
     }
     //insert key into the list
     void Insert(const Key & key);

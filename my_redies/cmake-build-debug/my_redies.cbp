@@ -96,6 +96,12 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/dict.h">
 			<Option target="my_redies"/>
 		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/options.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/options.h">
+			<Option target="my_redies"/>
+		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/random.h">
 			<Option target="my_redies"/>
 		</Unit>
@@ -142,6 +148,12 @@
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/aeEventloop.h">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/command.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/command.h">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/timeevents_.cc">

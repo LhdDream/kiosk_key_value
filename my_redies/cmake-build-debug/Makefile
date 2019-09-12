@@ -177,6 +177,33 @@ base/dict.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/dict.cc.s
 .PHONY : base/dict.cc.s
 
+base/options.o: base/options.cc.o
+
+.PHONY : base/options.o
+
+# target to build an object file
+base/options.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/options.cc.o
+.PHONY : base/options.cc.o
+
+base/options.i: base/options.cc.i
+
+.PHONY : base/options.i
+
+# target to preprocess a source file
+base/options.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/options.cc.i
+.PHONY : base/options.cc.i
+
+base/options.s: base/options.cc.s
+
+.PHONY : base/options.s
+
+# target to generate assembly for a file
+base/options.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/options.cc.s
+.PHONY : base/options.cc.s
+
 base/skiplist.o: base/skiplist.cc.o
 
 .PHONY : base/skiplist.o
@@ -365,6 +392,33 @@ src/aeEventloop.s: src/aeEventloop.cc.s
 src/aeEventloop.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/aeEventloop.cc.s
 .PHONY : src/aeEventloop.cc.s
+
+src/command.o: src/command.cc.o
+
+.PHONY : src/command.o
+
+# target to build an object file
+src/command.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/command.cc.o
+.PHONY : src/command.cc.o
+
+src/command.i: src/command.cc.i
+
+.PHONY : src/command.i
+
+# target to preprocess a source file
+src/command.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/command.cc.i
+.PHONY : src/command.cc.i
+
+src/command.s: src/command.cc.s
+
+.PHONY : src/command.s
+
+# target to generate assembly for a file
+src/command.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/command.cc.s
+.PHONY : src/command.cc.s
 
 src/timeevents_.o: src/timeevents_.cc.o
 
@@ -597,6 +651,9 @@ help:
 	@echo "... base/dict.o"
 	@echo "... base/dict.i"
 	@echo "... base/dict.s"
+	@echo "... base/options.o"
+	@echo "... base/options.i"
+	@echo "... base/options.s"
 	@echo "... base/skiplist.o"
 	@echo "... base/skiplist.i"
 	@echo "... base/skiplist.s"
@@ -618,6 +675,9 @@ help:
 	@echo "... src/aeEventloop.o"
 	@echo "... src/aeEventloop.i"
 	@echo "... src/aeEventloop.s"
+	@echo "... src/command.o"
+	@echo "... src/command.i"
+	@echo "... src/command.s"
 	@echo "... src/timeevents_.o"
 	@echo "... src/timeevents_.i"
 	@echo "... src/timeevents_.s"

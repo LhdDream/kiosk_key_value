@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kiosk/CLionProjects/my_redies/base/deconding.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/base/deconding.cc.o"
   "/home/kiosk/CLionProjects/my_redies/base/dict.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/base/dict.cc.o"
+  "/home/kiosk/CLionProjects/my_redies/base/options.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/base/options.cc.o"
   "/home/kiosk/CLionProjects/my_redies/base/skiplist.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/base/skiplist.cc.o"
   "/home/kiosk/CLionProjects/my_redies/main.cpp" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/main.cpp.o"
   "/home/kiosk/CLionProjects/my_redies/net/Socket.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/net/Socket.cc.o"
@@ -13,6 +14,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kiosk/CLionProjects/my_redies/src/Tcpconnection.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/Tcpconnection.cc.o"
   "/home/kiosk/CLionProjects/my_redies/src/aeChannel.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/aeChannel.cc.o"
   "/home/kiosk/CLionProjects/my_redies/src/aeEventloop.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/aeEventloop.cc.o"
+  "/home/kiosk/CLionProjects/my_redies/src/command.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/command.cc.o"
   "/home/kiosk/CLionProjects/my_redies/src/timeevents_.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/timeevents_.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/anytest.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/anytest.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/coding.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/coding.cc.o"
