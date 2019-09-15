@@ -14,7 +14,6 @@ const int DICT_ERR  = 1;
 const int  AE_OK = 0 ;
 // 出错
 const int AE_ERR  = -1;
-
 /*
  * 文件事件状态
  */

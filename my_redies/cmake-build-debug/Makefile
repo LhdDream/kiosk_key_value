@@ -177,33 +177,6 @@ base/dict.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/dict.cc.s
 .PHONY : base/dict.cc.s
 
-base/options.o: base/options.cc.o
-
-.PHONY : base/options.o
-
-# target to build an object file
-base/options.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/options.cc.o
-.PHONY : base/options.cc.o
-
-base/options.i: base/options.cc.i
-
-.PHONY : base/options.i
-
-# target to preprocess a source file
-base/options.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/options.cc.i
-.PHONY : base/options.cc.i
-
-base/options.s: base/options.cc.s
-
-.PHONY : base/options.s
-
-# target to generate assembly for a file
-base/options.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/options.cc.s
-.PHONY : base/options.cc.s
-
 base/skiplist.o: base/skiplist.cc.o
 
 .PHONY : base/skiplist.o
@@ -420,6 +393,33 @@ src/command.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/command.cc.s
 .PHONY : src/command.cc.s
 
+src/dbupdate.o: src/dbupdate.cc.o
+
+.PHONY : src/dbupdate.o
+
+# target to build an object file
+src/dbupdate.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/dbupdate.cc.o
+.PHONY : src/dbupdate.cc.o
+
+src/dbupdate.i: src/dbupdate.cc.i
+
+.PHONY : src/dbupdate.i
+
+# target to preprocess a source file
+src/dbupdate.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/dbupdate.cc.i
+.PHONY : src/dbupdate.cc.i
+
+src/dbupdate.s: src/dbupdate.cc.s
+
+.PHONY : src/dbupdate.s
+
+# target to generate assembly for a file
+src/dbupdate.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/dbupdate.cc.s
+.PHONY : src/dbupdate.cc.s
+
 src/timeevents_.o: src/timeevents_.cc.o
 
 .PHONY : src/timeevents_.o
@@ -473,6 +473,33 @@ test/anytest.s: test/anytest.cc.s
 test/anytest.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/anytest.cc.s
 .PHONY : test/anytest.cc.s
+
+test/bloom_test.o: test/bloom_test.cc.o
+
+.PHONY : test/bloom_test.o
+
+# target to build an object file
+test/bloom_test.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/bloom_test.cc.o
+.PHONY : test/bloom_test.cc.o
+
+test/bloom_test.i: test/bloom_test.cc.i
+
+.PHONY : test/bloom_test.i
+
+# target to preprocess a source file
+test/bloom_test.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/bloom_test.cc.i
+.PHONY : test/bloom_test.cc.i
+
+test/bloom_test.s: test/bloom_test.cc.s
+
+.PHONY : test/bloom_test.s
+
+# target to generate assembly for a file
+test/bloom_test.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/bloom_test.cc.s
+.PHONY : test/bloom_test.cc.s
 
 test/coding.o: test/coding.cc.o
 
@@ -651,9 +678,6 @@ help:
 	@echo "... base/dict.o"
 	@echo "... base/dict.i"
 	@echo "... base/dict.s"
-	@echo "... base/options.o"
-	@echo "... base/options.i"
-	@echo "... base/options.s"
 	@echo "... base/skiplist.o"
 	@echo "... base/skiplist.i"
 	@echo "... base/skiplist.s"
@@ -678,12 +702,18 @@ help:
 	@echo "... src/command.o"
 	@echo "... src/command.i"
 	@echo "... src/command.s"
+	@echo "... src/dbupdate.o"
+	@echo "... src/dbupdate.i"
+	@echo "... src/dbupdate.s"
 	@echo "... src/timeevents_.o"
 	@echo "... src/timeevents_.i"
 	@echo "... src/timeevents_.s"
 	@echo "... test/anytest.o"
 	@echo "... test/anytest.i"
 	@echo "... test/anytest.s"
+	@echo "... test/bloom_test.o"
+	@echo "... test/bloom_test.i"
+	@echo "... test/bloom_test.s"
 	@echo "... test/coding.o"
 	@echo "... test/coding.i"
 	@echo "... test/coding.s"

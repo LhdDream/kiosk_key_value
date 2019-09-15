@@ -79,10 +79,11 @@ private:
     //this file construct two-way link list
     //we are running this
 private:
-    inline int GetMaxheight() const
+    [[nodiscard]] inline int GetMaxheight() const
     {
         return max_height_.load(std::memory_order_relaxed);
     }
+    //被修饰的函数返回值十分重要，或者美剧类型，对象类型时分重要不能被废弃
     bool Equal(const Key &a , const Key &b) { return a == b ;}
     node * Findlessthan(const Key & key,node ** prev) const ;// 找到比这个key小的上一个元素
     //return the last element

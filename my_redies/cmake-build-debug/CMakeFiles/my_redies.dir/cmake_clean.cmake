@@ -17,7 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_redies.dir/test/coding.cc.o"
   "CMakeFiles/my_redies.dir/src/Cache.cc.o"
   "CMakeFiles/my_redies.dir/src/command.cc.o"
-  "CMakeFiles/my_redies.dir/base/options.cc.o"
+  "CMakeFiles/my_redies.dir/test/bloom_test.cc.o"
+  "CMakeFiles/my_redies.dir/src/dbupdate.cc.o"
   "my_redies.pdb"
   "my_redies"
 )

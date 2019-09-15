@@ -42,6 +42,6 @@ struct readoptions{
 };
 // write option
 struct writeoptions{
-
+    bool sync = false; //同步写入操作
 };
 #endif //MY_REDIES_OPTIONS_H
