@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/my_redies.dir/main.cpp.o"
   "CMakeFiles/my_redies.dir/net/Socket.cc.o"
-  "CMakeFiles/my_redies.dir/base/dict.cc.o"
   "CMakeFiles/my_redies.dir/src/aeEventloop.cc.o"
   "CMakeFiles/my_redies.dir/src/timeevents_.cc.o"
   "CMakeFiles/my_redies.dir/src/aeChannel.cc.o"
@@ -19,6 +18,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_redies.dir/src/command.cc.o"
   "CMakeFiles/my_redies.dir/test/bloom_test.cc.o"
   "CMakeFiles/my_redies.dir/src/dbupdate.cc.o"
+  "CMakeFiles/my_redies.dir/test/phmap.cc.o"
+  "CMakeFiles/my_redies.dir/base/dict_builder.cc.o"
   "my_redies.pdb"
   "my_redies"
 )

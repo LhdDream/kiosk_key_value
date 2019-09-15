@@ -90,10 +90,10 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/deconding.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/dict.cc">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/dict_builder.cc">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/dict.h">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/dict_builder.h">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/options.h">
@@ -172,6 +172,9 @@
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/coding.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/phmap.cc">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/random.cc">

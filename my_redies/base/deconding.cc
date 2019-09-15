@@ -16,7 +16,7 @@ void deconding::SetInt64(std::string *dst, uint64_t value) {
     dst->append((char * ) ptr);
 }
 //解压缩的以相同的方式进行解压缩
-void deconding::SetIntset(std::map <std::string , std::string > * dst, std::vector<std::any> value) {
+void deconding::SetIntset(parallel_flat_hash_map <std::string , std::string > * dst, std::vector<std::any> value) {
     std::string temp;
     for(auto &c :value)
     {
@@ -120,7 +120,7 @@ bool deconding::GetSds(sds *input, sds *value) {
     *value = DecodeSds(value);
     return *value != nullptr;
 }
-bool deconding::Getset(std::map<std::string, std::string> * input, std::vector<std::any> value) {
+bool deconding::Getset(parallel_flat_hash_map<std::string, std::string> * input, std::vector<std::any> value) {
     for(auto &c : *input)
     {
         if(c.first == "uint32_t")

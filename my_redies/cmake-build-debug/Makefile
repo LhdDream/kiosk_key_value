@@ -150,32 +150,32 @@ base/deconding.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/deconding.cc.s
 .PHONY : base/deconding.cc.s
 
-base/dict.o: base/dict.cc.o
+base/dict_builder.o: base/dict_builder.cc.o
 
-.PHONY : base/dict.o
+.PHONY : base/dict_builder.o
 
 # target to build an object file
-base/dict.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/dict.cc.o
-.PHONY : base/dict.cc.o
+base/dict_builder.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/dict_builder.cc.o
+.PHONY : base/dict_builder.cc.o
 
-base/dict.i: base/dict.cc.i
+base/dict_builder.i: base/dict_builder.cc.i
 
-.PHONY : base/dict.i
+.PHONY : base/dict_builder.i
 
 # target to preprocess a source file
-base/dict.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/dict.cc.i
-.PHONY : base/dict.cc.i
+base/dict_builder.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/dict_builder.cc.i
+.PHONY : base/dict_builder.cc.i
 
-base/dict.s: base/dict.cc.s
+base/dict_builder.s: base/dict_builder.cc.s
 
-.PHONY : base/dict.s
+.PHONY : base/dict_builder.s
 
 # target to generate assembly for a file
-base/dict.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/dict.cc.s
-.PHONY : base/dict.cc.s
+base/dict_builder.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/dict_builder.cc.s
+.PHONY : base/dict_builder.cc.s
 
 base/skiplist.o: base/skiplist.cc.o
 
@@ -528,6 +528,33 @@ test/coding.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/coding.cc.s
 .PHONY : test/coding.cc.s
 
+test/phmap.o: test/phmap.cc.o
+
+.PHONY : test/phmap.o
+
+# target to build an object file
+test/phmap.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/phmap.cc.o
+.PHONY : test/phmap.cc.o
+
+test/phmap.i: test/phmap.cc.i
+
+.PHONY : test/phmap.i
+
+# target to preprocess a source file
+test/phmap.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/phmap.cc.i
+.PHONY : test/phmap.cc.i
+
+test/phmap.s: test/phmap.cc.s
+
+.PHONY : test/phmap.s
+
+# target to generate assembly for a file
+test/phmap.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/phmap.cc.s
+.PHONY : test/phmap.cc.s
+
 test/random.o: test/random.cc.o
 
 .PHONY : test/random.o
@@ -675,9 +702,9 @@ help:
 	@echo "... base/deconding.o"
 	@echo "... base/deconding.i"
 	@echo "... base/deconding.s"
-	@echo "... base/dict.o"
-	@echo "... base/dict.i"
-	@echo "... base/dict.s"
+	@echo "... base/dict_builder.o"
+	@echo "... base/dict_builder.i"
+	@echo "... base/dict_builder.s"
 	@echo "... base/skiplist.o"
 	@echo "... base/skiplist.i"
 	@echo "... base/skiplist.s"
@@ -717,6 +744,9 @@ help:
 	@echo "... test/coding.o"
 	@echo "... test/coding.i"
 	@echo "... test/coding.s"
+	@echo "... test/phmap.o"
+	@echo "... test/phmap.i"
+	@echo "... test/phmap.s"
 	@echo "... test/random.o"
 	@echo "... test/random.i"
 	@echo "... test/random.s"

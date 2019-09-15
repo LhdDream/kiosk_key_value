@@ -7,11 +7,11 @@
 //打算使用snappy来进行解压缩
 #include <snappy.h> //
 #include "sds.h"
-#include "dict.h"
 #include <string>
 #include <vector>
 #include <any>
-#include <map>
+#include <../util/parallel_hashmap/phmap.h>
+using phmap::parallel_flat_hash_map;
 //compress 压缩
 //uncompress 解压缩
 //特殊编码的linklist 提高存储效率，存储字符串或者整数
@@ -27,7 +27,7 @@ namespace deconding{
     void SetInt64(std::string * dst ,uint64_t value);
     void Setsds(std::string  *dst, std::string value);
     //整数集合 intset
-    void SetIntset(std::map <std::string  , std::string > *,std::vector<std::any> value);
+    void SetIntset(parallel_flat_hash_map <std::string  , std::string > *,std::vector<std::any> value);
     //内部以sds进行存储
     //这里的string底部是以sds方式来进行实现
     //进行底层的压缩
@@ -41,7 +41,7 @@ namespace deconding{
     bool GetInt32(sds * input,uint32_t * value);
     bool GetInt64(sds * input ,uint64_t * value);
     bool GetSds(sds * input , sds * value);
-    bool Getset(std::map <std::string  , std::string > *,std::vector<std::any> value);
+    bool Getset(parallel_flat_hash_map <std::string,std::string > *,std::vector<std::any> value);
 }
 #endif //MY_REDIES_ZIPLIST_H
 

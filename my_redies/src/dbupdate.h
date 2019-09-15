@@ -10,4 +10,11 @@
 //仅仅只保存当前的时刻占用5bit
 // 对于用户传来的key作为一个标示,并且使用sds进行粗糙南湖
 //使用一个结构体或者map来标示当前key的版本
+#include "../base/deconding.h"
+#include "../base/sds.h"
+#include "../util/bloom_filter.h"
+class dbupdate{
+public:
+private:
+};
 #endif //MY_REDIES_DBUPDATE_H
