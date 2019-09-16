@@ -12,6 +12,7 @@
 #include <memory>
 #include "deconding.h"
 using phmap::parallel_flat_hash_map;
+using phmap::parallel_flat_hash_set;
 template  <typename  T>
 class dict
 {
@@ -21,7 +22,7 @@ public:
         }
         ~dict() = default;
         bool Add(sds& , T&) ; // 封装的add
-        bool Delete(sds &); //封装的delete
+        bool Get(sds &); //封装的delete
 private:
     typedef struct type{
         std::string type_;

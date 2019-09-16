@@ -16,29 +16,6 @@ void deconding::SetInt64(std::string *dst, uint64_t value) {
     dst->append((char * ) ptr);
 }
 //解压缩的以相同的方式进行解压缩
-void deconding::SetIntset(parallel_flat_hash_map <std::string , std::string > * dst, std::vector<std::any> value) {
-    std::string temp;
-    for(auto &c :value)
-    {
-        //对于不同的异构类型进行相应的压缩算法,尽可能的让其占用的内存比较少
-        if(c.type() == typeid(uint32_t))
-        {
-            SetInt32(&temp,std::any_cast<uint32_t > (c));
-            dst->insert({"uint32_t",temp});
-        }
-        else if(c.type() == typeid(uint64_t))
-        {
-            SetInt64(&temp,std::any_cast<uint64_t> (c));
-            dst->insert({"uint64_t",temp});
-        }
-        else
-        {
-            temp = static_cast<char> (std::any_cast<int> (c));
-            dst->insert({"char",temp});
-        }
-        temp.clear();
-    }
-}
 void deconding::Setsds(std::string *dst, std::string value) {
     dst->append(EncodeSds(value));
 }
@@ -119,23 +96,4 @@ bool deconding::GetInt64(sds *input, uint64_t *value) {
 bool deconding::GetSds(sds *input, sds *value) {
     *value = DecodeSds(value);
     return *value != nullptr;
-}
-bool deconding::Getset(parallel_flat_hash_map<std::string, std::string> * input, std::vector<std::any> value) {
-    for(auto &c : *input)
-    {
-        if(c.first == "uint32_t")
-        {
-           uint32_t  b = DecodeInt32(c.second.c_str());
-           value.emplace_back(b);
-        }
-        else if(c.first == "uint64_t")
-        {
-            uint64_t  b = DecodeInt64(c.second.c_str());
-            value.emplace_back(b);
-        }
-        else
-        {
-            value.emplace_back(c.second);
-        }
-    }
 }
