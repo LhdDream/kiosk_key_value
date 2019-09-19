@@ -4,6 +4,8 @@
 
 #ifndef MY_REDIES_STATE_H
 #define MY_REDIES_STATE_H
+
+
 //字典的操作状态
 const int  DICT_OK  = 0;
 const int DICT_ERR  = 1;

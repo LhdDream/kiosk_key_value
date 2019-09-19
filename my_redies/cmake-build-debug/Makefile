@@ -204,6 +204,33 @@ base/skiplist.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/skiplist.cc.s
 .PHONY : base/skiplist.cc.s
 
+base/write_buffer.o: base/write_buffer.cc.o
+
+.PHONY : base/write_buffer.o
+
+# target to build an object file
+base/write_buffer.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/write_buffer.cc.o
+.PHONY : base/write_buffer.cc.o
+
+base/write_buffer.i: base/write_buffer.cc.i
+
+.PHONY : base/write_buffer.i
+
+# target to preprocess a source file
+base/write_buffer.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/write_buffer.cc.i
+.PHONY : base/write_buffer.cc.i
+
+base/write_buffer.s: base/write_buffer.cc.s
+
+.PHONY : base/write_buffer.s
+
+# target to generate assembly for a file
+base/write_buffer.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/write_buffer.cc.s
+.PHONY : base/write_buffer.cc.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -285,87 +312,6 @@ src/Cache.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Cache.cc.s
 .PHONY : src/Cache.cc.s
 
-src/Tcpconnection.o: src/Tcpconnection.cc.o
-
-.PHONY : src/Tcpconnection.o
-
-# target to build an object file
-src/Tcpconnection.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Tcpconnection.cc.o
-.PHONY : src/Tcpconnection.cc.o
-
-src/Tcpconnection.i: src/Tcpconnection.cc.i
-
-.PHONY : src/Tcpconnection.i
-
-# target to preprocess a source file
-src/Tcpconnection.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Tcpconnection.cc.i
-.PHONY : src/Tcpconnection.cc.i
-
-src/Tcpconnection.s: src/Tcpconnection.cc.s
-
-.PHONY : src/Tcpconnection.s
-
-# target to generate assembly for a file
-src/Tcpconnection.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Tcpconnection.cc.s
-.PHONY : src/Tcpconnection.cc.s
-
-src/aeChannel.o: src/aeChannel.cc.o
-
-.PHONY : src/aeChannel.o
-
-# target to build an object file
-src/aeChannel.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/aeChannel.cc.o
-.PHONY : src/aeChannel.cc.o
-
-src/aeChannel.i: src/aeChannel.cc.i
-
-.PHONY : src/aeChannel.i
-
-# target to preprocess a source file
-src/aeChannel.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/aeChannel.cc.i
-.PHONY : src/aeChannel.cc.i
-
-src/aeChannel.s: src/aeChannel.cc.s
-
-.PHONY : src/aeChannel.s
-
-# target to generate assembly for a file
-src/aeChannel.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/aeChannel.cc.s
-.PHONY : src/aeChannel.cc.s
-
-src/aeEventloop.o: src/aeEventloop.cc.o
-
-.PHONY : src/aeEventloop.o
-
-# target to build an object file
-src/aeEventloop.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/aeEventloop.cc.o
-.PHONY : src/aeEventloop.cc.o
-
-src/aeEventloop.i: src/aeEventloop.cc.i
-
-.PHONY : src/aeEventloop.i
-
-# target to preprocess a source file
-src/aeEventloop.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/aeEventloop.cc.i
-.PHONY : src/aeEventloop.cc.i
-
-src/aeEventloop.s: src/aeEventloop.cc.s
-
-.PHONY : src/aeEventloop.s
-
-# target to generate assembly for a file
-src/aeEventloop.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/aeEventloop.cc.s
-.PHONY : src/aeEventloop.cc.s
-
 src/command.o: src/command.cc.o
 
 .PHONY : src/command.o
@@ -420,32 +366,32 @@ src/dbupdate.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/dbupdate.cc.s
 .PHONY : src/dbupdate.cc.s
 
-src/timeevents_.o: src/timeevents_.cc.o
+src/memtable.o: src/memtable.cc.o
 
-.PHONY : src/timeevents_.o
+.PHONY : src/memtable.o
 
 # target to build an object file
-src/timeevents_.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/timeevents_.cc.o
-.PHONY : src/timeevents_.cc.o
+src/memtable.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/memtable.cc.o
+.PHONY : src/memtable.cc.o
 
-src/timeevents_.i: src/timeevents_.cc.i
+src/memtable.i: src/memtable.cc.i
 
-.PHONY : src/timeevents_.i
+.PHONY : src/memtable.i
 
 # target to preprocess a source file
-src/timeevents_.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/timeevents_.cc.i
-.PHONY : src/timeevents_.cc.i
+src/memtable.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/memtable.cc.i
+.PHONY : src/memtable.cc.i
 
-src/timeevents_.s: src/timeevents_.cc.s
+src/memtable.s: src/memtable.cc.s
 
-.PHONY : src/timeevents_.s
+.PHONY : src/memtable.s
 
 # target to generate assembly for a file
-src/timeevents_.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/timeevents_.cc.s
-.PHONY : src/timeevents_.cc.s
+src/memtable.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/memtable.cc.s
+.PHONY : src/memtable.cc.s
 
 test/anytest.o: test/anytest.cc.o
 
@@ -708,6 +654,9 @@ help:
 	@echo "... base/skiplist.o"
 	@echo "... base/skiplist.i"
 	@echo "... base/skiplist.s"
+	@echo "... base/write_buffer.o"
+	@echo "... base/write_buffer.i"
+	@echo "... base/write_buffer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -717,24 +666,15 @@ help:
 	@echo "... src/Cache.o"
 	@echo "... src/Cache.i"
 	@echo "... src/Cache.s"
-	@echo "... src/Tcpconnection.o"
-	@echo "... src/Tcpconnection.i"
-	@echo "... src/Tcpconnection.s"
-	@echo "... src/aeChannel.o"
-	@echo "... src/aeChannel.i"
-	@echo "... src/aeChannel.s"
-	@echo "... src/aeEventloop.o"
-	@echo "... src/aeEventloop.i"
-	@echo "... src/aeEventloop.s"
 	@echo "... src/command.o"
 	@echo "... src/command.i"
 	@echo "... src/command.s"
 	@echo "... src/dbupdate.o"
 	@echo "... src/dbupdate.i"
 	@echo "... src/dbupdate.s"
-	@echo "... src/timeevents_.o"
-	@echo "... src/timeevents_.i"
-	@echo "... src/timeevents_.s"
+	@echo "... src/memtable.o"
+	@echo "... src/memtable.i"
+	@echo "... src/memtable.s"
 	@echo "... test/anytest.o"
 	@echo "... test/anytest.i"
 	@echo "... test/anytest.s"

@@ -16,6 +16,7 @@ public:
     {
 
     };
+    ~options() = default;
 private:
     size_t write_buf; //  设置写缓冲区的大小
     size_t  read_buf; //  设置读缓冲区的大小
@@ -27,9 +28,7 @@ private:
     //同时存储的命令也使用snappy进行压缩
     //通过什么顺序来进行排序
     // Compear * compearotr
-    // size_t db_size ; //  默认创建几个数据库，采用单线程的方式但是可以采用多个数据库来进行
-    //　数据的迁移操作
-    // 悲观锁和乐观锁
+    size_t  key_value_number{};//每多少条Key存储缓冲区之中
 };
 //read option
 struct readoptions{

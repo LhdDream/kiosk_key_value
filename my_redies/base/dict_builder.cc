@@ -5,27 +5,37 @@
 using namespace deconding;
 template  <typename T>
 bool dict<T>::Add(sds & key, T & value) {
-    type _type;
+    type _type = dict<T>::type();
+    bloom_->add(key); // 对于bloom过滤器
+    std::string buf;
     if(typeid(value)   == typeid(uint32_t)){
-        SetInt32(_type.value_,value);
-        _type.type_ = "uint32_t";
+        SetInt32(&buf,value);
+        _type.value_ = buf;
+        _type.type_ = "0";
         ht_->insert({key,_type});
     }
     else if(typeid(value) == typeid(uint64_t)){
-        SetInt64(_type.value_,value);
-        _type.type_ = "uint64_t";
+        SetInt64(&buf,value);
+        _type.value_ = buf;
+        _type.type_ = "1";
         ht_->insert({key,_type});
     }else if(typeid(value) == typeid(sds)){
-        Setsds(_type.value_,value);
-        _type.type_ = "sds";
+        Setsds(&buf,value);
+        _type.value_ = buf;
+        _type.type_ = "2";
         ht_->insert({key,_type});
-    }else if(typeid(value) == typeid(parallel_flat_hash_set<T>)){
-
+    }else if(typeid(value) == typeid(skiplist<sds>))
+    {
+        _type.type_ = "3";
+        ht_->insert({key,value});
     }
-
+    type__->push_back(_type);
 }
-
-template  <typename  T>
-bool dict<T>::Get(sds &) {
-
+template <typename  T>
+bool dict<T>::Get(sds &key, sds *value) {
+        if(bloom_->Contaion(key))
+        {
+           
+        }
+        return false;
 }

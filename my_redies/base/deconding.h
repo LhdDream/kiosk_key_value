@@ -10,9 +10,7 @@
 #include <string>
 #include <vector>
 #include <any>
-#include <../util/parallel_hashmap/phmap.h>
-using phmap::parallel_flat_hash_map;
-using phmap::parallel_flat_hash_set;
+#include "skiplist.h"
 //compress 压缩
 //uncompress 解压缩
 //特殊编码的linklist 提高存储效率，存储字符串或者整数
@@ -21,12 +19,14 @@ using phmap::parallel_flat_hash_set;
 //the different objects of this file are encoded
 //different objects are encoded different object
 //内存屏障，确保特定操作执行的顺序，影响一些数据的可见性
+//集合使用skiplist来进行实现
 namespace deconding{
     // 在这里里面实现get , set 方法相应对象的编码方式
     // varint 变长整形
     void SetInt32(std::string *dst ,uint32_t value);
     void SetInt64(std::string * dst ,uint64_t value);
     void Setsds(std::string  *dst, std::string value);
+    //set 直接使用skiplist
     //整数集合 intset
     //内部以sds进行存储
     //这里的string底部是以sds方式来进行实现
@@ -34,7 +34,7 @@ namespace deconding{
     //转化为二进制来进行存储节省宽度　编码为varint
     unsigned char * EncodeInt32(unsigned char *intput  ,uint32_t value);
     unsigned char * EncodeInt64(unsigned char *intput , uint64_t value);
-    const char * EncodeSds(std::string value);
+    const char * EncodeSds(const std::string& value);
     uint32_t  DecodeInt32(const  char * ptr);
     uint64_t DecodeInt64(const char * ptr);
     std::string DecodeSds(sds  * ptr);

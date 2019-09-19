@@ -36,6 +36,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -91,7 +96,9 @@
       <workItem from="1568528154475" duration="439000" />
       <workItem from="1568528792402" duration="312000" />
       <workItem from="1568529338047" duration="13420000" />
-      <workItem from="1568634162389" duration="4889000" />
+      <workItem from="1568634162389" duration="5841000" />
+      <workItem from="1568685267315" duration="14109000" />
+      <workItem from="1568873637507" duration="7330000" />
     </task>
     <servers />
   </component>

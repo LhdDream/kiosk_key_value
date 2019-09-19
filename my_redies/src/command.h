@@ -4,5 +4,6 @@
 
 #ifndef MY_REDIES_COMMAND_H
 #define MY_REDIES_COMMAND_H
+#include <iostream>
 
 #endif //MY_REDIES_COMMAND_H
