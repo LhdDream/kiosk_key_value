@@ -70,7 +70,22 @@ bool skiplist<Key>::Delete(const Key &key) {
      return true;
 }
 
-
+template  <typename Key>
+void skiplist<Key>::print() const {
+     //输出跳跃表中的所有内容
+     size_t  n = 0;
+     if(head_ == nullptr)
+     {
+         return ;
+     }
+     node * temp = head_;
+     while(temp!= nullptr){
+         std::cout << temp->key <<std::endl;
+         //把key输出出来
+         temp = temp->next(n);
+         n++;
+     }
+}
 
 template <typename  Key>
 typename skiplist<Key>::node * skiplist<Key>::Findlessthan(const Key &key, node ** prev) const

@@ -114,12 +114,6 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/state.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/write_buffer.cc">
-			<Option target="my_redies"/>
-		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/write_buffer.h">
-			<Option target="my_redies"/>
-		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/main.cpp">
 			<Option target="my_redies"/>
 		</Unit>
@@ -135,10 +129,10 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/Cache.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/command.cc">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/db.cc">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/command.h">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/db.h">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/dbupdate.cc">
@@ -147,10 +141,10 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/dbupdate.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/memtable.cc">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/write_buffer.cc">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/memtable.h">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/write_buffer.h">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/anytest.cc">

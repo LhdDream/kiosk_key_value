@@ -28,7 +28,7 @@ private:
     //同时存储的命令也使用snappy进行压缩
     //通过什么顺序来进行排序
     // Compear * compearotr
-    size_t  key_value_number;//每多少条Key存储缓冲区之中
+    size_t  key_value_number{};//每多少条Key存储缓冲区之中
 };
 //read option
 struct readoptions{

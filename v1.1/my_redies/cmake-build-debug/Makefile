@@ -204,33 +204,6 @@ base/skiplist.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/skiplist.cc.s
 .PHONY : base/skiplist.cc.s
 
-base/write_buffer.o: base/write_buffer.cc.o
-
-.PHONY : base/write_buffer.o
-
-# target to build an object file
-base/write_buffer.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/write_buffer.cc.o
-.PHONY : base/write_buffer.cc.o
-
-base/write_buffer.i: base/write_buffer.cc.i
-
-.PHONY : base/write_buffer.i
-
-# target to preprocess a source file
-base/write_buffer.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/write_buffer.cc.i
-.PHONY : base/write_buffer.cc.i
-
-base/write_buffer.s: base/write_buffer.cc.s
-
-.PHONY : base/write_buffer.s
-
-# target to generate assembly for a file
-base/write_buffer.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/write_buffer.cc.s
-.PHONY : base/write_buffer.cc.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -312,32 +285,32 @@ src/Cache.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Cache.cc.s
 .PHONY : src/Cache.cc.s
 
-src/command.o: src/command.cc.o
+src/db.o: src/db.cc.o
 
-.PHONY : src/command.o
+.PHONY : src/db.o
 
 # target to build an object file
-src/command.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/command.cc.o
-.PHONY : src/command.cc.o
+src/db.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/db.cc.o
+.PHONY : src/db.cc.o
 
-src/command.i: src/command.cc.i
+src/db.i: src/db.cc.i
 
-.PHONY : src/command.i
+.PHONY : src/db.i
 
 # target to preprocess a source file
-src/command.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/command.cc.i
-.PHONY : src/command.cc.i
+src/db.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/db.cc.i
+.PHONY : src/db.cc.i
 
-src/command.s: src/command.cc.s
+src/db.s: src/db.cc.s
 
-.PHONY : src/command.s
+.PHONY : src/db.s
 
 # target to generate assembly for a file
-src/command.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/command.cc.s
-.PHONY : src/command.cc.s
+src/db.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/db.cc.s
+.PHONY : src/db.cc.s
 
 src/dbupdate.o: src/dbupdate.cc.o
 
@@ -366,32 +339,32 @@ src/dbupdate.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/dbupdate.cc.s
 .PHONY : src/dbupdate.cc.s
 
-src/memtable.o: src/memtable.cc.o
+src/write_buffer.o: src/write_buffer.cc.o
 
-.PHONY : src/memtable.o
+.PHONY : src/write_buffer.o
 
 # target to build an object file
-src/memtable.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/memtable.cc.o
-.PHONY : src/memtable.cc.o
+src/write_buffer.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/write_buffer.cc.o
+.PHONY : src/write_buffer.cc.o
 
-src/memtable.i: src/memtable.cc.i
+src/write_buffer.i: src/write_buffer.cc.i
 
-.PHONY : src/memtable.i
+.PHONY : src/write_buffer.i
 
 # target to preprocess a source file
-src/memtable.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/memtable.cc.i
-.PHONY : src/memtable.cc.i
+src/write_buffer.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/write_buffer.cc.i
+.PHONY : src/write_buffer.cc.i
 
-src/memtable.s: src/memtable.cc.s
+src/write_buffer.s: src/write_buffer.cc.s
 
-.PHONY : src/memtable.s
+.PHONY : src/write_buffer.s
 
 # target to generate assembly for a file
-src/memtable.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/memtable.cc.s
-.PHONY : src/memtable.cc.s
+src/write_buffer.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/write_buffer.cc.s
+.PHONY : src/write_buffer.cc.s
 
 test/anytest.o: test/anytest.cc.o
 
@@ -654,9 +627,6 @@ help:
 	@echo "... base/skiplist.o"
 	@echo "... base/skiplist.i"
 	@echo "... base/skiplist.s"
-	@echo "... base/write_buffer.o"
-	@echo "... base/write_buffer.i"
-	@echo "... base/write_buffer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -666,15 +636,15 @@ help:
 	@echo "... src/Cache.o"
 	@echo "... src/Cache.i"
 	@echo "... src/Cache.s"
-	@echo "... src/command.o"
-	@echo "... src/command.i"
-	@echo "... src/command.s"
+	@echo "... src/db.o"
+	@echo "... src/db.i"
+	@echo "... src/db.s"
 	@echo "... src/dbupdate.o"
 	@echo "... src/dbupdate.i"
 	@echo "... src/dbupdate.s"
-	@echo "... src/memtable.o"
-	@echo "... src/memtable.i"
-	@echo "... src/memtable.s"
+	@echo "... src/write_buffer.o"
+	@echo "... src/write_buffer.i"
+	@echo "... src/write_buffer.s"
 	@echo "... test/anytest.o"
 	@echo "... test/anytest.i"
 	@echo "... test/anytest.s"

@@ -11,7 +11,8 @@
 #include <any>
 //this file create bloom
 //bloom 过滤器表示如果不在这个集合之中，则说明不在，在这个集合之后，实时不一定在这个集合之中
-template <typename T>   class bloom
+template <typename T>
+class bloom
 {
 public:
     bloom(){

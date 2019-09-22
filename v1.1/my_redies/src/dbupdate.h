@@ -11,9 +11,9 @@
 #include "../base/deconding.h"
 #include "../base/sds.h"
 #include "../util/bloom_filter.h"
-enum valueType { Deletion = 0 , Value = 1};
+
 //删除键和正常的键
-static const valueType  value = Value;
+
 
 class dbupdate{
 public:

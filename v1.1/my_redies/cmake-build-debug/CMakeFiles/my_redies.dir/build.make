@@ -213,22 +213,9 @@ CMakeFiles/my_redies.dir/src/Cache.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/src/Cache.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/src/Cache.cc -o CMakeFiles/my_redies.dir/src/Cache.cc.s
 
-CMakeFiles/my_redies.dir/src/command.cc.o: CMakeFiles/my_redies.dir/flags.make
-CMakeFiles/my_redies.dir/src/command.cc.o: ../src/command.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/my_redies.dir/src/command.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/src/command.cc.o -c /home/kiosk/CLionProjects/my_redies/src/command.cc
-
-CMakeFiles/my_redies.dir/src/command.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_redies.dir/src/command.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiosk/CLionProjects/my_redies/src/command.cc > CMakeFiles/my_redies.dir/src/command.cc.i
-
-CMakeFiles/my_redies.dir/src/command.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/src/command.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/src/command.cc -o CMakeFiles/my_redies.dir/src/command.cc.s
-
 CMakeFiles/my_redies.dir/test/bloom_test.cc.o: CMakeFiles/my_redies.dir/flags.make
 CMakeFiles/my_redies.dir/test/bloom_test.cc.o: ../test/bloom_test.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/my_redies.dir/test/bloom_test.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/my_redies.dir/test/bloom_test.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/test/bloom_test.cc.o -c /home/kiosk/CLionProjects/my_redies/test/bloom_test.cc
 
 CMakeFiles/my_redies.dir/test/bloom_test.cc.i: cmake_force
@@ -241,7 +228,7 @@ CMakeFiles/my_redies.dir/test/bloom_test.cc.s: cmake_force
 
 CMakeFiles/my_redies.dir/src/dbupdate.cc.o: CMakeFiles/my_redies.dir/flags.make
 CMakeFiles/my_redies.dir/src/dbupdate.cc.o: ../src/dbupdate.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/my_redies.dir/src/dbupdate.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/my_redies.dir/src/dbupdate.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/src/dbupdate.cc.o -c /home/kiosk/CLionProjects/my_redies/src/dbupdate.cc
 
 CMakeFiles/my_redies.dir/src/dbupdate.cc.i: cmake_force
@@ -254,7 +241,7 @@ CMakeFiles/my_redies.dir/src/dbupdate.cc.s: cmake_force
 
 CMakeFiles/my_redies.dir/test/phmap.cc.o: CMakeFiles/my_redies.dir/flags.make
 CMakeFiles/my_redies.dir/test/phmap.cc.o: ../test/phmap.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/my_redies.dir/test/phmap.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/my_redies.dir/test/phmap.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/test/phmap.cc.o -c /home/kiosk/CLionProjects/my_redies/test/phmap.cc
 
 CMakeFiles/my_redies.dir/test/phmap.cc.i: cmake_force
@@ -267,7 +254,7 @@ CMakeFiles/my_redies.dir/test/phmap.cc.s: cmake_force
 
 CMakeFiles/my_redies.dir/base/dict_builder.cc.o: CMakeFiles/my_redies.dir/flags.make
 CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../base/dict_builder.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/my_redies.dir/base/dict_builder.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/my_redies.dir/base/dict_builder.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/base/dict_builder.cc.o -c /home/kiosk/CLionProjects/my_redies/base/dict_builder.cc
 
 CMakeFiles/my_redies.dir/base/dict_builder.cc.i: cmake_force
@@ -278,31 +265,31 @@ CMakeFiles/my_redies.dir/base/dict_builder.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/base/dict_builder.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/base/dict_builder.cc -o CMakeFiles/my_redies.dir/base/dict_builder.cc.s
 
-CMakeFiles/my_redies.dir/base/write_buffer.cc.o: CMakeFiles/my_redies.dir/flags.make
-CMakeFiles/my_redies.dir/base/write_buffer.cc.o: ../base/write_buffer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/my_redies.dir/base/write_buffer.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/base/write_buffer.cc.o -c /home/kiosk/CLionProjects/my_redies/base/write_buffer.cc
+CMakeFiles/my_redies.dir/src/write_buffer.cc.o: CMakeFiles/my_redies.dir/flags.make
+CMakeFiles/my_redies.dir/src/write_buffer.cc.o: ../src/write_buffer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/my_redies.dir/src/write_buffer.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/src/write_buffer.cc.o -c /home/kiosk/CLionProjects/my_redies/src/write_buffer.cc
 
-CMakeFiles/my_redies.dir/base/write_buffer.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_redies.dir/base/write_buffer.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiosk/CLionProjects/my_redies/base/write_buffer.cc > CMakeFiles/my_redies.dir/base/write_buffer.cc.i
+CMakeFiles/my_redies.dir/src/write_buffer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_redies.dir/src/write_buffer.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiosk/CLionProjects/my_redies/src/write_buffer.cc > CMakeFiles/my_redies.dir/src/write_buffer.cc.i
 
-CMakeFiles/my_redies.dir/base/write_buffer.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/base/write_buffer.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/base/write_buffer.cc -o CMakeFiles/my_redies.dir/base/write_buffer.cc.s
+CMakeFiles/my_redies.dir/src/write_buffer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/src/write_buffer.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/src/write_buffer.cc -o CMakeFiles/my_redies.dir/src/write_buffer.cc.s
 
-CMakeFiles/my_redies.dir/src/memtable.cc.o: CMakeFiles/my_redies.dir/flags.make
-CMakeFiles/my_redies.dir/src/memtable.cc.o: ../src/memtable.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/my_redies.dir/src/memtable.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/src/memtable.cc.o -c /home/kiosk/CLionProjects/my_redies/src/memtable.cc
+CMakeFiles/my_redies.dir/src/db.cc.o: CMakeFiles/my_redies.dir/flags.make
+CMakeFiles/my_redies.dir/src/db.cc.o: ../src/db.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/my_redies.dir/src/db.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_redies.dir/src/db.cc.o -c /home/kiosk/CLionProjects/my_redies/src/db.cc
 
-CMakeFiles/my_redies.dir/src/memtable.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_redies.dir/src/memtable.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiosk/CLionProjects/my_redies/src/memtable.cc > CMakeFiles/my_redies.dir/src/memtable.cc.i
+CMakeFiles/my_redies.dir/src/db.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_redies.dir/src/db.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kiosk/CLionProjects/my_redies/src/db.cc > CMakeFiles/my_redies.dir/src/db.cc.i
 
-CMakeFiles/my_redies.dir/src/memtable.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/src/memtable.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/src/memtable.cc -o CMakeFiles/my_redies.dir/src/memtable.cc.s
+CMakeFiles/my_redies.dir/src/db.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_redies.dir/src/db.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kiosk/CLionProjects/my_redies/src/db.cc -o CMakeFiles/my_redies.dir/src/db.cc.s
 
 # Object files for target my_redies
 my_redies_OBJECTS = \
@@ -318,13 +305,12 @@ my_redies_OBJECTS = \
 "CMakeFiles/my_redies.dir/test/skiplisttest.cc.o" \
 "CMakeFiles/my_redies.dir/test/coding.cc.o" \
 "CMakeFiles/my_redies.dir/src/Cache.cc.o" \
-"CMakeFiles/my_redies.dir/src/command.cc.o" \
 "CMakeFiles/my_redies.dir/test/bloom_test.cc.o" \
 "CMakeFiles/my_redies.dir/src/dbupdate.cc.o" \
 "CMakeFiles/my_redies.dir/test/phmap.cc.o" \
 "CMakeFiles/my_redies.dir/base/dict_builder.cc.o" \
-"CMakeFiles/my_redies.dir/base/write_buffer.cc.o" \
-"CMakeFiles/my_redies.dir/src/memtable.cc.o"
+"CMakeFiles/my_redies.dir/src/write_buffer.cc.o" \
+"CMakeFiles/my_redies.dir/src/db.cc.o"
 
 # External object files for target my_redies
 my_redies_EXTERNAL_OBJECTS =
@@ -341,16 +327,15 @@ my_redies: CMakeFiles/my_redies.dir/test/random.cc.o
 my_redies: CMakeFiles/my_redies.dir/test/skiplisttest.cc.o
 my_redies: CMakeFiles/my_redies.dir/test/coding.cc.o
 my_redies: CMakeFiles/my_redies.dir/src/Cache.cc.o
-my_redies: CMakeFiles/my_redies.dir/src/command.cc.o
 my_redies: CMakeFiles/my_redies.dir/test/bloom_test.cc.o
 my_redies: CMakeFiles/my_redies.dir/src/dbupdate.cc.o
 my_redies: CMakeFiles/my_redies.dir/test/phmap.cc.o
 my_redies: CMakeFiles/my_redies.dir/base/dict_builder.cc.o
-my_redies: CMakeFiles/my_redies.dir/base/write_buffer.cc.o
-my_redies: CMakeFiles/my_redies.dir/src/memtable.cc.o
+my_redies: CMakeFiles/my_redies.dir/src/write_buffer.cc.o
+my_redies: CMakeFiles/my_redies.dir/src/db.cc.o
 my_redies: CMakeFiles/my_redies.dir/build.make
 my_redies: CMakeFiles/my_redies.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable my_redies"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable my_redies"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/my_redies.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

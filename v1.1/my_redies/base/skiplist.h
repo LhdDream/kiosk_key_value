@@ -48,7 +48,12 @@ private:
         next_.clear();
         m = 0;
     }
-    ~node()= default;
+    ~node(){
+        for(auto &c : next_)
+        {
+            delete c;
+        }
+    };
 private:
     std::vector<node *> next_;
     int m;
@@ -69,7 +74,7 @@ public:
     bool Delete(const Key & key);
     node * find(const Key & key) const;
     //iteration over a skip list
-
+    void print() const;
 private:
     enum {MaxHeight = 8};
     Prena *prena_;
@@ -87,6 +92,5 @@ private:
     node * Findlessthan(const Key & key,node ** prev) const ;// 找到比这个key小的上一个元素
     //return the last element
     node *newnode(const Key& key,int height);
-
 };
 #endif //MY_REDIES_SKIPLIST_H
