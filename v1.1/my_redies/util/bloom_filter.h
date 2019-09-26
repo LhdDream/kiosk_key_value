@@ -9,41 +9,41 @@
 #include <functional>
 #include <vector>
 #include <any>
+#include "../base/dict_builder.h"
 //this file create bloom
 //bloom 过滤器表示如果不在这个集合之中，则说明不在，在这个集合之后，实时不一定在这个集合之中
-template <typename T>
 class bloom
 {
 public:
     bloom(){
         array.reset();
     }
-    void add(const T &Temp);
-    bool Contaion(const T & temp);
+    void add(const sds &Temp);
+    bool Contaion(const sds & temp);
 private:
     std::bitset<1024000> array;
 };
 
-template<typename T>  void  bloom<T>::add(const T &Temp) {
+ void  bloom::add(const sds &Temp) {
         if(array.count() >= 1020000)
         {
             array.reset();
         }
-        array.set(SDBMHash(std::to_string(Temp).c_str()));
-        array.set(RSHash(std::to_string(Temp).c_str()));
-        array.set(JSHash(std::to_string(Temp).c_str()));
-        array.set(APHash(std::to_string(Temp).c_str()));
-        array.set(PJWHash(std::to_string(Temp).c_str()));
-        array.set(ELFHash(std::to_string(Temp).c_str()));
+        array.set(SDBMHash(Temp.data()));
+        array.set(RSHash(Temp.data()));
+        array.set(JSHash(Temp.data()));
+        array.set(APHash(Temp.data()));
+        array.set(PJWHash(Temp.data()));
+        array.set(ELFHash(Temp.data()));
 }
 
-template <typename T > bool bloom<T>::Contaion(const T &Temp) {
-        return array.test(SDBMHash(std::to_string(Temp).c_str()))
-        && array.test(RSHash(std::to_string(Temp).c_str()))
-        && array.test(JSHash(std::to_string(Temp).c_str()))
-        && array.test(APHash(std::to_string(Temp).c_str()))
-        && array.test(PJWHash(std::to_string(Temp).c_str()))
-        && array.test(ELFHash(std::to_string(Temp).c_str()));
+ bool bloom::Contaion(const sds &Temp) {
+        return array.test(SDBMHash(Temp.data()))
+        && array.test(RSHash(Temp.data()))
+        && array.test(JSHash(Temp.data()))
+        && array.test(APHash(Temp.data()))
+        && array.test(PJWHash(Temp.data()))
+        && array.test(ELFHash(Temp.data()));
         ;
 }
 #endif //MY_REDIES_BLOOM_FILTER_H

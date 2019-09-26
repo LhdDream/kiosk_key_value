@@ -7,12 +7,8 @@
 using namespace std;
 int main()
 {
-    string input = "helloworld";
+    string input = "ppp";
     string output ;
-    for(size_t i = 0 ; i < 10 ; i++)
-    {
-        input += input;
-    }
     snappy::Compress(input.data(),input.size(),&output);
     cout << "size   " << input.size() << "out put " << output.size() << endl;
     string output_uncon;

@@ -1,8 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/my_redies.dir/main.cpp.o"
-  "CMakeFiles/my_redies.dir/net/Socket.cc.o"
   "CMakeFiles/my_redies.dir/test/snappy.cc.o"
-  "CMakeFiles/my_redies.dir/base/deconding.cc.o"
   "CMakeFiles/my_redies.dir/base/skiplist.cc.o"
   "CMakeFiles/my_redies.dir/util/Prena.cc.o"
   "CMakeFiles/my_redies.dir/test/anytest.cc.o"
@@ -15,8 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_redies.dir/src/dbupdate.cc.o"
   "CMakeFiles/my_redies.dir/test/phmap.cc.o"
   "CMakeFiles/my_redies.dir/base/dict_builder.cc.o"
-  "CMakeFiles/my_redies.dir/src/write_buffer.cc.o"
-  "CMakeFiles/my_redies.dir/src/db.cc.o"
+  "CMakeFiles/my_redies.dir/src/db_wr.cc.o"
+  "CMakeFiles/my_redies.dir/test/do.cc.o"
   "my_redies.pdb"
   "my_redies"
 )
