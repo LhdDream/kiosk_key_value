@@ -84,12 +84,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/deconding.cc">
-			<Option target="my_redies"/>
-		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/deconding.h">
-			<Option target="my_redies"/>
-		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/dict_builder.cc">
 			<Option target="my_redies"/>
 		</Unit>
@@ -114,43 +108,31 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/state.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/write_buffer.cc">
-			<Option target="my_redies"/>
-		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/write_buffer.h">
-			<Option target="my_redies"/>
-		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/main.cpp">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/net/Socket.cc">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/db.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/net/Socket.h">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/db_wr.cc">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/Cache.cc">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/db_wr.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/Cache.h">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/snapshot.cc">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/command.cc">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/snapshot.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/command.h">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/sstable.cc">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/dbupdate.cc">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/sstable.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/dbupdate.h">
-			<Option target="my_redies"/>
-		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/memtable.cc">
-			<Option target="my_redies"/>
-		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/memtable.h">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/write_buffer.h">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/anytest.cc">
@@ -159,7 +141,13 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/bloom_test.cc">
 			<Option target="my_redies"/>
 		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/cache.cc">
+			<Option target="my_redies"/>
+		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/coding.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/do.cc">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/phmap.cc">

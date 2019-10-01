@@ -123,33 +123,6 @@ my_redies/fast:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/build
 .PHONY : my_redies/fast
 
-base/deconding.o: base/deconding.cc.o
-
-.PHONY : base/deconding.o
-
-# target to build an object file
-base/deconding.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/deconding.cc.o
-.PHONY : base/deconding.cc.o
-
-base/deconding.i: base/deconding.cc.i
-
-.PHONY : base/deconding.i
-
-# target to preprocess a source file
-base/deconding.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/deconding.cc.i
-.PHONY : base/deconding.cc.i
-
-base/deconding.s: base/deconding.cc.s
-
-.PHONY : base/deconding.s
-
-# target to generate assembly for a file
-base/deconding.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/deconding.cc.s
-.PHONY : base/deconding.cc.s
-
 base/dict_builder.o: base/dict_builder.cc.o
 
 .PHONY : base/dict_builder.o
@@ -204,33 +177,6 @@ base/skiplist.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/skiplist.cc.s
 .PHONY : base/skiplist.cc.s
 
-base/write_buffer.o: base/write_buffer.cc.o
-
-.PHONY : base/write_buffer.o
-
-# target to build an object file
-base/write_buffer.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/write_buffer.cc.o
-.PHONY : base/write_buffer.cc.o
-
-base/write_buffer.i: base/write_buffer.cc.i
-
-.PHONY : base/write_buffer.i
-
-# target to preprocess a source file
-base/write_buffer.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/write_buffer.cc.i
-.PHONY : base/write_buffer.cc.i
-
-base/write_buffer.s: base/write_buffer.cc.s
-
-.PHONY : base/write_buffer.s
-
-# target to generate assembly for a file
-base/write_buffer.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/write_buffer.cc.s
-.PHONY : base/write_buffer.cc.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -258,140 +204,86 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-net/Socket.o: net/Socket.cc.o
+src/db_wr.o: src/db_wr.cc.o
 
-.PHONY : net/Socket.o
-
-# target to build an object file
-net/Socket.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/net/Socket.cc.o
-.PHONY : net/Socket.cc.o
-
-net/Socket.i: net/Socket.cc.i
-
-.PHONY : net/Socket.i
-
-# target to preprocess a source file
-net/Socket.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/net/Socket.cc.i
-.PHONY : net/Socket.cc.i
-
-net/Socket.s: net/Socket.cc.s
-
-.PHONY : net/Socket.s
-
-# target to generate assembly for a file
-net/Socket.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/net/Socket.cc.s
-.PHONY : net/Socket.cc.s
-
-src/Cache.o: src/Cache.cc.o
-
-.PHONY : src/Cache.o
+.PHONY : src/db_wr.o
 
 # target to build an object file
-src/Cache.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Cache.cc.o
-.PHONY : src/Cache.cc.o
+src/db_wr.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/db_wr.cc.o
+.PHONY : src/db_wr.cc.o
 
-src/Cache.i: src/Cache.cc.i
+src/db_wr.i: src/db_wr.cc.i
 
-.PHONY : src/Cache.i
+.PHONY : src/db_wr.i
 
 # target to preprocess a source file
-src/Cache.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Cache.cc.i
-.PHONY : src/Cache.cc.i
+src/db_wr.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/db_wr.cc.i
+.PHONY : src/db_wr.cc.i
 
-src/Cache.s: src/Cache.cc.s
+src/db_wr.s: src/db_wr.cc.s
 
-.PHONY : src/Cache.s
+.PHONY : src/db_wr.s
 
 # target to generate assembly for a file
-src/Cache.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Cache.cc.s
-.PHONY : src/Cache.cc.s
+src/db_wr.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/db_wr.cc.s
+.PHONY : src/db_wr.cc.s
 
-src/command.o: src/command.cc.o
+src/snapshot.o: src/snapshot.cc.o
 
-.PHONY : src/command.o
+.PHONY : src/snapshot.o
 
 # target to build an object file
-src/command.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/command.cc.o
-.PHONY : src/command.cc.o
+src/snapshot.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/snapshot.cc.o
+.PHONY : src/snapshot.cc.o
 
-src/command.i: src/command.cc.i
+src/snapshot.i: src/snapshot.cc.i
 
-.PHONY : src/command.i
+.PHONY : src/snapshot.i
 
 # target to preprocess a source file
-src/command.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/command.cc.i
-.PHONY : src/command.cc.i
+src/snapshot.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/snapshot.cc.i
+.PHONY : src/snapshot.cc.i
 
-src/command.s: src/command.cc.s
+src/snapshot.s: src/snapshot.cc.s
 
-.PHONY : src/command.s
+.PHONY : src/snapshot.s
 
 # target to generate assembly for a file
-src/command.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/command.cc.s
-.PHONY : src/command.cc.s
+src/snapshot.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/snapshot.cc.s
+.PHONY : src/snapshot.cc.s
 
-src/dbupdate.o: src/dbupdate.cc.o
+src/sstable.o: src/sstable.cc.o
 
-.PHONY : src/dbupdate.o
+.PHONY : src/sstable.o
 
 # target to build an object file
-src/dbupdate.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/dbupdate.cc.o
-.PHONY : src/dbupdate.cc.o
+src/sstable.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/sstable.cc.o
+.PHONY : src/sstable.cc.o
 
-src/dbupdate.i: src/dbupdate.cc.i
+src/sstable.i: src/sstable.cc.i
 
-.PHONY : src/dbupdate.i
-
-# target to preprocess a source file
-src/dbupdate.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/dbupdate.cc.i
-.PHONY : src/dbupdate.cc.i
-
-src/dbupdate.s: src/dbupdate.cc.s
-
-.PHONY : src/dbupdate.s
-
-# target to generate assembly for a file
-src/dbupdate.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/dbupdate.cc.s
-.PHONY : src/dbupdate.cc.s
-
-src/memtable.o: src/memtable.cc.o
-
-.PHONY : src/memtable.o
-
-# target to build an object file
-src/memtable.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/memtable.cc.o
-.PHONY : src/memtable.cc.o
-
-src/memtable.i: src/memtable.cc.i
-
-.PHONY : src/memtable.i
+.PHONY : src/sstable.i
 
 # target to preprocess a source file
-src/memtable.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/memtable.cc.i
-.PHONY : src/memtable.cc.i
+src/sstable.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/sstable.cc.i
+.PHONY : src/sstable.cc.i
 
-src/memtable.s: src/memtable.cc.s
+src/sstable.s: src/sstable.cc.s
 
-.PHONY : src/memtable.s
+.PHONY : src/sstable.s
 
 # target to generate assembly for a file
-src/memtable.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/memtable.cc.s
-.PHONY : src/memtable.cc.s
+src/sstable.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/sstable.cc.s
+.PHONY : src/sstable.cc.s
 
 test/anytest.o: test/anytest.cc.o
 
@@ -447,6 +339,33 @@ test/bloom_test.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/bloom_test.cc.s
 .PHONY : test/bloom_test.cc.s
 
+test/cache.o: test/cache.cc.o
+
+.PHONY : test/cache.o
+
+# target to build an object file
+test/cache.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/cache.cc.o
+.PHONY : test/cache.cc.o
+
+test/cache.i: test/cache.cc.i
+
+.PHONY : test/cache.i
+
+# target to preprocess a source file
+test/cache.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/cache.cc.i
+.PHONY : test/cache.cc.i
+
+test/cache.s: test/cache.cc.s
+
+.PHONY : test/cache.s
+
+# target to generate assembly for a file
+test/cache.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/cache.cc.s
+.PHONY : test/cache.cc.s
+
 test/coding.o: test/coding.cc.o
 
 .PHONY : test/coding.o
@@ -473,6 +392,33 @@ test/coding.s: test/coding.cc.s
 test/coding.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/coding.cc.s
 .PHONY : test/coding.cc.s
+
+test/do.o: test/do.cc.o
+
+.PHONY : test/do.o
+
+# target to build an object file
+test/do.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/do.cc.o
+.PHONY : test/do.cc.o
+
+test/do.i: test/do.cc.i
+
+.PHONY : test/do.i
+
+# target to preprocess a source file
+test/do.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/do.cc.i
+.PHONY : test/do.cc.i
+
+test/do.s: test/do.cc.s
+
+.PHONY : test/do.s
+
+# target to generate assembly for a file
+test/do.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/do.cc.s
+.PHONY : test/do.cc.s
 
 test/phmap.o: test/phmap.cc.o
 
@@ -645,45 +591,39 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... my_redies"
 	@echo "... edit_cache"
-	@echo "... base/deconding.o"
-	@echo "... base/deconding.i"
-	@echo "... base/deconding.s"
 	@echo "... base/dict_builder.o"
 	@echo "... base/dict_builder.i"
 	@echo "... base/dict_builder.s"
 	@echo "... base/skiplist.o"
 	@echo "... base/skiplist.i"
 	@echo "... base/skiplist.s"
-	@echo "... base/write_buffer.o"
-	@echo "... base/write_buffer.i"
-	@echo "... base/write_buffer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... net/Socket.o"
-	@echo "... net/Socket.i"
-	@echo "... net/Socket.s"
-	@echo "... src/Cache.o"
-	@echo "... src/Cache.i"
-	@echo "... src/Cache.s"
-	@echo "... src/command.o"
-	@echo "... src/command.i"
-	@echo "... src/command.s"
-	@echo "... src/dbupdate.o"
-	@echo "... src/dbupdate.i"
-	@echo "... src/dbupdate.s"
-	@echo "... src/memtable.o"
-	@echo "... src/memtable.i"
-	@echo "... src/memtable.s"
+	@echo "... src/db_wr.o"
+	@echo "... src/db_wr.i"
+	@echo "... src/db_wr.s"
+	@echo "... src/snapshot.o"
+	@echo "... src/snapshot.i"
+	@echo "... src/snapshot.s"
+	@echo "... src/sstable.o"
+	@echo "... src/sstable.i"
+	@echo "... src/sstable.s"
 	@echo "... test/anytest.o"
 	@echo "... test/anytest.i"
 	@echo "... test/anytest.s"
 	@echo "... test/bloom_test.o"
 	@echo "... test/bloom_test.i"
 	@echo "... test/bloom_test.s"
+	@echo "... test/cache.o"
+	@echo "... test/cache.i"
+	@echo "... test/cache.s"
 	@echo "... test/coding.o"
 	@echo "... test/coding.i"
 	@echo "... test/coding.s"
+	@echo "... test/do.o"
+	@echo "... test/do.i"
+	@echo "... test/do.s"
 	@echo "... test/phmap.o"
 	@echo "... test/phmap.i"
 	@echo "... test/phmap.s"

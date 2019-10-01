@@ -5,24 +5,26 @@
 #ifndef MY_REDIES_WRITE_BUFFER_H
 #define MY_REDIES_WRITE_BUFFER_H
 #include "../base/sds.h"
+#include "../base/dict_builder.h"
+#include "../base/dict_builder.cc"
+#include <memory>
 //计划将key和value 分离存储，尽量减少耦合度
+//writebatch 写入磁盘
 class write_buffer{
 public:
-    class Handler {
-    public:
-        virtual ~Handler();
-        virtual void Set(const sds &key,const sds & value) = 0 ;
-        virtual void Delete(const sds & key) = 0;
+    write_buffer() : dict_(std::make_unique<dict>()){
     };
-    write_buffer();
-    write_buffer(const write_buffer&) = default;
-    write_buffer& operator=(const write_buffer&) = default;
     ~write_buffer() = default;
-    void Set(const sds& key,const sds & value);
-    void Delete(const sds & key);
-    void clear();
+    void Set( const sds& key, const sds & value){
+        dict_->Add(key,value);
+    };
+    bool Delete(const sds & key){
+        return dict_->Delete(key);
+    }
+    bool Get(const sds & key,std::string * value){
+        return dict_->Get(key,value);
+    }
 private:
-    std::string key_buffer; //key 缓冲
-    std::string value_buffer;//value 缓冲
+    std::unique_ptr<dict> dict_;
 };
 #endif //MY_REDIES_WRITE_BUFFER_H

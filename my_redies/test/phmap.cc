@@ -1,20 +1,20 @@
 //
 // Created by kiosk on 19-9-15.
 //
-#include <../util/parallel_hashmap/phmap.h>
-#include <iostream>
 #include <string>
-using phmap::parallel_flat_hash_map;
+#include <vector>
+#include <algorithm>
+#include <iostream>
 int main()
 {
-    parallel_flat_hash_map<std::string,std::string> email =
-            {
-                    {"hhh" , "ddd"}
-            };
-    email.insert({"sss","sss"});
-    for(auto &c : email)
+    std::vector<std::string> a;
+    a.emplace_back("pppp");
+    a.emplace_back("aaaa");
+    a.emplace_back("dddd");
+    std::sort(a.begin(),a.end());
+    for(auto &c : a)
     {
-        std::cout << c.first << std::endl;
+        std::cout << c << std::endl;
     }
     return 0;
 }

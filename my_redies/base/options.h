@@ -12,11 +12,15 @@
 class options
 {
 public:
-    options () : write_buf(8 * 1024 * 1024) , read_buf(4 * 1024 * 1024),block_size(8192),max_file_size(4 * 1024 * 1024)
+    options () : write_buf(8 * 1024 * 1024) , read_buf(4 * 1024 * 1024),block_size(8192),max_file_size(4 * 1024 * 1024),lru_number(100000)
     {
 
     };
     ~options() = default;
+    size_t get_lru_number()
+    {
+        return lru_number;
+    }
 private:
     size_t write_buf; //  设置写缓冲区的大小
     size_t  read_buf; //  设置读缓冲区的大小
@@ -24,6 +28,7 @@ private:
                         //在数据库中进行缓存的设置，如果数据量过大
     //Cache * cache; //   每一块的大小进行处理
     size_t max_file_size ;  //在磁盘中存储的文件的大小
+    size_t lru_number;//lru_中存储多少条数据
     // 这里使用Ｇｏｏｇｌｅ的snappy 来进行压缩,尽可能的在单核的情况下跑满
     //同时存储的命令也使用snappy进行压缩
     //通过什么顺序来进行排序

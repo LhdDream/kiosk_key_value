@@ -74,7 +74,7 @@ public:
     bool Delete(const Key & key);
     node * find(const Key & key) const;
     //iteration over a skip list
-
+    void print() const;
 private:
     enum {MaxHeight = 8};
     Prena *prena_;
