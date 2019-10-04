@@ -1,8 +1,10 @@
 #include <stdio.h>
-
+#include <string>
 int main()
 {
-    printf("%zu  \n",sizeof('a'));
+  std::string b(" b");
+   b = "a" + b;
+   printf("%s\n",b.c_str());
     return 0;
 }
 

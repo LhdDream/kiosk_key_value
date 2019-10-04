@@ -6,20 +6,28 @@
 
 void dict::Add(const sds & key,const  sds & value) {
     //返回相应的方式
-    if(bloom_->Contaion(key)  && Getlru(key)){
+    if(options_->write_() <= buffer_size){
+            sstable_->swap(ht_);
+            sstable_->save(bloom_);
+            buffer_size = 0 ;
+    }
+    if( Getlru(key)){
         ht_->at(key) = value;
     }
     else {
-        bloom_->add(key); // 对于bloom过滤器
+        //bloom 过滤器对于减少磁盘的IO查询起到了作用
         Put(key);
+        bloom_->add(key);
         //对于大型的value 进行压缩
         snappy::Compress(value.data(), value.size(), &buffer);
+        buffer_size += buffer.size();
+        buffer_size += key.size();
         ht_->emplace(key, buffer);
     }
 }
 
 bool dict::Get(const sds &key, std::string *value) {
-        if(bloom_->Contaion(key) && Getlru(key))
+        if( Getlru(key))
         {
            // 如果找到则进行解码操作
            auto c = ht_->find(key);
@@ -33,7 +41,7 @@ bool dict::Get(const sds &key, std::string *value) {
 }
 
 bool dict::Delete(const sds &key) {
-    if(bloom_->Contaion(key) && Getlru(key)){
+    if(Getlru(key)){
         if(list_->size() == options_->get_lru_number())
                 PDelete();
          ht_->erase(key);

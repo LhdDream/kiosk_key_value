@@ -258,33 +258,6 @@ src/snapshot.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/snapshot.cc.s
 .PHONY : src/snapshot.cc.s
 
-src/sstable.o: src/sstable.cc.o
-
-.PHONY : src/sstable.o
-
-# target to build an object file
-src/sstable.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/sstable.cc.o
-.PHONY : src/sstable.cc.o
-
-src/sstable.i: src/sstable.cc.i
-
-.PHONY : src/sstable.i
-
-# target to preprocess a source file
-src/sstable.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/sstable.cc.i
-.PHONY : src/sstable.cc.i
-
-src/sstable.s: src/sstable.cc.s
-
-.PHONY : src/sstable.s
-
-# target to generate assembly for a file
-src/sstable.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/sstable.cc.s
-.PHONY : src/sstable.cc.s
-
 test/anytest.o: test/anytest.cc.o
 
 .PHONY : test/anytest.o
@@ -606,9 +579,6 @@ help:
 	@echo "... src/snapshot.o"
 	@echo "... src/snapshot.i"
 	@echo "... src/snapshot.s"
-	@echo "... src/sstable.o"
-	@echo "... src/sstable.i"
-	@echo "... src/sstable.s"
 	@echo "... test/anytest.o"
 	@echo "... test/anytest.i"
 	@echo "... test/anytest.s"

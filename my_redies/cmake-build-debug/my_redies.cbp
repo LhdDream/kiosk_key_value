@@ -126,9 +126,6 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/snapshot.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/sstable.cc">
-			<Option target="my_redies"/>
-		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/sstable.h">
 			<Option target="my_redies"/>
 		</Unit>

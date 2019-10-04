@@ -50,22 +50,6 @@ unsigned int PJWHash(const char* str)
     return (hash & 0x7fffffff) % MOD;
 }
 
-unsigned int ELFHash(const char* str)
-{
-    unsigned int hash = 0;
-    unsigned int x = 0;
-    while (*str)
-    {
-        hash = (hash << 4) + *str++;
-        if((x = hash & 0xF0000000L) != 0)
-        {
-            hash ^= (x >> 24);
-        }
-        hash &= ~x;
-    }
-    return (hash & 0x7fffffff) % MOD;
-}
-
 
 unsigned int SDBMHash(const char* str)
 {

@@ -13,8 +13,9 @@
 #include <memory>
 #include "options.h"
 #include "skiplist.h"
-#include "../util/bloom_filter.h"
 #include "../util/parallel_hashmap/phmap_utils.h"
+#include "../src/sstable.h"
+#include "../src/sstable.h"
 using phmap::parallel_flat_hash_map;
 //在这里使用内存表的构建
 //内存表主要是通过pashmap来进行构建，同时提供多线程并发访问
@@ -33,8 +34,9 @@ class dict
 public:
         explicit dict() : ht_(std::make_unique<parallel_flat_hash_map<sds,sds,HashFunc,EqualKey>>()),
          options_(std::make_unique<options>()),
+         list_(std::make_unique<std::list< sds >>()),
          bloom_(std::make_unique<bloom>()),
-         list_(std::make_unique<std::list< sds >>()){
+         sstable_(std::make_unique<sstable>()){
         }
         dict(const dict & ) = delete ;
         dict operator = (const dict &) = delete;
@@ -51,15 +53,15 @@ private:
     //根据type 来进行反解压
     std::unique_ptr< parallel_flat_hash_map<sds,sds,HashFunc,EqualKey> >ht_;
     std::unique_ptr<options> options_;
-    std::unique_ptr<bloom> bloom_;//bloom 过滤器
     std::string buffer ; // snappy 的buffer，防止生命周期提前被释放
-
     std::unique_ptr<std::list<sds>> list_;
     //  维护的链表
     //双线链表维护的缓存内容的使用顺序
     //在一定时间内进行删除
     //主动淘汰和被动淘汰
     //每次进行内存的写入的时候，可以直接进行内存的释放
-
+    std::unique_ptr<bloom> bloom_;//bloom 过滤器
+    unsigned long long buffer_size = 0;
+    std::unique_ptr<sstable> sstable_; // sstable
 };
 #endif //MY_REDIES_DICT_BUILDER_H
