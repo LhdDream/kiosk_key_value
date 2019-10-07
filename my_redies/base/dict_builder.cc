@@ -6,10 +6,8 @@
 
 void dict::Add(const sds & key,const  sds & value) {
     //返回相应的方式
-    if(options_->write_() <= buffer_size){
-            sstable_->swap(ht_);
-            sstable_->save(bloom_);
-            buffer_size = 0 ;
+    if((options_->block_() <= buffer_size) && (options_->write_() > buffer_size)){
+
     }
     if( Getlru(key)){
         ht_->at(key) = value;

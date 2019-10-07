@@ -25,8 +25,12 @@ public:
     {
         return write_buf;
     }
+    size_t block_()
+    {
+        return block_size;
+    }
 private:
-    size_t write_buf; //  设置写缓冲区的大小
+    size_t  write_buf; //  设置写缓冲区的大小
     size_t  read_buf; //  设置读缓冲区的大小
     size_t  block_size; // 设置每一块的内容的大小
                         //在数据库中进行缓存的设置，如果数据量过大
@@ -34,6 +38,7 @@ private:
     size_t max_file_size ;  //在磁盘中存储的文件的大小
     size_t lru_number;//lru_中存储多少条数据
     size_t  key_value_number{};//每多少条Key存储缓冲区之中
+    const uint64_t  last_time = 3600; // 每一个小时进行一次合并
 };
 //read option
 struct readoptions{
