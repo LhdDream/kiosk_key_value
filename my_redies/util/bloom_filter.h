@@ -24,28 +24,29 @@ public:
         array.reset();
     }
     void add(const sds &Temp);
-    bool Contaion(const sds & temp);
-    void write_(std::string & filename){
+    void write_(std::string & filename, unsigned long long *file_size ){
+        *file_size += 2048;
         int fd = open(filename.c_str(),O_APPEND | O_WRONLY | O_CREAT ,S_IRUSR | S_IWUSR );
         struct stat sb{};
         if((fstat(fd,&sb)) == -1)
         {
             return ;
         }
-        if((ftruncate(fd,1024) )== -1) //使用mmap之前必须扩大文件大小，因为mmap写入不能大于文件大小
+        if((ftruncate(fd,*file_size ) )== -1) //使用mmap之前必须扩大文件大小，因为mmap写入不能大于文件大小
         {
             return ;
         }
         char *memPtr;
-        memPtr = (char *)mmap(NULL, 1024 , PROT_READ | PROT_WRITE,
+        memPtr = (char *)mmap(nullptr, *file_size  , PROT_READ | PROT_WRITE,
                               MAP_SHARED, fd, 0);
-        memmove(memPtr,(char *)&array, 1024); // 写入1KB的fifter
-        msync(memPtr,1024,0);
-        munmap(memPtr,1024);
+        memmove(memPtr,(char *)&array, *file_size ); // 写入1KB的fifter
+        msync(memPtr,*file_size ,0);
+        munmap(memPtr,*file_size );
         close(fd);
     }
+
 private:
-    std::bitset<1024 * 8> array; //1KB
+    std::bitset<16 * 1024> array; //2KB
 };
 
  void  bloom::add(const sds &Temp) {
@@ -56,12 +57,5 @@ private:
         array.set(PJWHash(Temp.data()));
 }
 
- bool bloom::Contaion(const sds &Temp) {
-        return array.test(SDBMHash(Temp.data()))
-        && array.test(RSHash(Temp.data()))
-        && array.test(JSHash(Temp.data()))
-        && array.test(APHash(Temp.data()))
-        && array.test(PJWHash(Temp.data()))
-        ;
-}
+
 #endif //MY_REDIES_BLOOM_FILTER_H
