@@ -5,15 +5,24 @@
 #include "../src/db_wr.h"
 #include "../src/db_wr.cc"
 #include<iostream>
+#include<map>
+#include "../util/sparsepp/spp.h"
+#include <unordered_map>
+#include "../base/sds.h"
+using namespace std;
+using spp::sparse_hash_map;
+
 
 int main()
 {
+   int start = clock();
+   sparse_hash_map<sds,sds> c;
    db * db_ = new wr();
-   std::string temp("ddd");
-   std::string temp_("lll");
-   std::string p;
-   db_->Set(temp,temp_);
-   db_->Get(temp,&p);
-   std::cout << p << std::endl;
-   return 0;
+   for(size_t i = 0 ; i < 1000; i++)
+   {
+       db_->Set(std::to_string(i),"aaa");
+   }
+   delete  db_;
+    printf("%.3lf/n",double(clock()-start)/CLOCKS_PER_SEC);
+    return 0;
 }

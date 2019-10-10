@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/decondig.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/decondig.h">
+			<Option target="my_redies"/>
+		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/base/dict_builder.cc">
 			<Option target="my_redies"/>
 		</Unit>
@@ -111,6 +117,15 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/main.cpp">
 			<Option target="my_redies"/>
 		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/net/Timer.h">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/Compaction.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/Compaction.h">
+			<Option target="my_redies"/>
+		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/db.h">
 			<Option target="my_redies"/>
 		</Unit>
@@ -120,16 +135,16 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/db_wr.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/snapshot.cc">
-			<Option target="my_redies"/>
-		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/snapshot.h">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/sstable.cc">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/sstable.h">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/write_buffer.h">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/Timer_test.cc">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/anytest.cc">

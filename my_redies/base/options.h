@@ -12,7 +12,7 @@
 class options
 {
 public:
-    options () : write_buf(8 * 1024 * 1024) , read_buf(4 * 1024 * 1024),block_size(1024 * 64),max_file_size(4 * 1024 * 1024),lru_number(1000000)
+    options () : write_buf(8 * 1024 ) , read_buf(4 * 1024 * 1024),block_size(1024 ),max_file_size(4 * 1024 * 1024),lru_number(500000)
     {
 
     };
@@ -37,8 +37,8 @@ private:
     //Cache * cache; //   每一块的大小进行处理
     size_t max_file_size ;  //在磁盘中存储的文件的大小
     size_t lru_number;//lru_中存储多少条数据
-    size_t  key_value_number{};//每多少条Key存储缓冲区之中
-    const uint64_t  last_time = 3600; // 每一个小时进行一次合并
+    const size_t  number_ = 4;//sstable 0
+    const size_t  last_time = 3600; // 每一个小时进行一次合并
 };
 //read option
 struct readoptions{

@@ -7,25 +7,32 @@
 void dict::Add(const sds & key,const  sds & value) {
     //返回相应的方式
     if((options_->block_() <= buffer_size) && (options_->write_() > buffer_size)){
-
+        sstable_->bloomadd(bloom_);
+        sstable_->save();
+        bloom_ = std::make_shared<bloom> ();
     }
-    if( Getlru(key)){
-        ht_->at(key) = value;
+    if(list_->size() >= options_->get_lru_number()) {
+        PDelete();
     }
-    else {
         //bloom 过滤器对于减少磁盘的IO查询起到了作用
-        Put(key);
-        bloom_->add(key);
-        //对于大型的value 进行压缩
-        snappy::Compress(value.data(), value.size(), &buffer);
-        buffer_size += buffer.size();
-        buffer_size += key.size();
-        ht_->emplace(key, buffer);
+        if(ht_->find(key) == ht_->end()) {
+            sstable_->add(key.Tostring(), const_cast<sds &>(value));
+            Put(key);
+            bloom_->add(key);
+            //对于大型的value 进行压缩
+            snappy::Compress(value.data(), value.size(), &buffer);
+            buffer_size += buffer.size();
+            buffer_size += key.size();
+            ht_->emplace(key, buffer);
+        }else{
+            ht_->at(key) = value;
+            auto it = std::find(list_->begin(),list_->end(),key);
+            list_->splice(list_->begin(),*list_,it);
     }
 }
 
 bool dict::Get(const sds &key, std::string *value) {
-        if( Getlru(key))
+        if( ht_->find(key) != ht_->end())
         {
            // 如果找到则进行解码操作
            auto c = ht_->find(key);
@@ -39,7 +46,7 @@ bool dict::Get(const sds &key, std::string *value) {
 }
 
 bool dict::Delete(const sds &key) {
-    if(Getlru(key)){
+    if(ht_->find(key) != ht_->end()){
         if(list_->size() == options_->get_lru_number())
                 PDelete();
          ht_->erase(key);
@@ -49,26 +56,14 @@ bool dict::Delete(const sds &key) {
 }
 
 void dict::PDelete(){
-    ht_->erase(*(--list_->end()));
-    list_->erase(--list_->end());//位置
+    ht_->erase(list_->back()) ;
+    list_->pop_back();
 }
 void dict::Put(const sds & key) {
-    auto c = std::find(list_->begin(),list_->end(),key) ;
-    if( c != list_->end())
-    {
-        list_->erase(c++);
-    }
-    if(list_->size() == options_->get_lru_number())
-    {
+     if(list_->size() >= options_->get_lru_number())
+     {
         PDelete();
-        list_->emplace_front(key);
-        //进行删除
-        //被动删除策略
-    }else{
-        list_->emplace_front(key);
-    }
+     }
+     list_->push_front(key);
 }
 
-bool dict::Getlru(const sds & key) {
-       return std::find(list_->begin(),list_->end(),key) != list_->end();
-}

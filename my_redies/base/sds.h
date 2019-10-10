@@ -7,7 +7,8 @@
 #include <string>
 #include <cstring>
 #include <cassert>
-
+#include "../util/sparsepp/spp.h"
+#include "../util/sparsepp/spp_utils.h"
 
 //c++ string 是可以修改的 ,为了保证类型安全，在这里封装一下sds
 class sds
@@ -16,47 +17,46 @@ public:
     sds() : data_(" "),size_(0){ }
     sds(const char * data,size_t n) : data_(data),size_(n){}
     //if no argument 空的字符串
-    sds(const std::string &s) :data_(s.data()),size_(s.size()){}
-    sds(const char * data) : data_(data),size_(strlen(data)){}
+    sds(const std::string &s) :size_(s.size()){
+       data_ = new char [size_];
+       strcpy(const_cast<char *> (data_),s.data());
+    }
+
+   sds(const char * data) : data_(data),size_(strlen(data)){
+        data_ = new char [size_];
+        strcpy(const_cast<char *> (data_),data);
+    }
     sds(const sds &) = default;
     sds&operator=(const sds &) = default;
     [[nodiscard]] const char * data() const {return data_;}
     [[nodiscard]] size_t  size() const {return size_;}
-
     [[nodiscard]] bool empty() const {return size_ == 0;}
-
     char operator[](size_t n) const{
         assert(n >= 0);
         return data_[n];
     }
-    void removesize(size_t n ){
-        assert(n >= 0);
-        data_ += n;
-        size_ -= n;
-    }
     [[nodiscard]] std::string Tostring() const { return std::string(data_,size_);}
-    inline bool operator == (const sds &s) const{
-        return ((s.size_ == this->size_) && (memcmp(this->data(),s.data_,this->size_) == 0));
-        //memcmp比较内存的前n个字节想不想等如果相等返回0
+    bool operator==( const sds& y) const {
+        return ((this->size_ == y.size()) &&(memcmp(this->data(), y.data(), this->size()) == 0) );
     }
-    inline bool  operator != (const sds &s) const{
-        return !(*this == s);
+    bool  operator!=(const sds &y)const {
+        return !(*this==y);
     }
 private:
     const char *  data_;
     size_t  size_;
 };
-struct HashFunc{
-    std::size_t operator()(const sds & p ) const{
-        using std::size_t ;
-        using std::hash;
-        return hash<std::string>()(p.Tostring());
-    }
-};
-struct EqualKey
-{
-    bool operator () (const sds & p, const sds & s) const{
-        return p == s;
-    }
-};
+
+
+namespace  std{
+    template <>
+    struct hash<sds>{
+        std::size_t operator()(const sds & p ) const{
+            std::size_t seed = 0 ;
+            spp::hash_combine(seed,p.Tostring());
+            spp::hash_combine(seed,p.size());
+            return seed;
+        }
+    };
+}
 #endif //MY_REDIES_SDS_H

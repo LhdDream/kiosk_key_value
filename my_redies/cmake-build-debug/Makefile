@@ -123,6 +123,33 @@ my_redies/fast:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/build
 .PHONY : my_redies/fast
 
+base/decondig.o: base/decondig.cc.o
+
+.PHONY : base/decondig.o
+
+# target to build an object file
+base/decondig.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/decondig.cc.o
+.PHONY : base/decondig.cc.o
+
+base/decondig.i: base/decondig.cc.i
+
+.PHONY : base/decondig.i
+
+# target to preprocess a source file
+base/decondig.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/decondig.cc.i
+.PHONY : base/decondig.cc.i
+
+base/decondig.s: base/decondig.cc.s
+
+.PHONY : base/decondig.s
+
+# target to generate assembly for a file
+base/decondig.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/decondig.cc.s
+.PHONY : base/decondig.cc.s
+
 base/dict_builder.o: base/dict_builder.cc.o
 
 .PHONY : base/dict_builder.o
@@ -204,6 +231,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Compaction.o: src/Compaction.cc.o
+
+.PHONY : src/Compaction.o
+
+# target to build an object file
+src/Compaction.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Compaction.cc.o
+.PHONY : src/Compaction.cc.o
+
+src/Compaction.i: src/Compaction.cc.i
+
+.PHONY : src/Compaction.i
+
+# target to preprocess a source file
+src/Compaction.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Compaction.cc.i
+.PHONY : src/Compaction.cc.i
+
+src/Compaction.s: src/Compaction.cc.s
+
+.PHONY : src/Compaction.s
+
+# target to generate assembly for a file
+src/Compaction.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Compaction.cc.s
+.PHONY : src/Compaction.cc.s
+
 src/db_wr.o: src/db_wr.cc.o
 
 .PHONY : src/db_wr.o
@@ -231,32 +285,59 @@ src/db_wr.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/db_wr.cc.s
 .PHONY : src/db_wr.cc.s
 
-src/snapshot.o: src/snapshot.cc.o
+src/sstable.o: src/sstable.cc.o
 
-.PHONY : src/snapshot.o
+.PHONY : src/sstable.o
 
 # target to build an object file
-src/snapshot.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/snapshot.cc.o
-.PHONY : src/snapshot.cc.o
+src/sstable.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/sstable.cc.o
+.PHONY : src/sstable.cc.o
 
-src/snapshot.i: src/snapshot.cc.i
+src/sstable.i: src/sstable.cc.i
 
-.PHONY : src/snapshot.i
+.PHONY : src/sstable.i
 
 # target to preprocess a source file
-src/snapshot.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/snapshot.cc.i
-.PHONY : src/snapshot.cc.i
+src/sstable.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/sstable.cc.i
+.PHONY : src/sstable.cc.i
 
-src/snapshot.s: src/snapshot.cc.s
+src/sstable.s: src/sstable.cc.s
 
-.PHONY : src/snapshot.s
+.PHONY : src/sstable.s
 
 # target to generate assembly for a file
-src/snapshot.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/snapshot.cc.s
-.PHONY : src/snapshot.cc.s
+src/sstable.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/sstable.cc.s
+.PHONY : src/sstable.cc.s
+
+test/Timer_test.o: test/Timer_test.cc.o
+
+.PHONY : test/Timer_test.o
+
+# target to build an object file
+test/Timer_test.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/Timer_test.cc.o
+.PHONY : test/Timer_test.cc.o
+
+test/Timer_test.i: test/Timer_test.cc.i
+
+.PHONY : test/Timer_test.i
+
+# target to preprocess a source file
+test/Timer_test.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/Timer_test.cc.i
+.PHONY : test/Timer_test.cc.i
+
+test/Timer_test.s: test/Timer_test.cc.s
+
+.PHONY : test/Timer_test.s
+
+# target to generate assembly for a file
+test/Timer_test.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/Timer_test.cc.s
+.PHONY : test/Timer_test.cc.s
 
 test/anytest.o: test/anytest.cc.o
 
@@ -564,6 +645,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... my_redies"
 	@echo "... edit_cache"
+	@echo "... base/decondig.o"
+	@echo "... base/decondig.i"
+	@echo "... base/decondig.s"
 	@echo "... base/dict_builder.o"
 	@echo "... base/dict_builder.i"
 	@echo "... base/dict_builder.s"
@@ -573,12 +657,18 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/Compaction.o"
+	@echo "... src/Compaction.i"
+	@echo "... src/Compaction.s"
 	@echo "... src/db_wr.o"
 	@echo "... src/db_wr.i"
 	@echo "... src/db_wr.s"
-	@echo "... src/snapshot.o"
-	@echo "... src/snapshot.i"
-	@echo "... src/snapshot.s"
+	@echo "... src/sstable.o"
+	@echo "... src/sstable.i"
+	@echo "... src/sstable.s"
+	@echo "... test/Timer_test.o"
+	@echo "... test/Timer_test.i"
+	@echo "... test/Timer_test.s"
 	@echo "... test/anytest.o"
 	@echo "... test/anytest.i"
 	@echo "... test/anytest.s"
