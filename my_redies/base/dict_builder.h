@@ -13,8 +13,8 @@
 #include "options.h"
 #include "skiplist.h"
 #include "../util/sparsepp/spp.h"
-#include "../src/sstable.h"
-#include "../src/sstable.cc"
+#include "../table/sstable.h"
+#include "../table/sstable.cc"
 using spp::sparse_hash_map;
 //在这里使用内存表的构建
 //内存表主要是通过pashmap来进行构建，同时提供多线程并发访问

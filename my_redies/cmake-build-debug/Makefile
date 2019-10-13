@@ -285,32 +285,32 @@ src/db_wr.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/db_wr.cc.s
 .PHONY : src/db_wr.cc.s
 
-src/sstable.o: src/sstable.cc.o
+table/sstable.o: table/sstable.cc.o
 
-.PHONY : src/sstable.o
+.PHONY : table/sstable.o
 
 # target to build an object file
-src/sstable.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/sstable.cc.o
-.PHONY : src/sstable.cc.o
+table/sstable.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/sstable.cc.o
+.PHONY : table/sstable.cc.o
 
-src/sstable.i: src/sstable.cc.i
+table/sstable.i: table/sstable.cc.i
 
-.PHONY : src/sstable.i
+.PHONY : table/sstable.i
 
 # target to preprocess a source file
-src/sstable.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/sstable.cc.i
-.PHONY : src/sstable.cc.i
+table/sstable.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/sstable.cc.i
+.PHONY : table/sstable.cc.i
 
-src/sstable.s: src/sstable.cc.s
+table/sstable.s: table/sstable.cc.s
 
-.PHONY : src/sstable.s
+.PHONY : table/sstable.s
 
 # target to generate assembly for a file
-src/sstable.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/sstable.cc.s
-.PHONY : src/sstable.cc.s
+table/sstable.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/sstable.cc.s
+.PHONY : table/sstable.cc.s
 
 test/Timer_test.o: test/Timer_test.cc.o
 
@@ -663,9 +663,9 @@ help:
 	@echo "... src/db_wr.o"
 	@echo "... src/db_wr.i"
 	@echo "... src/db_wr.s"
-	@echo "... src/sstable.o"
-	@echo "... src/sstable.i"
-	@echo "... src/sstable.s"
+	@echo "... table/sstable.o"
+	@echo "... table/sstable.i"
+	@echo "... table/sstable.s"
 	@echo "... test/Timer_test.o"
 	@echo "... test/Timer_test.i"
 	@echo "... test/Timer_test.s"

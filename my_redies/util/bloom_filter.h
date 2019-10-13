@@ -24,26 +24,7 @@ public:
         array.reset();
     }
     void add(const sds &Temp);
-    void write_(std::string & filename, unsigned long long *file_size ){
-        *file_size += 2048;
-        int fd = open(filename.c_str(),O_APPEND | O_WRONLY | O_CREAT ,S_IRUSR | S_IWUSR );
-        struct stat sb{};
-        if((fstat(fd,&sb)) == -1)
-        {
-            return ;
-        }
-        if((ftruncate(fd,*file_size ) )== -1) //使用mmap之前必须扩大文件大小，因为mmap写入不能大于文件大小
-        {
-            return ;
-        }
-        char *memPtr;
-        memPtr = (char *)mmap(nullptr, *file_size  , PROT_READ | PROT_WRITE,
-                              MAP_SHARED, fd, 0);
-        memmove(memPtr,(char *)&array, *file_size ); // 写入1KB的fifter
-        msync(memPtr,*file_size ,0);
-        munmap(memPtr,*file_size );
-        close(fd);
-    }
+
 
 private:
     std::bitset<16 * 1024> array; //2KB

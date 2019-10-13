@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kiosk/CLionProjects/my_redies/main.cpp" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/main.cpp.o"
   "/home/kiosk/CLionProjects/my_redies/src/Compaction.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/Compaction.cc.o"
   "/home/kiosk/CLionProjects/my_redies/src/db_wr.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/db_wr.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/src/sstable.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/sstable.cc.o"
+  "/home/kiosk/CLionProjects/my_redies/table/sstable.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/table/sstable.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/Timer_test.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/Timer_test.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/anytest.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/anytest.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/bloom_test.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/bloom_test.cc.o"

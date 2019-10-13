@@ -135,13 +135,16 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/db_wr.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/sstable.cc">
-			<Option target="my_redies"/>
-		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/sstable.h">
-			<Option target="my_redies"/>
-		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/write_buffer.h">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/table/sstable.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/table/sstable.h">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/table/write_file.h">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/Timer_test.cc">

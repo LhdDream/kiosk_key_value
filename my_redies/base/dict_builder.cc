@@ -7,8 +7,7 @@
 void dict::Add(const sds & key,const  sds & value) {
     //返回相应的方式
     if((options_->block_() <= buffer_size) && (options_->write_() > buffer_size)){
-        sstable_->bloomadd(bloom_);
-        sstable_->save();
+
         bloom_ = std::make_shared<bloom> ();
     }
     if(list_->size() >= options_->get_lru_number()) {
@@ -16,7 +15,6 @@ void dict::Add(const sds & key,const  sds & value) {
     }
         //bloom 过滤器对于减少磁盘的IO查询起到了作用
         if(ht_->find(key) == ht_->end()) {
-            sstable_->add(key.Tostring(), const_cast<sds &>(value));
             Put(key);
             bloom_->add(key);
             //对于大型的value 进行压缩

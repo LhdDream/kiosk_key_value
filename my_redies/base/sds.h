@@ -42,6 +42,9 @@ public:
     bool  operator!=(const sds &y)const {
         return !(*this==y);
     }
+    bool operator < (const sds &y) const {
+        return Tostring() < y.Tostring();
+    }
 private:
     const char *  data_;
     size_t  size_;

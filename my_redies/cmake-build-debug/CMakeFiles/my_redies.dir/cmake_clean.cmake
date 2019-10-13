@@ -16,7 +16,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_redies.dir/test/cache.cc.o"
   "CMakeFiles/my_redies.dir/test/Timer_test.cc.o"
   "CMakeFiles/my_redies.dir/src/Compaction.cc.o"
-  "CMakeFiles/my_redies.dir/src/sstable.cc.o"
+  "CMakeFiles/my_redies.dir/table/sstable.cc.o"
   "CMakeFiles/my_redies.dir/base/decondig.cc.o"
   "my_redies.pdb"
   "my_redies"
