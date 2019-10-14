@@ -1,11 +1,12 @@
 //
-// Created by kiosk on 19-9-22.
+// Created by kiosk on 19-10-13.
 //
+
+#ifndef MY_REDIES_FILESERIALIZER_H
+#define MY_REDIES_FILESERIALIZER_H
 #include <cstdio>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <../util/sparsepp/spp.h>
+
+#include "spp.h"
 
 using spp::sparse_hash_map;
 using namespace std;
@@ -65,26 +66,4 @@ public:
         return (*this)(fp, (A *)&value->first) && (*this)(fp, &value->second);
     }
 };
-
-int main(int argc, char* argv[])
-{
-    long long number = 0;
-    sparse_hash_map<string, int> age;
-    for(size_t i = 0 ; i < 10000 ;i++)
-    {
-        number += std::to_string(i).size() *2;
-        age.emplace(std::to_string(i),i);
-    }
-    // serialize age hash_map to "ages.dmp" file
-    FILE *out = fopen("ages.dmp", "wb");
-    age.serialize(FileSerializer(), out);
-    fclose(out);
-
-    sparse_hash_map<string, int> age_read;
-
-    // read from "ages.dmp" file into age_read hash_map
-    FILE *input = fopen("ages.dmp", "rb");
-    age_read.unserialize(FileSerializer(), input);
-    fclose(input);
-    printf("%d\n",number);
-}
+#endif //MY_REDIES_FILESERIALIZER_H

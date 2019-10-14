@@ -474,33 +474,6 @@ test/do.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/do.cc.s
 .PHONY : test/do.cc.s
 
-test/phmap.o: test/phmap.cc.o
-
-.PHONY : test/phmap.o
-
-# target to build an object file
-test/phmap.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/phmap.cc.o
-.PHONY : test/phmap.cc.o
-
-test/phmap.i: test/phmap.cc.i
-
-.PHONY : test/phmap.i
-
-# target to preprocess a source file
-test/phmap.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/phmap.cc.i
-.PHONY : test/phmap.cc.i
-
-test/phmap.s: test/phmap.cc.s
-
-.PHONY : test/phmap.s
-
-# target to generate assembly for a file
-test/phmap.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/phmap.cc.s
-.PHONY : test/phmap.cc.s
-
 test/random.o: test/random.cc.o
 
 .PHONY : test/random.o
@@ -582,33 +555,6 @@ test/snappy.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/snappy.cc.s
 .PHONY : test/snappy.cc.s
 
-test/test.o: test/test.cc.o
-
-.PHONY : test/test.o
-
-# target to build an object file
-test/test.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/test.cc.o
-.PHONY : test/test.cc.o
-
-test/test.i: test/test.cc.i
-
-.PHONY : test/test.i
-
-# target to preprocess a source file
-test/test.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/test.cc.i
-.PHONY : test/test.cc.i
-
-test/test.s: test/test.cc.s
-
-.PHONY : test/test.s
-
-# target to generate assembly for a file
-test/test.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/test.cc.s
-.PHONY : test/test.cc.s
-
 util/Prena.o: util/Prena.cc.o
 
 .PHONY : util/Prena.o
@@ -684,9 +630,6 @@ help:
 	@echo "... test/do.o"
 	@echo "... test/do.i"
 	@echo "... test/do.s"
-	@echo "... test/phmap.o"
-	@echo "... test/phmap.i"
-	@echo "... test/phmap.s"
 	@echo "... test/random.o"
 	@echo "... test/random.i"
 	@echo "... test/random.s"
@@ -696,9 +639,6 @@ help:
 	@echo "... test/snappy.o"
 	@echo "... test/snappy.i"
 	@echo "... test/snappy.s"
-	@echo "... test/test.o"
-	@echo "... test/test.i"
-	@echo "... test/test.s"
 	@echo "... util/Prena.o"
 	@echo "... util/Prena.i"
 	@echo "... util/Prena.s"

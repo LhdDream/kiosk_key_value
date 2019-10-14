@@ -17,11 +17,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kiosk/CLionProjects/my_redies/test/cache.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/cache.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/coding.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/coding.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/do.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/do.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/test/phmap.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/phmap.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/random.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/random.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/skiplisttest.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/skiplisttest.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/snappy.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/snappy.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/test/test.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/test.cc.o"
   "/home/kiosk/CLionProjects/my_redies/util/Prena.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/util/Prena.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

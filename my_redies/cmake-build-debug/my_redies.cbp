@@ -147,6 +147,9 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/table/write_file.h">
 			<Option target="my_redies"/>
 		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/Allocate.h">
+			<Option target="my_redies"/>
+		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/Timer_test.cc">
 			<Option target="my_redies"/>
 		</Unit>
@@ -165,9 +168,6 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/do.cc">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/phmap.cc">
-			<Option target="my_redies"/>
-		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/random.cc">
 			<Option target="my_redies"/>
 		</Unit>
@@ -175,9 +175,6 @@
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/snappy.cc">
-			<Option target="my_redies"/>
-		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/test.cc">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/util/Prena.cc">
@@ -190,6 +187,9 @@
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/util/hash.h">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/util/sparsepp/FileSerializer.h">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/CMakeLists.txt">

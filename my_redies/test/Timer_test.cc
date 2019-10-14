@@ -2,15 +2,25 @@
 // Created by kiosk on 19-10-6.
 //
 #include <iostream>
-#include "../net/Timer.h"
+#include "../base/sds.h"
 #include <unistd.h>
-using namespace std;
+#include <map>
+#include "../util/Allocate.h"
+#include <list>
+#include <set>
+struct c
+{
+    bool operator()(const sds &x ,const sds &y) const {
+        return x.Tostring() < y.Tostring();
+    }
+};
 int main()
 {
-    std::shared_ptr<Timer> Timer_ = std::make_shared<Timer>([](){cout <<" s\n";},time(nullptr)+ 2 ,0);
-    TimerQueue Timequeue_;
-    Timequeue_.AddTimer(Timer_);
-    sleep(8);
-    Timequeue_.tick();
+    std::list<int,Allocator<int>> c;
+    c.push_front(1);
+    for(auto p  : c)
+    {
+        std::cout << p <<std::endl;
+    }
     return 0;
 }

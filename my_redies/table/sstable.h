@@ -8,13 +8,15 @@
 #include <vector>
 #include <string>
 #include <memory>
+#include <snappy.h>
+#include <map>
 #include "../base/options.h"
 #include "../base/sds.h"
 
 #include "../util/bloom_filter.h"
 #include "../base/options.h"
 #include "../util/sparsepp/spp.h"
-#include <snappy.h>
+
 using spp::sparse_hash_map;
 //fifter
 //block
@@ -31,7 +33,7 @@ public:
     };
     ~sstable() = default;
     void unmemtableadd(std::unique_ptr<sparse_hash_map<sds,sds>> & value){
-        unmemtable_.emplace_back(std::move(value));
+        unmemtable_.emplace_back(value->begin(),value->end());
     }
     void bloomadd(std::shared_ptr<bloom> & b){
         bloom_.emplace_back(std::move(b));
@@ -39,8 +41,8 @@ public:
     bool Get(sds & key_,std::string *value){
         for(auto &c :unmemtable_)
         {
-            if(c->find(key_) != c->end()){
-                snappy::Uncompress(c->at(key_).data(),c->at(key_).size(),value);
+            if(c.find(key_) != c.end()){
+                snappy::Uncompress(c.at(key_).data(),c.at(key_).size(),value);
                 return true;
             }
         }
@@ -48,8 +50,11 @@ public:
     }
 private:
     std::vector<std::shared_ptr<bloom>> bloom_;
-    std::vector<std::unique_ptr<sparse_hash_map<sds,sds>>> unmemtable_;
+    std::vector<std::map<sds,sds>> unmemtable_;
+    // 转化为有序的map进行存储
     std::unique_ptr<options> option_; // 对于选项参数设置
+    unsigned  long long size;
+    int seqnumber_; // sst的文件编号
 };
 
 #endif //MY_REDIES_SSTABLE_H
