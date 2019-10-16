@@ -12,11 +12,12 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <sys/mman.h>
-
+//只是写入文件
+//kvfile 写入文件之中
 class  write_file{
 
 public:
-    write_file(int seq) : seqnumber(seq),fd(0){
+    explicit write_file(int seq) : seqnumber(seq),fd(0){
             
     }
     ~write_file() = default;

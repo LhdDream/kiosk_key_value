@@ -16,7 +16,8 @@
 #include "../util/bloom_filter.h"
 #include "../base/options.h"
 #include "../util/sparsepp/spp.h"
-
+#include "../util/memorypool/memorypool.h"
+#include "../util/memorypool/memorypool.cc"
 using spp::sparse_hash_map;
 //fifter
 //block
@@ -32,8 +33,8 @@ public:
 
     };
     ~sstable() = default;
-    void unmemtableadd(std::unique_ptr<sparse_hash_map<sds,sds>> & value){
-        unmemtable_.emplace_back(value->begin(),value->end());
+    void unmemtableadd(std::unique_ptr<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>>>> & value){
+        unmemtable_.emplace_back(std::move(value));
     }
     void bloomadd(std::shared_ptr<bloom> & b){
         bloom_.emplace_back(std::move(b));
@@ -50,7 +51,7 @@ public:
     }
 private:
     std::vector<std::shared_ptr<bloom>> bloom_;
-    std::vector<std::map<sds,sds>> unmemtable_;
+    std::vector<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>>>> unmemtable_;
     // 转化为有序的map进行存储
     std::unique_ptr<options> option_; // 对于选项参数设置
     unsigned  long long size;

@@ -16,6 +16,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_redies.dir/src/Compaction.cc.o"
   "CMakeFiles/my_redies.dir/table/sstable.cc.o"
   "CMakeFiles/my_redies.dir/base/decondig.cc.o"
+  "CMakeFiles/my_redies.dir/util/memorypool/memoryBlock.cc.o"
+  "CMakeFiles/my_redies.dir/util/memorypool/memorypool.cc.o"
   "my_redies.pdb"
   "my_redies"
 )

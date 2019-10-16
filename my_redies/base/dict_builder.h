@@ -14,6 +14,8 @@
 #include "skiplist.h"
 #include "../table/sstable.h"
 #include "../table/sstable.cc"
+#include "../util/memorypool/memorypool.h"
+#include "../util/memorypool/memorypool.cc"
 #include <map>
 //在这里使用内存表的构建
 //内存表主要是通过pashmap来进行构建，同时提供多线程并发访问
@@ -29,8 +31,9 @@ class options;
 
 class dict
 {
+
 public:
-        explicit dict() : ht_(std::make_unique<std::map<sds,sds>>()),
+        explicit dict() : ht_(std::make_unique<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>> >>()),
          options_(std::make_unique<options>()),
          list_(std::make_unique<std::list< sds >>()),
          bloom_(std::make_shared<bloom>()),
@@ -50,7 +53,7 @@ public:
 
 private:
     //根据type 来进行反解压
-    std::unique_ptr<std::map<sds,sds> >ht_;
+    std::unique_ptr<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>> >> ht_;
     std::unique_ptr<options> options_;
     std::string buffer ; // snappy 的buffer，防止生命周期提前被释放
     std::unique_ptr<std::list<sds>> list_;

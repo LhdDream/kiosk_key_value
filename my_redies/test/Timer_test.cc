@@ -5,9 +5,11 @@
 #include "../base/sds.h"
 #include <unistd.h>
 #include <map>
-#include "../util/Allocate.h"
+//#include "../util/Allocate.h"
 #include <list>
 #include <set>
+#include "../util/memorypool/memorypool.h"
+#include "../util/memorypool/memorypool.cc"
 struct c
 {
     bool operator()(const sds &x ,const sds &y) const {
@@ -16,11 +18,8 @@ struct c
 };
 int main()
 {
-    std::list<int,Allocator<int>> c;
-    c.push_front(1);
-    for(auto p  : c)
-    {
-        std::cout << p <<std::endl;
-    }
+    std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>>> c;\
+    c.emplace("1","@");
+
     return 0;
 }

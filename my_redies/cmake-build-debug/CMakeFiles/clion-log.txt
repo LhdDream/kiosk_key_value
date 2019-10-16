@@ -1,4 +1,16 @@
 /opt/clion/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/kiosk/CLionProjects/my_redies
 -- Configuring done
--- Generating done
+CMake Error at CMakeLists.txt:6 (add_executable):
+  Cannot find source file:
+
+    util/memorypool/memoryBlock.h
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .m .M .mm .h .hh .h++ .hm
+  .hpp .hxx .in .txx
+
+
+CMake Error at CMakeLists.txt:6 (add_executable):
+  No SOURCES given to target: my_redies
+
+
 -- Build files have been written to: /home/kiosk/CLionProjects/my_redies/cmake-build-debug

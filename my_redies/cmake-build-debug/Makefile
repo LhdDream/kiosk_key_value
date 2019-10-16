@@ -582,6 +582,60 @@ util/Prena.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/Prena.cc.s
 .PHONY : util/Prena.cc.s
 
+util/memorypool/memoryBlock.o: util/memorypool/memoryBlock.cc.o
+
+.PHONY : util/memorypool/memoryBlock.o
+
+# target to build an object file
+util/memorypool/memoryBlock.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/memorypool/memoryBlock.cc.o
+.PHONY : util/memorypool/memoryBlock.cc.o
+
+util/memorypool/memoryBlock.i: util/memorypool/memoryBlock.cc.i
+
+.PHONY : util/memorypool/memoryBlock.i
+
+# target to preprocess a source file
+util/memorypool/memoryBlock.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/memorypool/memoryBlock.cc.i
+.PHONY : util/memorypool/memoryBlock.cc.i
+
+util/memorypool/memoryBlock.s: util/memorypool/memoryBlock.cc.s
+
+.PHONY : util/memorypool/memoryBlock.s
+
+# target to generate assembly for a file
+util/memorypool/memoryBlock.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/memorypool/memoryBlock.cc.s
+.PHONY : util/memorypool/memoryBlock.cc.s
+
+util/memorypool/memorypool.o: util/memorypool/memorypool.cc.o
+
+.PHONY : util/memorypool/memorypool.o
+
+# target to build an object file
+util/memorypool/memorypool.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/memorypool/memorypool.cc.o
+.PHONY : util/memorypool/memorypool.cc.o
+
+util/memorypool/memorypool.i: util/memorypool/memorypool.cc.i
+
+.PHONY : util/memorypool/memorypool.i
+
+# target to preprocess a source file
+util/memorypool/memorypool.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/memorypool/memorypool.cc.i
+.PHONY : util/memorypool/memorypool.cc.i
+
+util/memorypool/memorypool.s: util/memorypool/memorypool.cc.s
+
+.PHONY : util/memorypool/memorypool.s
+
+# target to generate assembly for a file
+util/memorypool/memorypool.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/memorypool/memorypool.cc.s
+.PHONY : util/memorypool/memorypool.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -642,6 +696,12 @@ help:
 	@echo "... util/Prena.o"
 	@echo "... util/Prena.i"
 	@echo "... util/Prena.s"
+	@echo "... util/memorypool/memoryBlock.o"
+	@echo "... util/memorypool/memoryBlock.i"
+	@echo "... util/memorypool/memoryBlock.s"
+	@echo "... util/memorypool/memorypool.o"
+	@echo "... util/memorypool/memorypool.i"
+	@echo "... util/memorypool/memorypool.s"
 .PHONY : help
 
 

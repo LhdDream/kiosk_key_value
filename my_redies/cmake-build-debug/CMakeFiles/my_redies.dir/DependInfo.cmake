@@ -21,6 +21,8 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kiosk/CLionProjects/my_redies/test/skiplisttest.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/skiplisttest.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/snappy.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/snappy.cc.o"
   "/home/kiosk/CLionProjects/my_redies/util/Prena.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/util/Prena.cc.o"
+  "/home/kiosk/CLionProjects/my_redies/util/memorypool/memoryBlock.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/util/memorypool/memoryBlock.cc.o"
+  "/home/kiosk/CLionProjects/my_redies/util/memorypool/memorypool.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/util/memorypool/memorypool.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

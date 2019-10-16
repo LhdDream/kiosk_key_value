@@ -53,4 +53,11 @@ struct readoptions{
 struct writeoptions{
     bool sync = false; //同步写入操作
 };
+
+struct c
+{
+    bool operator()(const sds &x ,const sds &y) const {
+        return x.Tostring() < y.Tostring();
+    }
+};
 #endif //MY_REDIES_OPTIONS_H
