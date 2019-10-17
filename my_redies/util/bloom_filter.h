@@ -24,7 +24,7 @@ public:
         array.reset();
     }
     void add(const sds &Temp);
-
+    std::string append();
 
 private:
     std::bitset<16 * 1024> array; //2KB
@@ -37,6 +37,9 @@ private:
         array.set(APHash(Temp.data()));
         array.set(PJWHash(Temp.data()));
 }
-
+std::string bloom::append() {
+        return array.to_string(); //  直接转化为std::string
+        //basic_string<char>
+ }
 
 #endif //MY_REDIES_BLOOM_FILTER_H
