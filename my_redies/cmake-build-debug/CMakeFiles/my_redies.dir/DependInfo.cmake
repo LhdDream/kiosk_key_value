@@ -11,17 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kiosk/CLionProjects/my_redies/src/Compaction.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/Compaction.cc.o"
   "/home/kiosk/CLionProjects/my_redies/src/db_wr.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/db_wr.cc.o"
   "/home/kiosk/CLionProjects/my_redies/table/sstable.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/table/sstable.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/test/Timer_test.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/Timer_test.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/test/anytest.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/anytest.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/test/bloom_test.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/bloom_test.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/test/cache.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/cache.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/test/coding.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/coding.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/test/do.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/do.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/test/random.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/random.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/test/skiplisttest.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/skiplisttest.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/test/snappy.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/snappy.cc.o"
   "/home/kiosk/CLionProjects/my_redies/util/Prena.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/util/Prena.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/util/memorypool/memoryBlock.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/util/memorypool/memoryBlock.cc.o"
   "/home/kiosk/CLionProjects/my_redies/util/memorypool/memorypool.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/util/memorypool/memorypool.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

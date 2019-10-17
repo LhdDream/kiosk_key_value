@@ -11,17 +11,16 @@
 class status{
 public:
     // error type
-    status() noexcept : code(Ok) {
-    }
+    status() noexcept  = default;
     ~status() = default;
     status operator = (const status &) = delete;
     //error
     //error typde
-    bool OK() { return code == Ok;} //
-    bool IsNotFound() { return code == NotFound;}
-    bool ISNotSupported() {return code == NotSupported ;}
-    bool IsInvalidargument() {return code == Invalidargument;}
-    void Setcode(size_t status_) { code = status_;}
+    static bool OK() { return code == Ok;} //
+    static bool IsNotFound() { return code == NotFound;}
+    static bool ISNotSupported() {return code == NotSupported ;}
+    static bool IsInvalidargument() {return code == Invalidargument;}
+    static void Setcode(size_t status_) { code = status_;}
     [[nodiscard]] std::string tostring() const {
         switch (code) {
             case Ok: {
@@ -48,6 +47,7 @@ private:
         NotSupported = 2, // 不支持
         Invalidargument //  无效参数
     };
-    unsigned long  code;
+    static unsigned long  code ;
 };
+unsigned  long status::code = 0 ;
 #endif //MY_REDIES_STATE_H
