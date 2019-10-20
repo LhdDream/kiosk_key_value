@@ -141,6 +141,9 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/table/Block.h">
 			<Option target="my_redies"/>
 		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/table/block_builder.cc">
+			<Option target="my_redies"/>
+		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/table/block_builder.h">
 			<Option target="my_redies"/>
 		</Unit>
@@ -156,7 +159,7 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/table/write_file.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/util/Allocate.h">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/test/smaz.cc">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/util/Prena.cc">

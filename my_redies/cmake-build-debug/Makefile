@@ -285,6 +285,33 @@ src/db_wr.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/db_wr.cc.s
 .PHONY : src/db_wr.cc.s
 
+table/block_builder.o: table/block_builder.cc.o
+
+.PHONY : table/block_builder.o
+
+# target to build an object file
+table/block_builder.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/block_builder.cc.o
+.PHONY : table/block_builder.cc.o
+
+table/block_builder.i: table/block_builder.cc.i
+
+.PHONY : table/block_builder.i
+
+# target to preprocess a source file
+table/block_builder.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/block_builder.cc.i
+.PHONY : table/block_builder.cc.i
+
+table/block_builder.s: table/block_builder.cc.s
+
+.PHONY : table/block_builder.s
+
+# target to generate assembly for a file
+table/block_builder.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/block_builder.cc.s
+.PHONY : table/block_builder.cc.s
+
 table/sstable.o: table/sstable.cc.o
 
 .PHONY : table/sstable.o
@@ -311,6 +338,33 @@ table/sstable.s: table/sstable.cc.s
 table/sstable.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/sstable.cc.s
 .PHONY : table/sstable.cc.s
+
+test/smaz.o: test/smaz.cc.o
+
+.PHONY : test/smaz.o
+
+# target to build an object file
+test/smaz.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/smaz.cc.o
+.PHONY : test/smaz.cc.o
+
+test/smaz.i: test/smaz.cc.i
+
+.PHONY : test/smaz.i
+
+# target to preprocess a source file
+test/smaz.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/smaz.cc.i
+.PHONY : test/smaz.cc.i
+
+test/smaz.s: test/smaz.cc.s
+
+.PHONY : test/smaz.s
+
+# target to generate assembly for a file
+test/smaz.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/smaz.cc.s
+.PHONY : test/smaz.cc.s
 
 util/Prena.o: util/Prena.cc.o
 
@@ -393,9 +447,15 @@ help:
 	@echo "... src/db_wr.o"
 	@echo "... src/db_wr.i"
 	@echo "... src/db_wr.s"
+	@echo "... table/block_builder.o"
+	@echo "... table/block_builder.i"
+	@echo "... table/block_builder.s"
 	@echo "... table/sstable.o"
 	@echo "... table/sstable.i"
 	@echo "... table/sstable.s"
+	@echo "... test/smaz.o"
+	@echo "... test/smaz.i"
+	@echo "... test/smaz.s"
 	@echo "... util/Prena.o"
 	@echo "... util/Prena.i"
 	@echo "... util/Prena.s"

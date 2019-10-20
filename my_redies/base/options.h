@@ -29,6 +29,10 @@ public:
     {
         return block_size;
     }
+    size_t  restart_()
+    {
+        return block_restart_inter;
+    }
 private:
     size_t  write_buf; //  设置写缓冲区的大小
     size_t  read_buf; //  设置读缓冲区的大小
@@ -39,6 +43,7 @@ private:
     size_t lru_number;//lru_中存储多少条数据
     const size_t  number_ = 4;//sstable 0
     const size_t  last_time = 3600; // 每一个小时进行一次合并
+    const size_t   block_restart_inter = 16; // 每多少个记录里保存一次重启点
 };
 //read option
 struct readoptions{

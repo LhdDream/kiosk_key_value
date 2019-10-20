@@ -58,7 +58,7 @@ public:
     }
     bool writeFile(const char * data,size_t size){
         fd = open(filename.c_str(),O_DIRECT | O_CREAT | O_RDWR | O_NOATIME,0666);
-
+        //O_DIRECT 直接与磁盘进行IO操作
         if(ftruncate(fd,size) == -1)
         {
             std::cout << "fruncate" << std::endl;

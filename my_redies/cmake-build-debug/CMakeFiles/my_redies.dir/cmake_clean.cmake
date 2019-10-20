@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_redies.dir/table/sstable.cc.o"
   "CMakeFiles/my_redies.dir/base/decondig.cc.o"
   "CMakeFiles/my_redies.dir/util/memorypool/memorypool.cc.o"
+  "CMakeFiles/my_redies.dir/table/block_builder.cc.o"
+  "CMakeFiles/my_redies.dir/test/smaz.cc.o"
   "my_redies.pdb"
   "my_redies"
 )
