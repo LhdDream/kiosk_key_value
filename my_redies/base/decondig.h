@@ -15,8 +15,9 @@ namespace deconding{
     uint32_t DecodeInt32(const char * ptr);
 
     //这里借鉴了smaz 库的压缩方式
-    int smaz_compress(std::string &in, int inlen, std::string *out);
-    long smaz_decompress(std::string &in, int inlen, std::string *out );
+    std::string smaz_compress(const char *in, int inlen, std::string *out);
+    std::string smaz_decompress(const char *in, int inlen,std::string * out);
+
 }
 
 // 短字符串的压缩密码
