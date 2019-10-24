@@ -285,6 +285,33 @@ src/db_wr.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/db_wr.cc.s
 .PHONY : src/db_wr.cc.s
 
+table/Block.o: table/Block.cc.o
+
+.PHONY : table/Block.o
+
+# target to build an object file
+table/Block.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/Block.cc.o
+.PHONY : table/Block.cc.o
+
+table/Block.i: table/Block.cc.i
+
+.PHONY : table/Block.i
+
+# target to preprocess a source file
+table/Block.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/Block.cc.i
+.PHONY : table/Block.cc.i
+
+table/Block.s: table/Block.cc.s
+
+.PHONY : table/Block.s
+
+# target to generate assembly for a file
+table/Block.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/Block.cc.s
+.PHONY : table/Block.cc.s
+
 table/block_builder.o: table/block_builder.cc.o
 
 .PHONY : table/block_builder.o
@@ -365,6 +392,33 @@ test/smaz.s: test/smaz.cc.s
 test/smaz.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/smaz.cc.s
 .PHONY : test/smaz.cc.s
+
+test/test.o: test/test.cc.o
+
+.PHONY : test/test.o
+
+# target to build an object file
+test/test.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/test.cc.o
+.PHONY : test/test.cc.o
+
+test/test.i: test/test.cc.i
+
+.PHONY : test/test.i
+
+# target to preprocess a source file
+test/test.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/test.cc.i
+.PHONY : test/test.cc.i
+
+test/test.s: test/test.cc.s
+
+.PHONY : test/test.s
+
+# target to generate assembly for a file
+test/test.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/test.cc.s
+.PHONY : test/test.cc.s
 
 util/Prena.o: util/Prena.cc.o
 
@@ -447,6 +501,9 @@ help:
 	@echo "... src/db_wr.o"
 	@echo "... src/db_wr.i"
 	@echo "... src/db_wr.s"
+	@echo "... table/Block.o"
+	@echo "... table/Block.i"
+	@echo "... table/Block.s"
 	@echo "... table/block_builder.o"
 	@echo "... table/block_builder.i"
 	@echo "... table/block_builder.s"
@@ -456,6 +513,9 @@ help:
 	@echo "... test/smaz.o"
 	@echo "... test/smaz.i"
 	@echo "... test/smaz.s"
+	@echo "... test/test.o"
+	@echo "... test/test.i"
+	@echo "... test/test.s"
 	@echo "... util/Prena.o"
 	@echo "... util/Prena.i"
 	@echo "... util/Prena.s"

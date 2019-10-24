@@ -11,7 +11,7 @@
 namespace deconding{
     // 在这里里面实现get , set 方法相应对象的编码方式
     // varint 变长整形
-    void EncodeInt32(char *intput  ,uint32_t value);
+    void EncodeInt32(char *input , uint32_t value);
     uint32_t DecodeInt32(const char * ptr);
 
     //这里借鉴了smaz 库的压缩方式

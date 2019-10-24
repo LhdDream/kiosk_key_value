@@ -10,9 +10,11 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kiosk/CLionProjects/my_redies/main.cpp" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/main.cpp.o"
   "/home/kiosk/CLionProjects/my_redies/src/Compaction.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/Compaction.cc.o"
   "/home/kiosk/CLionProjects/my_redies/src/db_wr.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/db_wr.cc.o"
+  "/home/kiosk/CLionProjects/my_redies/table/Block.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/table/Block.cc.o"
   "/home/kiosk/CLionProjects/my_redies/table/block_builder.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/table/block_builder.cc.o"
   "/home/kiosk/CLionProjects/my_redies/table/sstable.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/table/sstable.cc.o"
   "/home/kiosk/CLionProjects/my_redies/test/smaz.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/smaz.cc.o"
+  "/home/kiosk/CLionProjects/my_redies/test/test.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/test.cc.o"
   "/home/kiosk/CLionProjects/my_redies/util/Prena.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/util/Prena.cc.o"
   "/home/kiosk/CLionProjects/my_redies/util/memorypool/memorypool.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/util/memorypool/memorypool.cc.o"
   )

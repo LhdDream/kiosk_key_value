@@ -21,16 +21,18 @@ public:
     void  Add(sds & key,sds & value);
     [[nodiscard]] bool empty() const { return buffer_.empty();}
     void Reset();
-    [[nodiscard]] inline size_t Current() const {
-        return (buffer_.size() + restart_.size() * sizeof(uint32_t) + sizeof(uint32_t));
-    };
-    std::string finish() ;
+
     ~block_builder() = default;
+    std::string finish();
+    [[nodiscard]] inline size_t  buffer_size() const {
+        return  buffer_.size();
+    }
 private:
     std::unique_ptr<options> option_;
     std::string buffer_;
-    std::vector<uint32_t > restart_ ; //重启点的偏移量
-    int cout_ ;
     bool finished{}; // 写入完成
+    long long size_; // 记录一块中有多少个key_value 对
+    std::vector<uint32_t > offest_; // 每一recode的偏移量
+    //写到每一块的最后面
 };
 #endif //MY_REDIES_BLOCK_BUILDER_H

@@ -1,40 +1,23 @@
-#include <cstdio>
-#include <string>
-#include <vector>
+//
+// Created by kiosk on 19-10-23.
+//
 #include <iostream>
+#include <sstream>
+#include <vector>
+#include <snappy.h>
 #include "../base/decondig.h"
 #include "../base/decondig.cc"
-#include <memory>
 using namespace std;
-
-class K{
-public:
-    K(){
-        a[0] = 1;
-    }
-    void clear()
-    {
-        a[0] = 0 ;
-    }
-    void print()
-    {
-        std::cout << a[0] << std::endl;
-    }
-    ~K() = default;
-    int a[3];
-};
+using namespace deconding;
 int main()
 {
-    int b = 2;
-    K b1;
-    std::shared_ptr<K > c(std::make_shared<K>(b1));
-    std::vector<std::shared_ptr<K >> d;
-    d.emplace_back(std::move(c));
-    c = std::make_shared<K>(b1);
-    c->clear();
-    for(auto &p : d)
-    {
-        p->print();
-    }
+    char s [6];
+   uint32_t  c = 1024;
+   deconding::EncodeInt32(s,c);
+   uint32_t  p = 2;
+   std::string l;
+   l += s;
+   std::cout << l <<std::endl;
+   std::cout << deconding::DecodeInt32(s) << std::endl;
+   return 0;
 }
-

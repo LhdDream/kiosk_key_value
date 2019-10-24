@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_redies.dir/util/memorypool/memorypool.cc.o"
   "CMakeFiles/my_redies.dir/table/block_builder.cc.o"
   "CMakeFiles/my_redies.dir/test/smaz.cc.o"
+  "CMakeFiles/my_redies.dir/test/test.cc.o"
+  "CMakeFiles/my_redies.dir/table/Block.cc.o"
   "my_redies.pdb"
   "my_redies"
 )

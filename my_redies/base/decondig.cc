@@ -3,7 +3,7 @@
 //
 #include "decondig.h"
 
-void deconding::EncodeInt32(  char *intput , uint32_t value) {
+void deconding::EncodeInt32(  char *input , uint32_t value) {
 
     //varByte算法，根据数据大小使用不同个数的字节来进行存储
     //varint 编码是对于较小数来进行压缩，但是需要大数可能需要5bytes
@@ -14,7 +14,7 @@ void deconding::EncodeInt32(  char *intput , uint32_t value) {
      char * ptr =  intput;
     while(value >= B)
     {
-        *(ptr + ( iEncodeLen++)) = ( char)((value & (B-1)) | B);
+        *(ptr + ( iEncodeLen++)) = static_cast<char>  ((value & (B-1)) | B);
         value >>= 7;
     }
     *(ptr + (iEncodeLen ++ )) = value;
