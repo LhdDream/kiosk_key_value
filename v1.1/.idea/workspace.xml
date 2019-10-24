@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="my_redies" targetName="my_redies" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="45aba6c4-e73f-45d8-a0b4-c944281d98ee" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/test/ArenaAlloc" />
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectId" id="1PMwwDoNcg7UsciyDyfrIgj7DbP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../myweb" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$/util" />
+      <recent name="$PROJECT_DIR$/table" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="my_redies" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="my_redies" TARGET_NAME="my_redies" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="my_redies" RUN_TARGET_NAME="my_redies">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="45aba6c4-e73f-45d8-a0b4-c944281d98ee" name="Default Changelist" comment="" />
+      <created>1565697509155</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565697509155</updated>
+      <workItem from="1565697511383" duration="2562000" />
+      <workItem from="1565764746667" duration="452000" />
+      <workItem from="1565828112552" duration="2478000" />
+      <workItem from="1565852240240" duration="28522000" />
+      <workItem from="1566033327849" duration="597000" />
+      <workItem from="1566259874228" duration="1423000" />
+      <workItem from="1566797618408" duration="14542000" />
+      <workItem from="1566972855305" duration="13210000" />
+      <workItem from="1567230543782" duration="14663000" />
+      <workItem from="1567331969889" duration="12260000" />
+      <workItem from="1567429171600" duration="2997000" />
+      <workItem from="1567511263317" duration="9263000" />
+      <workItem from="1567570443461" duration="7374000" />
+      <workItem from="1567662604442" duration="9480000" />
+      <workItem from="1567772749045" duration="8735000" />
+      <workItem from="1567852073195" duration="18084000" />
+      <workItem from="1568033771563" duration="5010000" />
+      <workItem from="1568080406809" duration="14899000" />
+      <workItem from="1568203209712" duration="3381000" />
+      <workItem from="1568206782432" duration="6296000" />
+      <workItem from="1568269417651" duration="7653000" />
+      <workItem from="1568459780179" duration="2937000" />
+      <workItem from="1568467584736" duration="7363000" />
+      <workItem from="1568528154475" duration="439000" />
+      <workItem from="1568528792402" duration="312000" />
+      <workItem from="1568529338047" duration="13420000" />
+      <workItem from="1568634162389" duration="5841000" />
+      <workItem from="1568685267315" duration="14109000" />
+      <workItem from="1568873637507" duration="7330000" />
+      <workItem from="1568966175473" duration="3879000" />
+      <workItem from="1569136543017" duration="20353000" />
+      <workItem from="1569246899224" duration="4682000" />
+      <workItem from="1569293083078" duration="11194000" />
+      <workItem from="1569416710291" duration="2963000" />
+      <workItem from="1569465439351" duration="21074000" />
+      <workItem from="1569595279518" duration="717000" />
+      <workItem from="1569653020188" duration="1831000" />
+      <workItem from="1569761051627" duration="4033000" />
+      <workItem from="1569935510388" duration="1830000" />
+      <workItem from="1570088228976" duration="9719000" />
+      <workItem from="1570187835286" duration="11558000" />
+      <workItem from="1570357019298" duration="12090000" />
+      <workItem from="1570427024558" duration="22442000" />
+      <workItem from="1570536584231" duration="5157000" />
+      <workItem from="1570544026724" duration="2559000" />
+      <workItem from="1570629689837" duration="3866000" />
+      <workItem from="1570675912614" duration="21052000" />
+      <workItem from="1570948002911" duration="10916000" />
+      <workItem from="1571052990048" duration="12863000" />
+      <workItem from="1571129458546" duration="1495000" />
+      <workItem from="1571145676123" duration="3027000" />
+      <workItem from="1571209826310" duration="12815000" />
+      <workItem from="1571298792965" duration="1724000" />
+      <workItem from="1571312812266" duration="9476000" />
+      <workItem from="1571375393621" duration="7630000" />
+      <workItem from="1571552489597" duration="2293000" />
+      <workItem from="1571557699704" duration="6047000" />
+      <workItem from="1571667512547" duration="3533000" />
+      <workItem from="1571714003936" duration="18083000" />
+      <workItem from="1571832811341" duration="4474000" />
+      <workItem from="1571894960615" duration="3472000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
