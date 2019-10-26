@@ -135,6 +135,12 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/db_wr.h">
 			<Option target="my_redies"/>
 		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/lru.cc">
+			<Option target="my_redies"/>
+		</Unit>
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/lru.h">
+			<Option target="my_redies"/>
+		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/write_buffer.h">
 			<Option target="my_redies"/>
 		</Unit>

@@ -34,5 +34,6 @@ private:
     long long size_; // 记录一块中有多少个key_value 对
     std::vector<uint32_t > offest_; // 每一recode的偏移量
     //写到每一块的最后面
+    size_t cout{};
 };
 #endif //MY_REDIES_BLOCK_BUILDER_H

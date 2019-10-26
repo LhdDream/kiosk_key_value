@@ -1,22 +1,35 @@
 //
 // Created by kiosk on 19-10-20.
 //
-
+#include <snappy.h>
+#include <string>
 #include <iostream>
+#include <string>
+#include <vector>
 #include "../base/decondig.h"
 #include "../base/decondig.cc"
-int main(){
-    std::string c = "Nothing is more difficult, and therefore more precious, than to be able to decide";
- //   char d[4096];
-//   auto *d = new std::vector<char>();
-   std::string d;
-  // d.resize(10);
-   // d[3] = 'c';
-    deconding::smaz_compress(c.data(),c.size(),&d);
-    std::cout << d<< std::endl;
-    std::string p ;
-    deconding::smaz_decompress(d.data(),d.size(),&p);
-    std::cout << p << std::endl;
+using namespace std;
+using namespace deconding;
+std::string c()
+{
+    std::string p = "A";
+    return p;
 }
-//"\000\000L\376T8\254>\255\230>\303F" L�T8�>��>�F
-//"\376TL8\254>\255\230>\303F" �TL8�>��>�F
+int main() {
+    std::vector<uint32_t > p;
+    char bufs[4];
+    std::string buffer_;
+    for(size_t i = 0 ; i< 100000 ; i++)
+    {
+        p.emplace_back(i);
+    }
+    for(auto & it : p)
+    {
+        EncodeInt32(bufs,it);
+        buffer_ += bufs;
+    }
+    EncodeInt32(bufs,p.size());
+    buffer_ += bufs;
+    std::cout << buffer_.size() << std::endl;
+    return 0;
+}

@@ -2,22 +2,19 @@
 // Created by kiosk on 19-10-23.
 //
 #include <iostream>
-#include <sstream>
-#include <vector>
-#include <snappy.h>
-#include "../base/decondig.h"
-#include "../base/decondig.cc"
+#include "../src/db.h"
+#include "../src/db_wr.h"
+#include "../src/db_wr.cc"
 using namespace std;
-using namespace deconding;
+
 int main()
 {
-    char s [6];
-   uint32_t  c = 1024;
-   deconding::EncodeInt32(s,c);
-   uint32_t  p = 2;
-   std::string l;
-   l += s;
-   std::cout << l <<std::endl;
-   std::cout << deconding::DecodeInt32(s) << std::endl;
+    db * db_ = new wr();
+    std::string c = " aaaa";
+    for(size_t i = 0 ;  i< 10000 ; i++)
+    {
+        db_->Set(std::to_string(i),c);
+    }
+    delete db_;
    return 0;
 }

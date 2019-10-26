@@ -27,15 +27,14 @@ public:
     std::string append();
 
 private:
-    std::bitset<16 * 1024> array; //2KB
+    std::bitset<1024 * 16> array; //2KB
 };
 
  void  bloom::add(const sds &Temp) {
         array.set(SDBMHash(Temp.data()));
         array.set(RSHash(Temp.data()));
-        array.set(JSHash(Temp.data()));
         array.set(APHash(Temp.data()));
-        array.set(PJWHash(Temp.data()));
+
 }
 std::string bloom::append() {
         return array.to_string(); //  直接转化为std::string

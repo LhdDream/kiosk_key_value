@@ -285,6 +285,33 @@ src/db_wr.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/db_wr.cc.s
 .PHONY : src/db_wr.cc.s
 
+src/lru.o: src/lru.cc.o
+
+.PHONY : src/lru.o
+
+# target to build an object file
+src/lru.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/lru.cc.o
+.PHONY : src/lru.cc.o
+
+src/lru.i: src/lru.cc.i
+
+.PHONY : src/lru.i
+
+# target to preprocess a source file
+src/lru.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/lru.cc.i
+.PHONY : src/lru.cc.i
+
+src/lru.s: src/lru.cc.s
+
+.PHONY : src/lru.s
+
+# target to generate assembly for a file
+src/lru.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/lru.cc.s
+.PHONY : src/lru.cc.s
+
 table/Block.o: table/Block.cc.o
 
 .PHONY : table/Block.o
@@ -501,6 +528,9 @@ help:
 	@echo "... src/db_wr.o"
 	@echo "... src/db_wr.i"
 	@echo "... src/db_wr.s"
+	@echo "... src/lru.o"
+	@echo "... src/lru.i"
+	@echo "... src/lru.s"
 	@echo "... table/Block.o"
 	@echo "... table/Block.i"
 	@echo "... table/Block.s"

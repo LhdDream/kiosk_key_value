@@ -65,7 +65,7 @@ public:
             //这一位的偏移量
             uint32_t  next_off = GetoffestPoint(mid+1);
             std::string p;
-            std::copy(data_ + region_off,data_+ next_off,p);
+            std::copy(data_ + region_off,data_+ next_off,p.begin());
             DecondEntry(&p,&key_,&value_);
             if(key_ < target.Tostring())
             {

@@ -7,7 +7,7 @@
 #include <atomic>
 #include <cassert>
 #include <cstdlib>
-#include "../util/Prena.cc"
+#include "../util/Prena.h"
 #include <boost/any.hpp>
 #include <list>
 #include <memory>

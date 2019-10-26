@@ -7,8 +7,8 @@
 //sstable 中所构建的数据块
 #include <unistd.h>
 #include <cstdint>
+#include "../base/sds.h"
 #include "../base/decondig.h"
-#include "../base/decondig.cc"
 using namespace deconding;
 // 每一个数据块中的最后维护
 class Block{

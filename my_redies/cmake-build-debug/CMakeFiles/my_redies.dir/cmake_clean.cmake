@@ -12,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_redies.dir/test/smaz.cc.o"
   "CMakeFiles/my_redies.dir/test/test.cc.o"
   "CMakeFiles/my_redies.dir/table/Block.cc.o"
+  "CMakeFiles/my_redies.dir/src/lru.cc.o"
   "my_redies.pdb"
   "my_redies"
 )

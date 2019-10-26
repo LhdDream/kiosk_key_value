@@ -12,14 +12,9 @@
 #include <map>
 #include "../base/options.h"
 #include "../base/sds.h"
-#include "../base/decondig.h"
-#include "../base/decondig.cc"
 #include "../util/bloom_filter.h"
-#include "../base/options.h"
 #include "block_builder.h"
 #include "block_builder.cc"
-#include "Block.h"
-#include "Block.cc"
 #include "../util/memorypool/memorypool.h"
 #include "../util/memorypool/memorypool.cc"
 #include "write_file.h"
@@ -40,14 +35,11 @@ class bloom;
 class options;
 class sstable{
 public:
-    sstable() :option_(std::make_unique<options>()),seqnumber_(0)
+    sstable() :writ_ (nullptr),blo(std::make_unique<block_builder>()) , option_(std::make_unique<options>()),seqnumber_(0)
     {
     };
     ~sstable() = default;
-    void unmemtableadd(std::unique_ptr<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>>>> & value , unsigned long long size){
-
-        std::unique_ptr<block_builder> blo = std::make_unique<block_builder>();
-
+    void unmemtableadd(std::unique_ptr<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>>>> & value ){
         for(auto &it : *value)
         {
             blo->Add(const_cast<sds &>(it.first), it.second);
@@ -55,10 +47,9 @@ public:
         buffer_ +=  blo->finish(); //
         unmemtable_.emplace_back(std::move(value));
         data_index.emplace_back(blo->buffer_size());
-         // 写入第一块的大小
-        block_.emplace_back(std::move(blo));
         //快进行组织
-        seqnumber_ += size; // 找到多大
+        seqnumber_ += buffer_.size();
+        blo->Reset();
     }
     void bloomadd(std::shared_ptr<bloom> & b){
         bloom_.emplace_back(std::move(b));
@@ -68,22 +59,20 @@ public:
         for(auto &c :unmemtable_)
         {
             if(c->find(key_) != c->end()){
-                snappy::Uncompress(c->at(key_).data(),c->at(key_).size(),value);
+                 *value = c->at(key_).Tostring();
                 return true;
             }
         }
         return false;
     }
     void composition_file(){
-        fifter_index.emplace_back(buffer_.size());
         for(auto & it  : bloom_)
         {
             buffer_ += it->append();
-            fifter_index.emplace_back(buffer_.size());
+            fifter_index++;
         }
         //现在把各个块的偏移量进行写入, 如果不满多少字节则进行补充
-        compostionoffest(fifter_index);
-        compostionoffest(data_index);
+      //  compostionoffest(data_index);
     }
     void compostionoffest(std::vector <uint32_t > &index){
         char bufs[4];
@@ -95,18 +84,25 @@ public:
         }
         bzero(bufs,sizeof(bufs));
         EncodeInt32(bufs,data_index.size());
-        buffer_.append(bufs,sizeof(bufs));
+        buffer_ += bufs;
+        bzero(bufs,sizeof(bufs));
+        EncodeInt32(bufs,fifter_index);
+        buffer_ += bufs;
     }
     void write_namefile()
     {
-        std::unique_ptr<write_file> writ_ = std::make_unique<write_file>("."+std::to_string(id_) + "tts");
-        writ_->Append(buffer_);
+        composition_file();
+        std::string filename =  "."+std::to_string(id_) + "tts";
+        writ_ = std::make_unique<write_file>(filename);
+        writ_->writeFile(buffer_.data(),buffer_.size());
         buffer_.clear();
-        write_.emplace_back(writ_);
+        write_.emplace_back(std::move(writ_));
+        printf("write_namefile\n");
     }
 private:
+    std::unique_ptr<write_file> writ_;
     std::vector<std::shared_ptr<bloom>> bloom_;
-
+    std::unique_ptr<block_builder> blo;
     std::vector<std::unique_ptr<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>>>> > unmemtable_;
     // 转化为有序的map进行存储
     std::unique_ptr<options> option_; // 对于选项参数设置
@@ -115,8 +111,7 @@ private:
     std::vector<std::unique_ptr<write_file>> write_; // 标志写入文件
 private:
     std::vector<uint32_t > data_index; //　每一个数据块的index
-    std::vector<uint32_t > fifter_index; // 每一个bloom过滤器的index
-    std::vector<std::unique_ptr<block_builder> > block_; // 每一个数据块的
+    uint32_t fifter_index{}; // fifter 的个数　，　每一块的大小相同
     static long long id_ ;
 };
 long long sstable::id_ = 0;
