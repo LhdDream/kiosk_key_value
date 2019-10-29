@@ -35,7 +35,7 @@ class bloom;
 class options;
 class sstable{
 public:
-    sstable() :writ_ (nullptr),blo(std::make_unique<block_builder>()) , option_(std::make_unique<options>()),seqnumber_(0)
+    sstable() :writ_ (nullptr),blo(std::make_unique<block_builder>()) , option_(std::make_unique<options>())
     {
     };
     ~sstable() = default;
@@ -48,12 +48,9 @@ public:
         unmemtable_.emplace_back(std::move(value));
         data_index.emplace_back(blo->buffer_size());
         //快进行组织
-        seqnumber_ += buffer_.size();
+        fifter_buffer += blo->to_fif(); // fiter 过滤器
+        fifter_index.emplace_back(fifter_index.size());
         blo->Reset();
-    }
-    void bloomadd(std::shared_ptr<bloom> & b){
-        bloom_.emplace_back(std::move(b));
-        seqnumber_ += 2048;
     }
     bool Get(sds & key_,std::string *value){
         for(auto &c :unmemtable_)
@@ -65,15 +62,7 @@ public:
         }
         return false;
     }
-    void composition_file(){
-        for(auto & it  : bloom_)
-        {
-            buffer_ += it->append();
-            fifter_index++;
-        }
-        //现在把各个块的偏移量进行写入, 如果不满多少字节则进行补充
-      //  compostionoffest(data_index);
-    }
+
     void compostionoffest(std::vector <uint32_t > &index){
         char bufs[4];
         for(auto & it : index)
@@ -86,33 +75,32 @@ public:
         EncodeInt32(bufs,data_index.size());
         buffer_ += bufs;
         bzero(bufs,sizeof(bufs));
-        EncodeInt32(bufs,fifter_index);
         buffer_ += bufs;
     }
     void write_namefile()
     {
-        composition_file();
+        buffer_ += fifter_buffer;
+      //  compostionoffest(fifter_index);
+       // compostionoffest(data_index);
         std::string filename =  "."+std::to_string(id_) + "tts";
         writ_ = std::make_unique<write_file>(filename);
         writ_->writeFile(buffer_.data(),buffer_.size());
-        buffer_.clear();
         write_.emplace_back(std::move(writ_));
-        printf("write_namefile\n");
     }
 private:
     std::unique_ptr<write_file> writ_;
-    std::vector<std::shared_ptr<bloom>> bloom_;
     std::unique_ptr<block_builder> blo;
     std::vector<std::unique_ptr<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>>>> > unmemtable_;
     // 转化为有序的map进行存储
     std::unique_ptr<options> option_; // 对于选项参数设置
-    unsigned long long seqnumber_; //
     std::string buffer_; // 写入文件的内容
     std::vector<std::unique_ptr<write_file>> write_; // 标志写入文件
 private:
     std::vector<uint32_t > data_index; //　每一个数据块的index
-    uint32_t fifter_index{}; // fifter 的个数　，　每一块的大小相同
     static long long id_ ;
+private:
+    std::string fifter_buffer; // fifter 中的buffer
+    std::vector<uint32_t > fifter_index; // index 标记
 };
 long long sstable::id_ = 0;
 #endif //MY_REDIES_SSTABLE_H

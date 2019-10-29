@@ -11,6 +11,7 @@
 #include "../base/options.h"
 #include "../base/decondig.h"
 #include "../base/decondig.cc"
+#include "fifter_builder.h"
 using namespace deconding;
  // 组织数据块中的内容
 class block_builder{
@@ -27,13 +28,19 @@ public:
     [[nodiscard]] inline size_t  buffer_size() const {
         return  buffer_.size();
     }
+    std::string to_fif(){
+        return fifter_->To_string(); // 表示转化
+    }
 private:
     std::unique_ptr<options> option_;
     std::string buffer_;
-    bool finished{}; // 写入完成
+    bool finished; // 写入完成
     long long size_; // 记录一块中有多少个key_value 对
+    //记录重启点的个数
     std::vector<uint32_t > offest_; // 每一recode的偏移量
     //写到每一块的最后面
-    size_t cout{};
+    size_t cout;
+    std::unique_ptr<fifter> fifter_;
+
 };
 #endif //MY_REDIES_BLOCK_BUILDER_H
