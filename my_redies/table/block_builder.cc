@@ -9,9 +9,19 @@ block_builder::block_builder() : option_(std::make_unique<options>()),finished(f
 void block_builder::Reset() {
     buffer_.clear();
     finished = false;
+    offest_.clear();
 }
 std::string block_builder::finish() {
-
+    char bufs[4];
+    for(auto & it : offest_)
+    {
+        bzero(bufs,sizeof(bufs));
+        EncodeInt32(bufs,it);
+        buffer_ += bufs;
+    }
+    bzero(bufs,sizeof(bufs));
+    EncodeInt32(bufs,offest_.size());
+    buffer_ += bufs;
     finished = true;
     return buffer_;
 }
@@ -21,7 +31,7 @@ void block_builder::Add(const sds &key, const sds &value) {
     //这时候记录key的长度或者编码
     //对于key
     //在这里我们使用我们的压缩算法来对key进行压缩，对于value不进行处理
-
+    offest_.emplace_back(buffer_.size()) ; //对于key_value的偏移量
     std::string temp;
     smaz_compress(key.data(),key.size(),&temp);
     buffer_ += temp;
