@@ -42,14 +42,14 @@ public:
     void unmemtableadd(std::unique_ptr<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>>>> & value ){
         for(auto &it : *value)
         {
-            blo->Add(const_cast<sds &>(it.first), it.second);
+            blo->Add(it.first, it.second);
         }
-        buffer_ +=  blo->finish(); //
+        buffer_ += blo->finish(); //
         unmemtable_.emplace_back(std::move(value));
-        data_index.emplace_back(blo->buffer_size());
+        data_index.emplace_back(buffer_.size());
         //快进行组织
-        fifter_buffer += blo->to_fif(); // fiter 过滤器
-        fifter_index.emplace_back(fifter_index.size());
+        fifter_buffer += Compress(blo->to_fif()); // fiter 过滤器
+        fifter_index.emplace_back(fifter_buffer.size());
         blo->Reset();
     }
     bool Get(sds & key_,std::string *value){
@@ -64,28 +64,52 @@ public:
     }
 
     void compostionoffest(std::vector <uint32_t > &index){
+        std::string p;
         char bufs[4];
         for(auto & it : index)
         {
             bzero(bufs,sizeof(bufs));
             EncodeInt32(bufs,it);
-            buffer_ += bufs;
+            p += bufs;
         }
-        bzero(bufs,sizeof(bufs));
-        EncodeInt32(bufs,data_index.size());
-        buffer_ += bufs;
-        bzero(bufs,sizeof(bufs));
-        buffer_ += bufs;
+        offest_ += p;
+        offest_ += '\r';
     }
     void write_namefile()
     {
         buffer_ += fifter_buffer;
-      //  compostionoffest(fifter_index);
-       // compostionoffest(data_index);
-        std::string filename =  "."+std::to_string(id_) + "tts";
+        compostionoffest(fifter_index);
+        compostionoffest(data_index);
+        {
+            char bufs[4];
+            bzero(bufs, sizeof(bufs));
+            EncodeInt32(bufs, offest_.size());
+            offest_ += bufs;
+            buffer_ += offest_;
+            //应该读取多少字节的索引
+        }
+        std::string filename;
+        makefilename(&filename);
         writ_ = std::make_unique<write_file>(filename);
         writ_->writeFile(buffer_.data(),buffer_.size());
         write_.emplace_back(std::move(writ_));
+         Reset();
+    }
+    void Reset(){
+        fifter_buffer.clear();
+        buffer_.clear();
+        data_index.clear();
+        fifter_index.clear();
+        offest_.clear();
+    }
+    std::string Compress(const std::string &data){
+        std::string p ;
+        snappy::Compress(data.data(),data.size(),&p);
+        return p;
+    }
+    void makefilename(std::string *filename){
+            *filename = "."+std::to_string(id_) + "tts";
+            id_++;
     }
 private:
     std::unique_ptr<write_file> writ_;
@@ -101,6 +125,9 @@ private:
 private:
     std::string fifter_buffer; // fifter 中的buffer
     std::vector<uint32_t > fifter_index; // index 标记
+private:
+    std::string offest_ ; //偏移量的offest
+
 };
 long long sstable::id_ = 0;
 #endif //MY_REDIES_SSTABLE_H

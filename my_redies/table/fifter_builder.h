@@ -23,7 +23,7 @@ public:
         std::string result_;
         for(auto & it : fifter_)
         {
-            it+= "\r";
+            it+= '\r';
             result_ += it;
         }
         fifter_.clear();
