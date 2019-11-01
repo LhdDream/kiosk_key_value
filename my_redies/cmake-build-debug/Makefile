@@ -285,33 +285,6 @@ src/db_wr.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/db_wr.cc.s
 .PHONY : src/db_wr.cc.s
 
-src/lru.o: src/lru.cc.o
-
-.PHONY : src/lru.o
-
-# target to build an object file
-src/lru.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/lru.cc.o
-.PHONY : src/lru.cc.o
-
-src/lru.i: src/lru.cc.i
-
-.PHONY : src/lru.i
-
-# target to preprocess a source file
-src/lru.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/lru.cc.i
-.PHONY : src/lru.cc.i
-
-src/lru.s: src/lru.cc.s
-
-.PHONY : src/lru.s
-
-# target to generate assembly for a file
-src/lru.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/lru.cc.s
-.PHONY : src/lru.cc.s
-
 table/Block.o: table/Block.cc.o
 
 .PHONY : table/Block.o
@@ -365,33 +338,6 @@ table/block_builder.s: table/block_builder.cc.s
 table/block_builder.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/block_builder.cc.s
 .PHONY : table/block_builder.cc.s
-
-table/sstable.o: table/sstable.cc.o
-
-.PHONY : table/sstable.o
-
-# target to build an object file
-table/sstable.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/sstable.cc.o
-.PHONY : table/sstable.cc.o
-
-table/sstable.i: table/sstable.cc.i
-
-.PHONY : table/sstable.i
-
-# target to preprocess a source file
-table/sstable.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/sstable.cc.i
-.PHONY : table/sstable.cc.i
-
-table/sstable.s: table/sstable.cc.s
-
-.PHONY : table/sstable.s
-
-# target to generate assembly for a file
-table/sstable.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/sstable.cc.s
-.PHONY : table/sstable.cc.s
 
 test/smaz.o: test/smaz.cc.o
 
@@ -528,18 +474,12 @@ help:
 	@echo "... src/db_wr.o"
 	@echo "... src/db_wr.i"
 	@echo "... src/db_wr.s"
-	@echo "... src/lru.o"
-	@echo "... src/lru.i"
-	@echo "... src/lru.s"
 	@echo "... table/Block.o"
 	@echo "... table/Block.i"
 	@echo "... table/Block.s"
 	@echo "... table/block_builder.o"
 	@echo "... table/block_builder.i"
 	@echo "... table/block_builder.s"
-	@echo "... table/sstable.o"
-	@echo "... table/sstable.i"
-	@echo "... table/sstable.s"
 	@echo "... test/smaz.o"
 	@echo "... test/smaz.i"
 	@echo "... test/smaz.s"

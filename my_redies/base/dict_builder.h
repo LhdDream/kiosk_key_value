@@ -31,7 +31,6 @@ public:
         explicit dict() : ht_(std::make_unique<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>> >>()),
          options_(std::make_unique<options>()),
          lru_(std::make_unique<lru_cache>()),
-         bloom_(std::make_shared<bloom>()),
          buffer_size(0),
          sstable_(std::make_unique<sstable>()){
         }
@@ -54,7 +53,6 @@ private:
     //在一定时间内进行删除
     //主动淘汰和被动淘汰
     //每次进行内存的写入的时候，可以直接进行内存的释放
-    std::shared_ptr<bloom> bloom_;//bloom 过滤器
     unsigned long long buffer_size ;
     std::unique_ptr<sstable> sstable_; // sstable
 };

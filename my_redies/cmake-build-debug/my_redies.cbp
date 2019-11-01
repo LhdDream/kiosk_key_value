@@ -135,10 +135,10 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/db_wr.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/lru.cc">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/lru.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/lru.h">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/read_buffer.h">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/src/write_buffer.h">
@@ -156,10 +156,10 @@
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/table/block_builder.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/table/log.h">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/table/fifter_builder.h">
 			<Option target="my_redies"/>
 		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/table/sstable.cc">
+		<Unit filename="/home/kiosk/CLionProjects/my_redies/table/log.h">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/table/sstable.h">
@@ -181,9 +181,6 @@
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/util/bloom_filter.h">
-			<Option target="my_redies"/>
-		</Unit>
-		<Unit filename="/home/kiosk/CLionProjects/my_redies/util/env.h">
 			<Option target="my_redies"/>
 		</Unit>
 		<Unit filename="/home/kiosk/CLionProjects/my_redies/util/hash.h">

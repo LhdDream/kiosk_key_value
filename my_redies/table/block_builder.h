@@ -37,6 +37,6 @@ private:
     bool finished; // 写入完成
 
     std::unique_ptr<fifter> fifter_; // 对于每一块的fifter 过滤器
-
+    std::vector<uint32_t > offest_ ; // 对于每一key_value 的索引
 };
 #endif //MY_REDIES_BLOCK_BUILDER_H

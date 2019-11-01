@@ -6,8 +6,6 @@
 void dict::Add(const sds & key,const  sds & value) {
     //返回相应的方式
     if((options_->block_() <= buffer_size) && (options_->write_() > buffer_size)){
-        sstable_->bloomadd(bloom_);
-        bloom_ = std::make_shared<bloom> ();
         sstable_->unmemtableadd(ht_);
         ht_ = std::make_unique<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>> >>();
     }else if(options_->write_() < buffer_size)
@@ -18,7 +16,6 @@ void dict::Add(const sds & key,const  sds & value) {
     //bloom 过滤器对于减少磁盘的IO查询起到了作用
     if(ht_->find(key) == ht_->end()) {
         lru_->put(key,value);
-        bloom_->add(key);
         //对于大型的value 进行压缩
         buffer_size += key.size();
         buffer_size += value.size();

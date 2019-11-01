@@ -12,7 +12,7 @@
 class options
 {
 public:
-    options () : write_buf( 8 * 1024) , read_buf(4 * 1024 * 1024),block_size(1024 * 4 ),max_file_size(4 * 1024 * 1024),lru_number(1024000)
+    options () : write_buf( 16 * 1024) , read_buf(4 * 1024 * 1024),block_size(1024 * 8 ),max_file_size(4 * 1024 * 1024),lru_number(1024000)
     {
 
     };
