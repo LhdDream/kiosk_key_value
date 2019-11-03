@@ -10,7 +10,6 @@
 #include "../base/sds.h"
 #include "../base/options.h"
 #include "../base/decondig.h"
-#include "../base/decondig.cc"
 #include "fifter_builder.h"
 using namespace deconding;
  // 组织数据块中的内容

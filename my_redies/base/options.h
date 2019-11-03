@@ -12,24 +12,30 @@
 class options
 {
 public:
-    options () : write_buf( 16 * 1024) , read_buf(4 * 1024 * 1024),block_size(1024 * 8 ),max_file_size(4 * 1024 * 1024),lru_number(1024000)
+    options () : write_buf( 64 * 1024) , read_buf(4 * 1024 * 1024),block_size(1024 * 8 ),max_file_size(4 * 1024 * 1024),lru_number(1024000),id_(0)
     {
-
     };
     ~options() = default;
-    size_t get_lru_number()
+    inline size_t get_lru_number()
     {
         return lru_number;
     }
-    size_t  write_()
+    inline size_t  write_()
     {
         return write_buf;
     }
-    size_t block_()
+    inline size_t block_()
     {
         return block_size;
     }
-
+    inline long long get_id()
+    {
+        return id_;
+    }
+    void makefilename(std::string *filename){
+        *filename = "."+std::to_string(id_) + "tts";
+        id_++;
+    }
 private:
     size_t  write_buf; //  设置写缓冲区的大小
     size_t  read_buf; //  设置读缓冲区的大小
@@ -40,19 +46,7 @@ private:
     size_t lru_number;//lru_中存储多少条数据
     const size_t  number_ = 4;//sstable 0
     const size_t  last_time = 3600; // 每一个小时进行一次合并
-};
-//read option
-struct readoptions{
-    //在缓存中进行读取
-    readoptions() = default;
-    ~readoptions() = default;
-    bool cache_read = true;
-    //是不是需要存储在本地之中,所读取到的数据
-    bool save_local = false;
-};
-// write option
-struct writeoptions{
-    bool sync = false; //同步写入操作
+    long long id_ ; // sstable的id
 };
 
 struct c

@@ -6,16 +6,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kiosk/CLionProjects/my_redies/base/decondig.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/base/decondig.cc.o"
   "/home/kiosk/CLionProjects/my_redies/base/dict_builder.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/base/dict_builder.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/base/skiplist.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/base/skiplist.cc.o"
   "/home/kiosk/CLionProjects/my_redies/main.cpp" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/main.cpp.o"
   "/home/kiosk/CLionProjects/my_redies/src/Compaction.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/Compaction.cc.o"
   "/home/kiosk/CLionProjects/my_redies/src/db_wr.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/db_wr.cc.o"
+  "/home/kiosk/CLionProjects/my_redies/src/read_buffer.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/src/read_buffer.cc.o"
   "/home/kiosk/CLionProjects/my_redies/table/Block.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/table/Block.cc.o"
   "/home/kiosk/CLionProjects/my_redies/table/block_builder.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/table/block_builder.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/test/smaz.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/smaz.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/test/test.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/test/test.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/util/Prena.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/util/Prena.cc.o"
-  "/home/kiosk/CLionProjects/my_redies/util/memorypool/memorypool.cc" "/home/kiosk/CLionProjects/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir/util/memorypool/memorypool.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

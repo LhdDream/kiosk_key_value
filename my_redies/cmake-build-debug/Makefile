@@ -177,33 +177,6 @@ base/dict_builder.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/dict_builder.cc.s
 .PHONY : base/dict_builder.cc.s
 
-base/skiplist.o: base/skiplist.cc.o
-
-.PHONY : base/skiplist.o
-
-# target to build an object file
-base/skiplist.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/skiplist.cc.o
-.PHONY : base/skiplist.cc.o
-
-base/skiplist.i: base/skiplist.cc.i
-
-.PHONY : base/skiplist.i
-
-# target to preprocess a source file
-base/skiplist.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/skiplist.cc.i
-.PHONY : base/skiplist.cc.i
-
-base/skiplist.s: base/skiplist.cc.s
-
-.PHONY : base/skiplist.s
-
-# target to generate assembly for a file
-base/skiplist.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/skiplist.cc.s
-.PHONY : base/skiplist.cc.s
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -285,6 +258,33 @@ src/db_wr.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/db_wr.cc.s
 .PHONY : src/db_wr.cc.s
 
+src/read_buffer.o: src/read_buffer.cc.o
+
+.PHONY : src/read_buffer.o
+
+# target to build an object file
+src/read_buffer.cc.o:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/read_buffer.cc.o
+.PHONY : src/read_buffer.cc.o
+
+src/read_buffer.i: src/read_buffer.cc.i
+
+.PHONY : src/read_buffer.i
+
+# target to preprocess a source file
+src/read_buffer.cc.i:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/read_buffer.cc.i
+.PHONY : src/read_buffer.cc.i
+
+src/read_buffer.s: src/read_buffer.cc.s
+
+.PHONY : src/read_buffer.s
+
+# target to generate assembly for a file
+src/read_buffer.cc.s:
+	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/read_buffer.cc.s
+.PHONY : src/read_buffer.cc.s
+
 table/Block.o: table/Block.cc.o
 
 .PHONY : table/Block.o
@@ -339,114 +339,6 @@ table/block_builder.cc.s:
 	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/block_builder.cc.s
 .PHONY : table/block_builder.cc.s
 
-test/smaz.o: test/smaz.cc.o
-
-.PHONY : test/smaz.o
-
-# target to build an object file
-test/smaz.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/smaz.cc.o
-.PHONY : test/smaz.cc.o
-
-test/smaz.i: test/smaz.cc.i
-
-.PHONY : test/smaz.i
-
-# target to preprocess a source file
-test/smaz.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/smaz.cc.i
-.PHONY : test/smaz.cc.i
-
-test/smaz.s: test/smaz.cc.s
-
-.PHONY : test/smaz.s
-
-# target to generate assembly for a file
-test/smaz.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/smaz.cc.s
-.PHONY : test/smaz.cc.s
-
-test/test.o: test/test.cc.o
-
-.PHONY : test/test.o
-
-# target to build an object file
-test/test.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/test.cc.o
-.PHONY : test/test.cc.o
-
-test/test.i: test/test.cc.i
-
-.PHONY : test/test.i
-
-# target to preprocess a source file
-test/test.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/test.cc.i
-.PHONY : test/test.cc.i
-
-test/test.s: test/test.cc.s
-
-.PHONY : test/test.s
-
-# target to generate assembly for a file
-test/test.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/test/test.cc.s
-.PHONY : test/test.cc.s
-
-util/Prena.o: util/Prena.cc.o
-
-.PHONY : util/Prena.o
-
-# target to build an object file
-util/Prena.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/Prena.cc.o
-.PHONY : util/Prena.cc.o
-
-util/Prena.i: util/Prena.cc.i
-
-.PHONY : util/Prena.i
-
-# target to preprocess a source file
-util/Prena.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/Prena.cc.i
-.PHONY : util/Prena.cc.i
-
-util/Prena.s: util/Prena.cc.s
-
-.PHONY : util/Prena.s
-
-# target to generate assembly for a file
-util/Prena.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/Prena.cc.s
-.PHONY : util/Prena.cc.s
-
-util/memorypool/memorypool.o: util/memorypool/memorypool.cc.o
-
-.PHONY : util/memorypool/memorypool.o
-
-# target to build an object file
-util/memorypool/memorypool.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/memorypool/memorypool.cc.o
-.PHONY : util/memorypool/memorypool.cc.o
-
-util/memorypool/memorypool.i: util/memorypool/memorypool.cc.i
-
-.PHONY : util/memorypool/memorypool.i
-
-# target to preprocess a source file
-util/memorypool/memorypool.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/memorypool/memorypool.cc.i
-.PHONY : util/memorypool/memorypool.cc.i
-
-util/memorypool/memorypool.s: util/memorypool/memorypool.cc.s
-
-.PHONY : util/memorypool/memorypool.s
-
-# target to generate assembly for a file
-util/memorypool/memorypool.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/memorypool/memorypool.cc.s
-.PHONY : util/memorypool/memorypool.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -462,9 +354,6 @@ help:
 	@echo "... base/dict_builder.o"
 	@echo "... base/dict_builder.i"
 	@echo "... base/dict_builder.s"
-	@echo "... base/skiplist.o"
-	@echo "... base/skiplist.i"
-	@echo "... base/skiplist.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -474,24 +363,15 @@ help:
 	@echo "... src/db_wr.o"
 	@echo "... src/db_wr.i"
 	@echo "... src/db_wr.s"
+	@echo "... src/read_buffer.o"
+	@echo "... src/read_buffer.i"
+	@echo "... src/read_buffer.s"
 	@echo "... table/Block.o"
 	@echo "... table/Block.i"
 	@echo "... table/Block.s"
 	@echo "... table/block_builder.o"
 	@echo "... table/block_builder.i"
 	@echo "... table/block_builder.s"
-	@echo "... test/smaz.o"
-	@echo "... test/smaz.i"
-	@echo "... test/smaz.s"
-	@echo "... test/test.o"
-	@echo "... test/test.i"
-	@echo "... test/test.s"
-	@echo "... util/Prena.o"
-	@echo "... util/Prena.i"
-	@echo "... util/Prena.s"
-	@echo "... util/memorypool/memorypool.o"
-	@echo "... util/memorypool/memorypool.i"
-	@echo "... util/memorypool/memorypool.s"
 .PHONY : help
 
 

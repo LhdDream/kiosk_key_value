@@ -6,7 +6,6 @@
 #define MY_REDIES_WRITE_BUFFER_H
 #include "../base/sds.h"
 #include "../base/dict_builder.h"
-#include "../base/dict_builder.cc"
 #include <memory>
 //计划将key和value 分离存储，尽量减少耦合度
 //writebatch 写入磁盘

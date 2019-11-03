@@ -14,9 +14,7 @@
 #include "../base/sds.h"
 #include "../util/bloom_filter.h"
 #include "block_builder.h"
-#include "block_builder.cc"
 #include "../util/memorypool/memorypool.h"
-#include "../util/memorypool/memorypool.cc"
 #include "write_file.h"
 using spp::sparse_hash_map;
 using namespace deconding;
@@ -35,7 +33,7 @@ class bloom;
 class options;
 class sstable{
 public:
-    sstable() :writ_ (nullptr),blo(std::make_unique<block_builder>()) , option_(std::make_unique<options>())
+    sstable(std::shared_ptr<options> op_) :writ_ (nullptr),blo(std::make_unique<block_builder>()) , option_(op_)
     {
     };
     ~sstable() = default;
@@ -89,11 +87,10 @@ public:
             //应该读取多少字节的索引
         }
         std::string filename;
-        makefilename(&filename);
+        option_->makefilename(&filename);
         writ_ = std::make_unique<write_file>(filename);
         writ_->writeFile(buffer_.data(),buffer_.size());
-        write_.emplace_back(std::move(writ_));
-         Reset();
+        Reset();
     }
     void Reset(){
         fifter_buffer.clear();
@@ -107,27 +104,21 @@ public:
         snappy::Compress(data.data(),data.size(),&p);
         return p;
     }
-    void makefilename(std::string *filename){
-            *filename = "."+std::to_string(id_) + "tts";
-            id_++;
-    }
+
 private:
     std::unique_ptr<write_file> writ_;
     std::unique_ptr<block_builder> blo;
     std::vector<std::unique_ptr<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>>>> > unmemtable_;
     // 转化为有序的map进行存储
-    std::unique_ptr<options> option_; // 对于选项参数设置
+    std::shared_ptr<options> option_; // 对于选项参数设置
     std::string buffer_; // 写入文件的内容
-    std::vector<std::unique_ptr<write_file>> write_; // 标志写入文件
 private:
     std::vector<uint32_t > data_index; //　每一个数据块的index
-    static long long id_ ;
 private:
     std::string fifter_buffer; // fifter 中的buffer
     std::vector<uint32_t > fifter_index; // index 标记
 private:
     std::string offest_ ; //偏移量的offest
-
 };
-long long sstable::id_ = 0;
+
 #endif //MY_REDIES_SSTABLE_H

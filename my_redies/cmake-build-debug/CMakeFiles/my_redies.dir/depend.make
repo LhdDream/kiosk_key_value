@@ -4,8 +4,6 @@
 CMakeFiles/my_redies.dir/base/decondig.cc.o: ../base/decondig.cc
 CMakeFiles/my_redies.dir/base/decondig.cc.o: ../base/decondig.h
 CMakeFiles/my_redies.dir/base/decondig.cc.o: ../base/sds.h
-CMakeFiles/my_redies.dir/base/decondig.cc.o: ../base/skiplist.h
-CMakeFiles/my_redies.dir/base/decondig.cc.o: ../util/Prena.h
 CMakeFiles/my_redies.dir/base/decondig.cc.o: ../util/sparsepp/spp.h
 CMakeFiles/my_redies.dir/base/decondig.cc.o: ../util/sparsepp/spp_config.h
 CMakeFiles/my_redies.dir/base/decondig.cc.o: ../util/sparsepp/spp_dlalloc.h
@@ -19,14 +17,12 @@ CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../base/dict_builder.cc
 CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../base/dict_builder.h
 CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../base/options.h
 CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../base/sds.h
-CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../base/skiplist.h
-CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../base/state.h
+CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../src/lru.h
 CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../table/block_builder.h
+CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../table/fifter_builder.h
 CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../table/sstable.h
 CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../table/write_file.h
-CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../util/Prena.h
 CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../util/bloom_filter.h
-CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../util/env.h
 CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../util/hash.h
 CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../util/memorypool/memorypool.h
 CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../util/sparsepp/spp.h
@@ -37,32 +33,46 @@ CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../util/sparsepp/spp_stdint.h
 CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../util/sparsepp/spp_traits.h
 CMakeFiles/my_redies.dir/base/dict_builder.cc.o: ../util/sparsepp/spp_utils.h
 
-CMakeFiles/my_redies.dir/base/skiplist.cc.o: ../base/random.h
-CMakeFiles/my_redies.dir/base/skiplist.cc.o: ../base/skiplist.cc
-CMakeFiles/my_redies.dir/base/skiplist.cc.o: ../base/skiplist.h
-CMakeFiles/my_redies.dir/base/skiplist.cc.o: ../util/Prena.h
-
+CMakeFiles/my_redies.dir/main.cpp.o: ../base/decondig.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../base/dict_builder.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../base/options.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../base/sds.h
 CMakeFiles/my_redies.dir/main.cpp.o: ../main.cpp
+CMakeFiles/my_redies.dir/main.cpp.o: ../src/db.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../src/db_wr.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../src/lru.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../src/write_buffer.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../table/block_builder.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../table/fifter_builder.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../table/sstable.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../table/write_file.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../util/bloom_filter.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../util/hash.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../util/memorypool/memorypool.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../util/sparsepp/spp.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../util/sparsepp/spp_config.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../util/sparsepp/spp_dlalloc.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../util/sparsepp/spp_smartptr.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../util/sparsepp/spp_stdint.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../util/sparsepp/spp_traits.h
+CMakeFiles/my_redies.dir/main.cpp.o: ../util/sparsepp/spp_utils.h
 
 CMakeFiles/my_redies.dir/src/Compaction.cc.o: ../src/Compaction.cc
 
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../base/decondig.h
-CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../base/dict_builder.cc
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../base/dict_builder.h
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../base/options.h
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../base/sds.h
-CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../base/skiplist.h
-CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../base/state.h
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../src/db.h
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../src/db_wr.cc
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../src/db_wr.h
+CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../src/lru.h
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../src/write_buffer.h
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../table/block_builder.h
+CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../table/fifter_builder.h
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../table/sstable.h
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../table/write_file.h
-CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../util/Prena.h
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../util/bloom_filter.h
-CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../util/env.h
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../util/hash.h
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../util/memorypool/memorypool.h
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../util/sparsepp/spp.h
@@ -73,12 +83,27 @@ CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../util/sparsepp/spp_stdint.h
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../util/sparsepp/spp_traits.h
 CMakeFiles/my_redies.dir/src/db_wr.cc.o: ../util/sparsepp/spp_utils.h
 
+CMakeFiles/my_redies.dir/src/read_buffer.cc.o: ../base/decondig.h
+CMakeFiles/my_redies.dir/src/read_buffer.cc.o: ../base/options.h
+CMakeFiles/my_redies.dir/src/read_buffer.cc.o: ../base/sds.h
+CMakeFiles/my_redies.dir/src/read_buffer.cc.o: ../src/read_buffer.cc
+CMakeFiles/my_redies.dir/src/read_buffer.cc.o: ../src/read_buffer.h
+CMakeFiles/my_redies.dir/src/read_buffer.cc.o: ../table/Block.h
+CMakeFiles/my_redies.dir/src/read_buffer.cc.o: ../table/fifter_builder.h
+CMakeFiles/my_redies.dir/src/read_buffer.cc.o: ../util/bloom_filter.h
+CMakeFiles/my_redies.dir/src/read_buffer.cc.o: ../util/hash.h
+CMakeFiles/my_redies.dir/src/read_buffer.cc.o: ../util/sparsepp/spp.h
+CMakeFiles/my_redies.dir/src/read_buffer.cc.o: ../util/sparsepp/spp_config.h
+CMakeFiles/my_redies.dir/src/read_buffer.cc.o: ../util/sparsepp/spp_dlalloc.h
+CMakeFiles/my_redies.dir/src/read_buffer.cc.o: ../util/sparsepp/spp_smartptr.h
+CMakeFiles/my_redies.dir/src/read_buffer.cc.o: ../util/sparsepp/spp_stdint.h
+CMakeFiles/my_redies.dir/src/read_buffer.cc.o: ../util/sparsepp/spp_traits.h
+CMakeFiles/my_redies.dir/src/read_buffer.cc.o: ../util/sparsepp/spp_utils.h
+
 CMakeFiles/my_redies.dir/table/Block.cc.o: ../base/decondig.h
 CMakeFiles/my_redies.dir/table/Block.cc.o: ../base/sds.h
-CMakeFiles/my_redies.dir/table/Block.cc.o: ../base/skiplist.h
 CMakeFiles/my_redies.dir/table/Block.cc.o: ../table/Block.cc
 CMakeFiles/my_redies.dir/table/Block.cc.o: ../table/Block.h
-CMakeFiles/my_redies.dir/table/Block.cc.o: ../util/Prena.h
 CMakeFiles/my_redies.dir/table/Block.cc.o: ../util/sparsepp/spp.h
 CMakeFiles/my_redies.dir/table/Block.cc.o: ../util/sparsepp/spp_config.h
 CMakeFiles/my_redies.dir/table/Block.cc.o: ../util/sparsepp/spp_dlalloc.h
@@ -90,10 +115,11 @@ CMakeFiles/my_redies.dir/table/Block.cc.o: ../util/sparsepp/spp_utils.h
 CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../base/decondig.h
 CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../base/options.h
 CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../base/sds.h
-CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../base/skiplist.h
 CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../table/block_builder.cc
 CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../table/block_builder.h
-CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../util/Prena.h
+CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../table/fifter_builder.h
+CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../util/bloom_filter.h
+CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../util/hash.h
 CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../util/sparsepp/spp.h
 CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../util/sparsepp/spp_config.h
 CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../util/sparsepp/spp_dlalloc.h
@@ -101,36 +127,4 @@ CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../util/sparsepp/spp_smartptr
 CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../util/sparsepp/spp_stdint.h
 CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../util/sparsepp/spp_traits.h
 CMakeFiles/my_redies.dir/table/block_builder.cc.o: ../util/sparsepp/spp_utils.h
-
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../base/decondig.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../base/options.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../base/sds.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../base/skiplist.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../base/state.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../table/block_builder.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../table/sstable.cc
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../table/sstable.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../table/write_file.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../util/Prena.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../util/bloom_filter.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../util/env.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../util/hash.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../util/memorypool/memorypool.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../util/sparsepp/spp.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../util/sparsepp/spp_config.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../util/sparsepp/spp_dlalloc.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../util/sparsepp/spp_smartptr.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../util/sparsepp/spp_stdint.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../util/sparsepp/spp_traits.h
-CMakeFiles/my_redies.dir/table/sstable.cc.o: ../util/sparsepp/spp_utils.h
-
-CMakeFiles/my_redies.dir/test/smaz.cc.o: ../test/smaz.cc
-
-CMakeFiles/my_redies.dir/test/test.cc.o: ../test/test.cc
-
-CMakeFiles/my_redies.dir/util/Prena.cc.o: ../util/Prena.cc
-CMakeFiles/my_redies.dir/util/Prena.cc.o: ../util/Prena.h
-
-CMakeFiles/my_redies.dir/util/memorypool/memorypool.cc.o: ../util/memorypool/memorypool.cc
-CMakeFiles/my_redies.dir/util/memorypool/memorypool.cc.o: ../util/memorypool/memorypool.h
 

@@ -3,24 +3,25 @@
 //
 #include "db_wr.h"
 
-status wr::Get( const sds &key, std::string *value) {
+bool wr::Get( const sds &key, std::string *value) {
     return db::Get(key,value);
 }
-status wr::Delete(const  sds &key) {
+bool wr::Delete(const  sds &key) {
     return db::Delete(key);
 }
-status wr::Set(const sds &key, const sds &value) {
+bool wr::Set(const sds &key, const sds &value) {
     return db::Set(key,value);
 }
 
 wr::~wr() = default;
 
-status db::Get(const sds &key, std::string *value) {
+bool db::Get(const sds &key, std::string *value) {
     write_->Get(key,value);
 }
-status db::Delete(const sds &key) {
+bool db::Delete(const sds &key) {
     write_->Delete(key);
 }
-status db::Set(const  sds &key,const sds &value) {
+
+bool db::Set(const  sds &key,const sds &value) {
     write_->Set(key,value);
 }

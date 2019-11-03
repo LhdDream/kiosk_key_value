@@ -11,7 +11,6 @@
 #include "sds.h"
 #include <memory>
 #include "options.h"
-#include "skiplist.h"
 #include "../table/sstable.h"
 #include "../util/memorypool/memorypool.h"
 #include "../table/block_builder.h"
@@ -29,10 +28,10 @@ class dict
 
 public:
         explicit dict() : ht_(std::make_unique<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>> >>()),
-         options_(std::make_unique<options>()),
+         options_(std::make_shared<options>()),
          lru_(std::make_unique<lru_cache>()),
          buffer_size(0),
-         sstable_(std::make_unique<sstable>()){
+         sstable_(std::make_unique<sstable>(options_)){
         }
         dict(const dict & ) = delete ;
         dict operator = (const dict &) = delete;
@@ -45,7 +44,7 @@ public:
 private:
     //根据type 来进行反解压
     std::unique_ptr<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>> >> ht_;
-    std::unique_ptr<options> options_;
+    std::shared_ptr<options> options_;
     std::unique_ptr<lru_cache> lru_;
     //每一块链表直接缓存它的块
     //  维护的链表

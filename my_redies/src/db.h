@@ -6,7 +6,6 @@
 #define MY_REDIES_DB_H
 //这里是数据库的总接口
 #include "../base/options.h"
-#include "../base/state.h"
 #include "../base/sds.h"
 #include "write_buffer.h"
 #include <memory>
@@ -18,9 +17,9 @@ public:
     db(const db &) = delete;
     db& operator=(const db &) = delete;
     virtual ~db()  = default;
-    virtual status Set(const sds & key,const sds &value) = 0;
-    virtual status Delete(const sds &key) = 0 ;
-    virtual status Get(const sds &key,std::string * value) = 0;
+    virtual bool Set(const sds & key,const sds &value) = 0;
+    virtual bool Delete(const sds &key) = 0 ;
+    virtual bool Get(const sds &key,std::string * value) = 0;
 private:
     std::unique_ptr<write_buffer> write_;
 };
