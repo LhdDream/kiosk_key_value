@@ -13,8 +13,6 @@ bool wr::Set(const sds &key, const sds &value) {
     return db::Set(key,value);
 }
 
-wr::~wr() = default;
-
 bool db::Get(const sds &key, std::string *value) {
     write_->Get(key,value);
 }

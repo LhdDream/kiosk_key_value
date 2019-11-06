@@ -19,56 +19,27 @@ using namespace deconding;
 //使用mmap来进行读取文件中的内容，意图加快读取速率
 class read_buffer{
 public:
-    explicit read_buffer(std::shared_ptr<options> &op,sds &key) : block_(nullptr),Iter_(nullptr),option_(op),id(option_->get_id()),re_buffer(nullptr),right(false),key_(std::move(key)){
+    explicit read_buffer(std::shared_ptr<options> &op,sds &key) :fif_(nullptr),block_(nullptr),Iter_(nullptr),option_(op),id(option_->get_id()),re_buffer(nullptr),key_(key){
     }
-    bool read_file()
-    {
-            while(!right || (id == 0))
-            {
-                file_name = "." +std::to_string(id) +"tts";
-                auto fd = open(file_name.c_str(),O_RDONLY | O_CLOEXEC,0666);
-                if(fd == -1) // 文件不存在
-                {
-                    id--;//查看下一个文件是不是存在
-                    continue;
-                }
-                struct stat st{};
-                auto r = fstat(fd,&st);
-                if(r == -1)
-                {
-                    close(fd);
-                    return  false;
-                }
-                int len = st.st_size;
-                re_buffer = static_cast<char *>  (mmap(nullptr,len,PROT_READ ,
-                                                       MAP_SHARED | MAP_POPULATE | MAP_NONBLOCK,fd,0));
-                if(re_buffer == nullptr) {
-                    return false;
-                }
-                block_ = std::make_unique<Block>(re_buffer);
-
-                id--;
-            }
-    }
+    bool read_file();
+    bool read_offest(char * data,size_t len);
     //在每一data块中进行读取
     bool find_value();
     //读取索引
-    void read_offest(char * data,size_t len);
+
+
+
     void get_vector(std::vector<uint32_t > &index,const std::string& off);
-    void read_fifter(){
-        int size = fifter_index.size();
-        while(size != 0)
-        {
-            size--;
-        }
-    } // 读取出一块的fifter
+    std::string value()
+    {
+        return value_.Tostring();
+    }
 
 private:
     std::unique_ptr<fifter> fif_; // fif hhh
     std::unique_ptr<Block> block_;
     std::unique_ptr<Block::Itear> Iter_;
     std::shared_ptr<options> option_;
-    bool right  ; // 有没有找到
     long long  id; // 这个从后往前进行读取，如果没有读取到内容在找之前的数据
     //读取到内容之后不找之前的数据
     char * re_buffer; // 读取的buffer
@@ -79,5 +50,7 @@ private:
     std::vector<uint32_t > data_index; //　每一个数据块的index
     std::vector<uint32_t > fifter_index; // index 标记
     std::string fifter_; // fifter
+private:
+    std::string buffer_; // 存储整块的内容
 };
 #endif //MY_REDIES_READ_BUFFER_H
