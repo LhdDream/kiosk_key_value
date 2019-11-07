@@ -30,14 +30,14 @@ bool read_buffer::read_offest(char *data, size_t len) {
 
     std::string temp1 , temp2;
     temp1.resize(it);
-    temp2.resize(altogether.end() - altogether.begin() - 2 - it);
+    temp2.resize(altogether.end() - altogether.begin()  - it);
     std::copy(altogether.begin(),altogether.begin()+it,temp1.begin());
-    std::copy(altogether.begin()+it+2,altogether.end(),temp2.begin());
-    get_vector(fifter_index,temp1);
-    get_vector(data_index,temp2);
-
+    std::copy(altogether.begin()+it+1,altogether.end(),temp2.begin());
+    get_vector(data_index,temp1);
+    get_vector(fifter_index,temp2);
+    //先data块后fifter块
     //在这里使用一个循环判断处于那个块之中
-    size_t  fifter_size = fifter_index.size();
+    size_t  fifter_size = fifter_index.size() - 1;
     while(fifter_size != 0)
     {
         //每一个数据块进行匹配
@@ -45,7 +45,8 @@ bool read_buffer::read_offest(char *data, size_t len) {
         //计算出大小
         //先是fifter
         //如果找到则退出//之后进行数据块的读取
-        std::copy(data+len-sizeof(uint32_t) - size*sizeof(uint32_t) - fifter_index[fifter_size],data+len-sizeof(uint32_t) - size*sizeof(uint32_t) - fifter_index[fifter_size- 1 ],fifter_.begin());
+        fifter_.resize(fifter_index[fifter_size] - fifter_index[fifter_size - 1]);
+        std::copy(data+len-(size + 1) * sizeof(uint32_t)  - 2 - fifter_index[fifter_size],data+len-(size + 1) * sizeof(uint32_t) - 2 - fifter_index[fifter_size- 1 ],fifter_.begin());
         fif_ = std::make_unique<fifter>();
         fif_->SplitString(fifter_);
         if(fif_->match(key_))
@@ -58,7 +59,8 @@ bool read_buffer::read_offest(char *data, size_t len) {
     {
         //找到
         //给我相应的data块放入解析之中
-        std::copy(data+len - sizeof(uint32_t) - size*sizeof(uint32_t) - fifter_index[fifter_index.size() - 1] - data_index[fifter_size],data+len - sizeof(uint32_t) - size*sizeof(uint32_t) - fifter_index[fifter_index.size() - 1] - data_index[fifter_size - 1],buffer_.begin());
+        buffer_.resize(data_index[fifter_size]-data_index[fifter_size-1]);
+        std::copy(data+len - (size +1 ) *sizeof(uint32_t) - fifter_index[fifter_index.size() - 1] - data_index[fifter_size] - 2,data+len - 2 - (size + 1)*sizeof(uint32_t) - fifter_index[fifter_index.size() - 1] - data_index[fifter_size - 1],buffer_.begin());
         return true;
     }
     return false;
@@ -86,11 +88,11 @@ bool read_buffer::read_file() {
             if(re_buffer == nullptr) {
                 return false;
             }
-            if(read_offest(re_buffer,len))
+            if(!read_offest(re_buffer,len))
             {
                 break;
             }
-            block_ = std::make_unique<Block>(re_buffer);
+            block_ = std::make_unique<Block>(buffer_);
             if(find_value())
             {
                 id = option_->get_id();

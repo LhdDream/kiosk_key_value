@@ -26,9 +26,6 @@ public:
     //在每一data块中进行读取
     bool find_value();
     //读取索引
-
-
-
     void get_vector(std::vector<uint32_t > &index,const std::string& off);
     std::string value()
     {
