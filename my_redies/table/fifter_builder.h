@@ -10,7 +10,7 @@
 #include <vector>
 class fifter{
 public:
-    explicit fifter() : bloom_(std::make_unique<bloom> ()){
+    explicit fifter() : bloom_(std::make_unique<bloom> ()) ,fifter_ (0),off_(0){
 
     }
     void Add(const sds & key_){
@@ -20,18 +20,17 @@ public:
     }
    ~fifter() = default;
     std::string To_string() {
+        off_ = 0;
         std::string result_;
         for(auto & it : fifter_)
         {
             it+= '\r';
             result_ += it;
         }
+        off_ = result_.size();
         fifter_.clear();
         return result_;
     }
-    inline size_t  size_ () {
-        return fifter_.size();
-    };
     //read 函数
     void SplitString(const std::string & s){
              if(!fifter_.empty())
@@ -52,9 +51,22 @@ public:
                  fifter_.emplace_back(s.substr(pos1));
              }
     }
+    bool match(sds & key_)
+    {
+        for(auto & it : fifter_)
+        {
+            if(bloom_->key_match(key_,&it))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     //分割函数
 private:
     std::unique_ptr<bloom> bloom_;
     std::vector<std::string> fifter_;
+    size_t  off_;
 };
 #endif //MY_REDIES_FIFTER_BUILDER_H

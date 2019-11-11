@@ -5,11 +5,13 @@
 #ifndef MY_REDIES_SSTABLE_H
 #define MY_REDIES_SSTABLE_H
 
+#include <utility>
 #include <vector>
 #include <string>
 #include <memory>
 #include <snappy.h>
 #include <map>
+#include <list>
 #include "../base/options.h"
 #include "../base/sds.h"
 #include "../util/bloom_filter.h"
@@ -35,6 +37,9 @@ class sstable{
 public:
     sstable(std::shared_ptr<options> op_) :writ_ (nullptr),blo(std::make_unique<block_builder>()) , option_(op_)
     {
+        std::cout << "writesss" << std::endl;
+        data_index.emplace_back(0);
+        fifter_index.emplace_back(0);
     };
     ~sstable() = default;
     void unmemtableadd(std::unique_ptr<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>>>> & value ){
@@ -42,11 +47,12 @@ public:
         {
             blo->Add(it.first, it.second);
         }
-        buffer_ += blo->finish(); //
+        buffer_.append(blo->finish()); //
         unmemtable_.emplace_back(std::move(value));
+       //这里应该是data_index上一块加+
         data_index.emplace_back(buffer_.size());
         //快进行组织
-        fifter_buffer += Compress(blo->to_fif()); // fiter 过滤器
+        fifter_buffer+= blo->to_fif(); // fiter 过滤器
         fifter_index.emplace_back(fifter_buffer.size());
         blo->Reset();
     }
@@ -62,29 +68,30 @@ public:
     }
 
     void compostionoffest(std::vector <uint32_t > &index){
-        std::string p;
         char bufs[4];
         for(auto & it : index)
         {
             bzero(bufs,sizeof(bufs));
             EncodeInt32(bufs,it);
-            p += bufs;
+            offest_.append(bufs, sizeof(bufs));
         }
-        offest_ += p;
         offest_ += '\r';
     }
     void write_namefile()
     {
         buffer_ += fifter_buffer;
-        compostionoffest(fifter_index);
         compostionoffest(data_index);
+        compostionoffest(fifter_index);
         {
             char bufs[4];
             bzero(bufs, sizeof(bufs));
-            EncodeInt32(bufs, offest_.size());
-            offest_ += bufs;
-            buffer_ += offest_;
-            //应该读取多少字节的索引
+            EncodeInt32(bufs, data_index.size() + fifter_index.size());
+            offest_.append(bufs,sizeof(bufs));
+            buffer_.append(offest_);
+            for(auto & it : data_index)
+            {
+                std::cout << it  << std::endl;
+            }
         }
         std::string filename;
         option_->makefilename(&filename);
@@ -98,17 +105,15 @@ public:
         data_index.clear();
         fifter_index.clear();
         offest_.clear();
-    }
-    std::string Compress(const std::string &data){
-        std::string p ;
-        snappy::Compress(data.data(),data.size(),&p);
-        return p;
+        unmemtable_.pop_front(); // 每次把第一个清除掉
+        data_index.emplace_back(0);
+        fifter_index.emplace_back(0);
     }
 
 private:
     std::unique_ptr<write_file> writ_;
     std::unique_ptr<block_builder> blo;
-    std::vector<std::unique_ptr<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>>>> > unmemtable_;
+    std::list<std::unique_ptr<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>>>> > unmemtable_;
     // 转化为有序的map进行存储
     std::shared_ptr<options> option_; // 对于选项参数设置
     std::string buffer_; // 写入文件的内容

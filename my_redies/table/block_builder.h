@@ -15,17 +15,16 @@ using namespace deconding;
  // 组织数据块中的内容
 class block_builder{
 public:
-    block_builder();
+    block_builder() : option_(std::make_unique<options>()),finished(false),fifter_(std::make_unique<fifter>()){
+    }
     block_builder(const block_builder &) = delete;
     block_builder&operator=(const block_builder &) = delete;
     void  Add(const sds & key,const sds & value);
-    [[nodiscard]] bool empty() const { return buffer_.empty();}
     void Reset();
-
     ~block_builder() = default;
-    std::string finish();
+    std::string&& finish();
     [[nodiscard]] inline size_t  buffer_size() const {
-        return  buffer_.size();
+        return  buffer_.size() + (offest_.size() *4) ;
     }
     std::string to_fif(){
         return fifter_->To_string(); // 表示转化
