@@ -16,7 +16,7 @@ public:
     wr()= default;
     wr(const wr & )= delete;
     wr& operator =(const wr &) = delete;
-    ~wr() override = default;; // override 确保派生类声明的重载函数
+    ~wr() override = default; // override 确保派生类声明的重载函数
     //有相同的签名
     //签名不匹配会导致创建一个新的虚函数
     bool Set(const sds & key,const sds &value) override ;

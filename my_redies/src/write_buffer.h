@@ -12,6 +12,7 @@
 class write_buffer{
 public:
     write_buffer() : dict_(std::make_unique<dict>()){
+        std::cout << "write_buffer\n";
     };
     ~write_buffer() = default;
     void Set( const sds& key, const sds & value){
