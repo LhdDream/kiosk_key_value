@@ -8,30 +8,28 @@
 #include <queue>
 #include <algorithm>
 #include <any>
-#include "sds.h"
 #include <memory>
+#include <map>
+#include "sds.h"
 #include "options.h"
 #include "../table/sstable.h"
 #include "../util/memorypool/memorypool.h"
 #include "../table/block_builder.h"
 #include "../src/lru.h"
-#include <map>
 //在这里使用内存表的构建
 //内存表主要是通过pashmap来进行构建，同时提供多线程并发访问
 class options;
 
-
-
-
 class dict
 {
-
 public:
         explicit dict() : ht_(std::make_unique<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>> >>()),
          options_(std::make_shared<options>()),
          lru_(std::make_unique<lru_cache>()),
-         buffer_size(0),
-         sstable_(std::make_unique<sstable>(options_)){
+         buffer_size{},
+         sstable_(std::make_unique<sstable>(options_)),
+         write_size{},
+         save_flag(false){
         }
         dict(const dict & ) = delete ;
         dict operator = (const dict &) = delete;
@@ -40,7 +38,10 @@ public:
         //引用只能被初始化一次
         bool Get(const sds&,std::string *);// 查找
         bool Delete(const sds&);
-
+        bool save() ;
+        void set_save() {
+            save_flag = true;
+        }
 private:
     //根据type 来进行反解压
     std::unique_ptr<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>> >> ht_;
@@ -54,5 +55,8 @@ private:
     //每次进行内存的写入的时候，可以直接进行内存的释放
     unsigned long long buffer_size ;
     std::unique_ptr<sstable> sstable_; // sstable
+    unsigned  long long write_size ;
+
+    bool save_flag ; // 进行内存的装入
 };
 #endif //MY_REDIES_DICT_BUILDER_H

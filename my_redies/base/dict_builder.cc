@@ -4,16 +4,8 @@
 #include "dict_builder.h"
 
 void dict::Add(const sds & key,const  sds & value) {
-    //返回相应的方式
-    if((options_->block_() <= buffer_size) && (options_->write_() > buffer_size)){
-        sstable_->unmemtableadd(ht_);
-        ht_ = std::make_unique<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>> >>();
-    }else if(options_->write_() < buffer_size)
-    {
-        sstable_->write_namefile();
-        buffer_size = 0 ;
-    }
     //bloom 过滤器对于减少磁盘的IO查询起到了作用
+    save(); // 每次进行save的判断
     if(ht_->find(key) == ht_->end()) {
         lru_->put(key,value);
         //对于大型的value 进行压缩
@@ -50,4 +42,18 @@ bool dict::Delete(const sds &key) {
     return false;
 }
 
+bool dict::save() {
+    //返回相应的方式
+    //save_flag 会两者同时进行触发
+    if(options_->block_() <= buffer_size || save_flag){
+        sstable_->unmemtableadd(ht_);
+        ht_ = std::make_unique<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>> >>();
+        write_size += buffer_size;
+        buffer_size = 0;
+    }else if(options_->write_() <= write_size || save_flag)
+    {
+        sstable_->write_namefile();
+        write_size = 0;
+    }
+}
 
