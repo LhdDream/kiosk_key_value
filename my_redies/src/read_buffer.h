@@ -19,7 +19,12 @@ using namespace deconding;
 //使用mmap来进行读取文件中的内容，意图加快读取速率
 class read_buffer{
 public:
-    explicit read_buffer(std::shared_ptr<options> &op,sds &key) :fif_(nullptr),block_(nullptr),Iter_(nullptr),option_(op),id(op->get_id()),key_(key),fd{}{
+    explicit read_buffer(std::shared_ptr<options> &op) :fif_(nullptr),block_(nullptr),Iter_(nullptr),option_(op),id(op->get_id()),fd{}{
+    }
+    void set_key(sds &key)
+    {
+        key_ = key;
+        id = option_->get_id();
     }
     bool read_file();
     bool read_offest(const char * data,size_t len);

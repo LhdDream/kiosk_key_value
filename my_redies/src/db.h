@@ -7,20 +7,16 @@
 //这里是数据库的总接口
 #include "../base/options.h"
 #include "../base/sds.h"
-#include "write_buffer.h"
-#include <memory>
-
 class db{
 public:
-    db():write_(std::make_unique<write_buffer>()){
-    };
+    db() = default;
     db(const db &) = delete;
     db& operator=(const db &) = delete;
     virtual ~db()  = default;
-    virtual bool Set(const sds & key,const sds &value) = 0;
+    virtual void  Set(const sds & key,const sds &value) = 0;
     virtual bool Delete(const sds &key) = 0 ;
     virtual bool Get(const sds &key,std::string * value) = 0;
-private:
-    std::unique_ptr<write_buffer> write_;
+    virtual bool save() = 0 ;
+
 };
 #endif
