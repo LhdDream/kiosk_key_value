@@ -1,0 +1,3 @@
+/home/kiosk/CLionProjects/kiosk_key_value/my_redies/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/kiosk/CLionProjects/kiosk_key_value/my_redies/cmake-build-debug/CMakeFiles/my_redies.dir
+/home/kiosk/CLionProjects/kiosk_key_value/my_redies/cmake-build-debug/CMakeFiles/edit_cache.dir
