@@ -2,8 +2,8 @@
 // Created by kiosk on 19-10-14.
 //
 
-#ifndef MY_REDIES_ALLOCATE_H
-#define MY_REDIES_ALLOCATE_H
+#ifndef MY_SIMPLE_STORAGE_ALLOCATE_H
+#define MY_SIMPLE_STORAGE_ALLOCATE_H
 
 
 #include <memory>

@@ -3,57 +3,103 @@
 //
 #include "dict_builder.h"
 
-void dict::Add(const sds & key,const  sds & value) {
+void dict::Set(const std::string & key,  const std::string & value ) {
     //bloom 过滤器对于减少磁盘的IO查询起到了作用
-    save(); // 每次进行save的判断
-    if(ht_->find(key) == ht_->end()) {
-        lru_->put(key,value);
-        //对于大型的value 进行压缩
-        buffer_size += key.size();
-        buffer_size += value.size();
-        ht_->emplace(key,value);
+   // Save();
+    //m_log.info()  << key << ' '<< value << ' ';
+   // m_log.flunsh();
+    auto it = m_ht[m_index].find(key) ;
+    if( it == m_ht[m_index].end() ) {
+        m_buffer_size += key.size();
+        m_buffer_size += value.size();
+        m_ht[m_index].emplace(key,value);
+        m_lru->Put(key,value);
     }else{
-        ht_->at(key) = value;
-        lru_->put(key,value);
+        m_ht[m_index][key] = value;
+        m_lru->Put(key,m_ht[m_index][key]);
     }
 }
 
-bool dict::Get(const sds &key, std::string *value) {
-    if(lru_->exist(key)) {
-          *value = lru_->get(key).Tostring();
+bool dict::Get(const std::string &key, std::string &value) {
+    if(m_lru->Exist(key) ) {
+          value = m_lru->Get(key);
+          return true;
     }else {
-        auto c = ht_->find(key);
-        if (c!= ht_->end()) {
-            // 如果找到则进行解码操作
-                *value = c->second.Tostring();
+        int i = m_index;
+        while(i >= 0) {
+            auto c = m_ht[i].find(key);
+            if (c != m_ht[i].end() && !c->second.empty()) {
+                value = c->second;
                 return true;
-        }else {
-            sstable_->Get(const_cast<sds &>(key), value);
+            }
+            i--;
         }
-    }
-    return false;
-}
-
-bool dict::Delete(const sds &key) {
-    if(ht_->find(key) != ht_->end()){
-         ht_->erase(key);
-         return true;
-    }
-    return false;
-}
-
-bool dict::save() {
-    //返回相应的方式
-    //save_flag 会两者同时进行触发
-    if(options_->block_() <= buffer_size || save_flag){
-        sstable_->unmemtableadd(ht_);
-        ht_ = std::make_unique<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>> >>();
-        write_size += buffer_size;
-        buffer_size = 0;
-    }else if(options_->write_() <= write_size || save_flag)
-    {
-        sstable_->write_namefile();
-        write_size = 0;
+        return  m_sstable->Get(key,value);
+        //磁盘中读取
     }
 }
 
+void  dict::Delete(const std::string &key) {
+     m_ht[m_index][key] = "";
+}
+
+bool dict::Save() {
+    if(options::GetOptions().Block() <= m_buffer_size){
+        m_write_size += m_buffer_size;
+        m_buffer_size = 0;
+        m_index++;
+    }else if(options::GetOptions().Write() <= m_write_size){
+        //进行异步save
+        if(options::GetOptions().Id() % 5 == 0 && (options::GetOptions().Write() <= m_number)){
+            options::GetOptions().AddBlock();
+            options::GetOptions().AddWrite();
+        }
+        Map c;
+        Merge(m_ht[m_index - 2], m_ht[m_index], c);
+        m_sstable->UnmemtableAdd(c);
+        m_sstable->Write_NameFile();
+        m_write_size = 0;
+        m_index = 0;
+        m_log.clear();
+    }
+    return true;
+}
+
+void dict::Merge(Map &a, Map &b, Map &c) {
+    for(const auto  & l : b){
+        if(!l.second.empty())
+            c.emplace(l.first,l.second);
+    }
+    for(const auto & l :a){
+        if(!l.second.empty())
+         c.emplace(l.first,l.second);
+    }
+    a.clear();
+    b.clear();
+}
+
+void dict::Recover( const std::string &filename) {
+    if( !access(filename.data(),0)){
+        //创建一个文件流对象，并打开文件
+        std::ifstream fin(filename.c_str());
+        //创建字符串流对象
+        std::stringstream sin;
+        sin <<  fin.rdbuf();
+        std::string p;
+        std::string key;
+        std::string value;
+        bool ty = true;
+        while(getline(sin,p,' ')){
+            if(ty){
+                key = p;
+                ty = false;
+            }else{
+                value =p;
+                m_ht[m_index].emplace(key,value);
+                ty = true;
+            }
+        }
+        fin.close();
+        fin.clear();
+    }
+}

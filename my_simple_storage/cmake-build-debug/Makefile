@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kiosk/CLionProjects/kiosk_key_value/my_redies
+CMAKE_SOURCE_DIR = /home/kiosk/CLionProjects/kiosk_key_value/my_simple_storage
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kiosk/CLionProjects/kiosk_key_value/my_redies/cmake-build-debug
+CMAKE_BINARY_DIR = /home/kiosk/CLionProjects/kiosk_key_value/my_simple_storage/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kiosk/CLionProjects/kiosk_key_value/my_redies/cmake-build-debug/CMakeFiles /home/kiosk/CLionProjects/kiosk_key_value/my_redies/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kiosk/CLionProjects/kiosk_key_value/my_simple_storage/cmake-build-debug/CMakeFiles /home/kiosk/CLionProjects/kiosk_key_value/my_simple_storage/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kiosk/CLionProjects/kiosk_key_value/my_redies/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kiosk/CLionProjects/kiosk_key_value/my_simple_storage/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named my_redies
+# Target rules for targets named my_simple_storage
 
 # Build rule for target.
-my_redies: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 my_redies
-.PHONY : my_redies
+my_simple_storage: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 my_simple_storage
+.PHONY : my_simple_storage
 
 # fast build rule for target.
-my_redies/fast:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/build
-.PHONY : my_redies/fast
+my_simple_storage/fast:
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/build
+.PHONY : my_simple_storage/fast
 
 base/decondig.o: base/decondig.cc.o
 
@@ -129,7 +129,7 @@ base/decondig.o: base/decondig.cc.o
 
 # target to build an object file
 base/decondig.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/decondig.cc.o
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/base/decondig.cc.o
 .PHONY : base/decondig.cc.o
 
 base/decondig.i: base/decondig.cc.i
@@ -138,7 +138,7 @@ base/decondig.i: base/decondig.cc.i
 
 # target to preprocess a source file
 base/decondig.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/decondig.cc.i
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/base/decondig.cc.i
 .PHONY : base/decondig.cc.i
 
 base/decondig.s: base/decondig.cc.s
@@ -147,7 +147,7 @@ base/decondig.s: base/decondig.cc.s
 
 # target to generate assembly for a file
 base/decondig.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/decondig.cc.s
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/base/decondig.cc.s
 .PHONY : base/decondig.cc.s
 
 base/dict_builder.o: base/dict_builder.cc.o
@@ -156,7 +156,7 @@ base/dict_builder.o: base/dict_builder.cc.o
 
 # target to build an object file
 base/dict_builder.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/dict_builder.cc.o
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/base/dict_builder.cc.o
 .PHONY : base/dict_builder.cc.o
 
 base/dict_builder.i: base/dict_builder.cc.i
@@ -165,7 +165,7 @@ base/dict_builder.i: base/dict_builder.cc.i
 
 # target to preprocess a source file
 base/dict_builder.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/dict_builder.cc.i
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/base/dict_builder.cc.i
 .PHONY : base/dict_builder.cc.i
 
 base/dict_builder.s: base/dict_builder.cc.s
@@ -174,35 +174,35 @@ base/dict_builder.s: base/dict_builder.cc.s
 
 # target to generate assembly for a file
 base/dict_builder.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/dict_builder.cc.s
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/base/dict_builder.cc.s
 .PHONY : base/dict_builder.cc.s
 
-base/skiplist.o: base/skiplist.cc.o
+log/Log.o: log/Log.cc.o
 
-.PHONY : base/skiplist.o
+.PHONY : log/Log.o
 
 # target to build an object file
-base/skiplist.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/skiplist.cc.o
-.PHONY : base/skiplist.cc.o
+log/Log.cc.o:
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/log/Log.cc.o
+.PHONY : log/Log.cc.o
 
-base/skiplist.i: base/skiplist.cc.i
+log/Log.i: log/Log.cc.i
 
-.PHONY : base/skiplist.i
+.PHONY : log/Log.i
 
 # target to preprocess a source file
-base/skiplist.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/skiplist.cc.i
-.PHONY : base/skiplist.cc.i
+log/Log.cc.i:
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/log/Log.cc.i
+.PHONY : log/Log.cc.i
 
-base/skiplist.s: base/skiplist.cc.s
+log/Log.s: log/Log.cc.s
 
-.PHONY : base/skiplist.s
+.PHONY : log/Log.s
 
 # target to generate assembly for a file
-base/skiplist.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/base/skiplist.cc.s
-.PHONY : base/skiplist.cc.s
+log/Log.cc.s:
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/log/Log.cc.s
+.PHONY : log/Log.cc.s
 
 main.o: main.cpp.o
 
@@ -210,7 +210,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -219,7 +219,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -228,116 +228,8 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-src/Compaction.o: src/Compaction.cc.o
-
-.PHONY : src/Compaction.o
-
-# target to build an object file
-src/Compaction.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Compaction.cc.o
-.PHONY : src/Compaction.cc.o
-
-src/Compaction.i: src/Compaction.cc.i
-
-.PHONY : src/Compaction.i
-
-# target to preprocess a source file
-src/Compaction.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Compaction.cc.i
-.PHONY : src/Compaction.cc.i
-
-src/Compaction.s: src/Compaction.cc.s
-
-.PHONY : src/Compaction.s
-
-# target to generate assembly for a file
-src/Compaction.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/Compaction.cc.s
-.PHONY : src/Compaction.cc.s
-
-src/db_wr.o: src/db_wr.cc.o
-
-.PHONY : src/db_wr.o
-
-# target to build an object file
-src/db_wr.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/db_wr.cc.o
-.PHONY : src/db_wr.cc.o
-
-src/db_wr.i: src/db_wr.cc.i
-
-.PHONY : src/db_wr.i
-
-# target to preprocess a source file
-src/db_wr.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/db_wr.cc.i
-.PHONY : src/db_wr.cc.i
-
-src/db_wr.s: src/db_wr.cc.s
-
-.PHONY : src/db_wr.s
-
-# target to generate assembly for a file
-src/db_wr.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/db_wr.cc.s
-.PHONY : src/db_wr.cc.s
-
-src/log.o: src/log.cc.o
-
-.PHONY : src/log.o
-
-# target to build an object file
-src/log.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/log.cc.o
-.PHONY : src/log.cc.o
-
-src/log.i: src/log.cc.i
-
-.PHONY : src/log.i
-
-# target to preprocess a source file
-src/log.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/log.cc.i
-.PHONY : src/log.cc.i
-
-src/log.s: src/log.cc.s
-
-.PHONY : src/log.s
-
-# target to generate assembly for a file
-src/log.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/log.cc.s
-.PHONY : src/log.cc.s
-
-src/read_buffer.o: src/read_buffer.cc.o
-
-.PHONY : src/read_buffer.o
-
-# target to build an object file
-src/read_buffer.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/read_buffer.cc.o
-.PHONY : src/read_buffer.cc.o
-
-src/read_buffer.i: src/read_buffer.cc.i
-
-.PHONY : src/read_buffer.i
-
-# target to preprocess a source file
-src/read_buffer.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/read_buffer.cc.i
-.PHONY : src/read_buffer.cc.i
-
-src/read_buffer.s: src/read_buffer.cc.s
-
-.PHONY : src/read_buffer.s
-
-# target to generate assembly for a file
-src/read_buffer.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/src/read_buffer.cc.s
-.PHONY : src/read_buffer.cc.s
 
 table/Block.o: table/Block.cc.o
 
@@ -345,7 +237,7 @@ table/Block.o: table/Block.cc.o
 
 # target to build an object file
 table/Block.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/Block.cc.o
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/table/Block.cc.o
 .PHONY : table/Block.cc.o
 
 table/Block.i: table/Block.cc.i
@@ -354,7 +246,7 @@ table/Block.i: table/Block.cc.i
 
 # target to preprocess a source file
 table/Block.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/Block.cc.i
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/table/Block.cc.i
 .PHONY : table/Block.cc.i
 
 table/Block.s: table/Block.cc.s
@@ -363,7 +255,7 @@ table/Block.s: table/Block.cc.s
 
 # target to generate assembly for a file
 table/Block.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/Block.cc.s
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/table/Block.cc.s
 .PHONY : table/Block.cc.s
 
 table/block_builder.o: table/block_builder.cc.o
@@ -372,7 +264,7 @@ table/block_builder.o: table/block_builder.cc.o
 
 # target to build an object file
 table/block_builder.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/block_builder.cc.o
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/table/block_builder.cc.o
 .PHONY : table/block_builder.cc.o
 
 table/block_builder.i: table/block_builder.cc.i
@@ -381,7 +273,7 @@ table/block_builder.i: table/block_builder.cc.i
 
 # target to preprocess a source file
 table/block_builder.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/block_builder.cc.i
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/table/block_builder.cc.i
 .PHONY : table/block_builder.cc.i
 
 table/block_builder.s: table/block_builder.cc.s
@@ -390,8 +282,35 @@ table/block_builder.s: table/block_builder.cc.s
 
 # target to generate assembly for a file
 table/block_builder.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/block_builder.cc.s
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/table/block_builder.cc.s
 .PHONY : table/block_builder.cc.s
+
+table/read_buffer.o: table/read_buffer.cc.o
+
+.PHONY : table/read_buffer.o
+
+# target to build an object file
+table/read_buffer.cc.o:
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/table/read_buffer.cc.o
+.PHONY : table/read_buffer.cc.o
+
+table/read_buffer.i: table/read_buffer.cc.i
+
+.PHONY : table/read_buffer.i
+
+# target to preprocess a source file
+table/read_buffer.cc.i:
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/table/read_buffer.cc.i
+.PHONY : table/read_buffer.cc.i
+
+table/read_buffer.s: table/read_buffer.cc.s
+
+.PHONY : table/read_buffer.s
+
+# target to generate assembly for a file
+table/read_buffer.cc.s:
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/table/read_buffer.cc.s
+.PHONY : table/read_buffer.cc.s
 
 table/sstable.o: table/sstable.cc.o
 
@@ -399,7 +318,7 @@ table/sstable.o: table/sstable.cc.o
 
 # target to build an object file
 table/sstable.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/sstable.cc.o
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/table/sstable.cc.o
 .PHONY : table/sstable.cc.o
 
 table/sstable.i: table/sstable.cc.i
@@ -408,7 +327,7 @@ table/sstable.i: table/sstable.cc.i
 
 # target to preprocess a source file
 table/sstable.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/sstable.cc.i
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/table/sstable.cc.i
 .PHONY : table/sstable.cc.i
 
 table/sstable.s: table/sstable.cc.s
@@ -417,35 +336,8 @@ table/sstable.s: table/sstable.cc.s
 
 # target to generate assembly for a file
 table/sstable.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/table/sstable.cc.s
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/table/sstable.cc.s
 .PHONY : table/sstable.cc.s
-
-util/Prena.o: util/Prena.cc.o
-
-.PHONY : util/Prena.o
-
-# target to build an object file
-util/Prena.cc.o:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/Prena.cc.o
-.PHONY : util/Prena.cc.o
-
-util/Prena.i: util/Prena.cc.i
-
-.PHONY : util/Prena.i
-
-# target to preprocess a source file
-util/Prena.cc.i:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/Prena.cc.i
-.PHONY : util/Prena.cc.i
-
-util/Prena.s: util/Prena.cc.s
-
-.PHONY : util/Prena.s
-
-# target to generate assembly for a file
-util/Prena.cc.s:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/util/Prena.cc.s
-.PHONY : util/Prena.cc.s
 
 # Help Target
 help:
@@ -454,7 +346,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... my_redies"
+	@echo "... my_simple_storage"
 	@echo "... edit_cache"
 	@echo "... base/decondig.o"
 	@echo "... base/decondig.i"
@@ -462,36 +354,24 @@ help:
 	@echo "... base/dict_builder.o"
 	@echo "... base/dict_builder.i"
 	@echo "... base/dict_builder.s"
-	@echo "... base/skiplist.o"
-	@echo "... base/skiplist.i"
-	@echo "... base/skiplist.s"
+	@echo "... log/Log.o"
+	@echo "... log/Log.i"
+	@echo "... log/Log.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/Compaction.o"
-	@echo "... src/Compaction.i"
-	@echo "... src/Compaction.s"
-	@echo "... src/db_wr.o"
-	@echo "... src/db_wr.i"
-	@echo "... src/db_wr.s"
-	@echo "... src/log.o"
-	@echo "... src/log.i"
-	@echo "... src/log.s"
-	@echo "... src/read_buffer.o"
-	@echo "... src/read_buffer.i"
-	@echo "... src/read_buffer.s"
 	@echo "... table/Block.o"
 	@echo "... table/Block.i"
 	@echo "... table/Block.s"
 	@echo "... table/block_builder.o"
 	@echo "... table/block_builder.i"
 	@echo "... table/block_builder.s"
+	@echo "... table/read_buffer.o"
+	@echo "... table/read_buffer.i"
+	@echo "... table/read_buffer.s"
 	@echo "... table/sstable.o"
 	@echo "... table/sstable.i"
 	@echo "... table/sstable.s"
-	@echo "... util/Prena.o"
-	@echo "... util/Prena.i"
-	@echo "... util/Prena.s"
 .PHONY : help
 
 

@@ -5,48 +5,39 @@
 #include <sstream>
 
 void block_builder::Reset() {
-    buffer_.clear();
-    finished = false;
-    offest_.clear();
+    m_buffer.clear();
+    m_finished = false;
+    m_offest.clear();
 }
-std::string&& block_builder::finish() {
+std::string block_builder::Finish() {
+    std::string temp ;
+    for(const auto & it :m_buffer){
+        temp += it;
+    }
     char bufs[4];
-    for(auto & it : offest_)
+    for(auto & it : m_offest)
     {
         bzero(bufs,sizeof(bufs));
         EncodeInt32(bufs,it);
-        buffer_.append(bufs,sizeof(bufs));
+        temp.append(bufs,sizeof(bufs));
     }
     bzero(bufs,sizeof(bufs));
-    EncodeInt32(bufs,offest_.size());
-    buffer_.append(bufs,sizeof(bufs));
-    finished = true;
-    return std::move(buffer_);
+    EncodeInt32(bufs,m_offest.size());
+    temp.append(bufs,sizeof(bufs));
+    m_finished = true;
+    return temp;
 }
 //Entry 定义
-void block_builder::Add(const sds &key, const sds &value) {
-    assert(!finished);
-    //这时候记录key的长度或者编码
-    //对于key
-    //在这里我们使用我们的压缩算法来对key进行压缩，对于value不进行处理
-    fifter_->Add(key);
+void block_builder::Add(const std::string &key, const std::string &value) {
+    std::string buffer;
+    m_fifter->Add(key);
+    deconding::Smaz_Compress(key.data(),key.size(),buffer);
+    buffer += '\r' + buffer +'\r';
     std::string temp;
-    smaz_compress(key.data(),key.size(),&temp);
-    buffer_ += temp;
-    buffer_ += '\r';
-    std::string p ;
-    if(value.size() < 64)
-    {
-        buffer_ +='0';
-        smaz_compress(value.data(),value.size(),&p);
-    }else
-    {
-        buffer_ +='1';
-        snappy::Compress(value.data(),value.size() ,&p);
-    }
-    buffer_ += p;
-    buffer_ +=  '\r';
-    offest_.emplace_back(buffer_.size()) ; //对于key_value的偏移量
+    snappy::Compress(value.data(),value.size(),&temp);
+    buffer += temp;
+    m_buffer.emplace_back(buffer);
+    m_offest.emplace_back(buffer.size()) ; //对于key_value的偏移量
 }
 
 

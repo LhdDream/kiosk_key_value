@@ -3,31 +3,30 @@
 //
 #include "Block.h"
 //这里使用block进行解码等操作
-static bool DecondEntry(std::string *p,std::string *key,std::string *value)
+static bool DecondEntry(std::string &p,std::string &key,std::string &value)
 {
-    // 找出key的长度
-    auto it = p->find('\r'); // 找出Key的长度
-    if(it != -1) {
-        std::string key_;
-        std::copy(p->begin(), p->begin() + it , key_.begin());
-        smaz_decompress(key_.data(),key_.size(),key);
-        auto  type = p->at(it +2);
-        std::string value_;
-        std::copy(p->begin() + it+ 3,p->end() -2 ,value_.begin());
-        if(type == '0')
-        {
-            smaz_decompress(value_.data(),value_.size(),value);
+    try {
+        auto it = p.find_first_of('\r');
+        if(it == -1){
+            throw std::invalid_argument(strerror(errno));
         }
-        snappy::Uncompress(value_.data(),value_.size(),value);
-        //获取到key和value
-        return true;
-    }
-    else
+        auto it1 = p.find_first_of('\r', it + 1);
+        if(it1 == -1){
+            throw std::invalid_argument(strerror(errno));
+        }
+        std::string temp;
+        temp = p.substr(it + 1, it1 - 1);
+        deconding::Smaz_Decompress(temp.data(),temp.size(),key);
+        temp = p.substr(it1 + 1, p.size());
+        snappy::Uncompress(temp.data(),temp.size(),&value);
+    }catch(std::invalid_argument &e){
+        puts(e.what());
         return false;
-    // 把key放入其中
+    }
+    return true;
 }
 
-bool Block::Itear::Seek(const sds &target) {
+bool Block::Itear::Seek(const std::string &target) {
         // 使用二分查找
         uint32_t  left = 0 ;
         uint32_t  right = off_.size() - 1;
@@ -39,16 +38,16 @@ bool Block::Itear::Seek(const sds &target) {
             uint32_t  next_off = GetoffestPoint(mid+1);
             std::string p;
             std::copy(data_ + region_off,data_+ next_off,p.begin());
-            DecondEntry(&p,&key_,&value_);
-            if(key_ < target.Tostring())
+            DecondEntry(p,key_,value_);
+            if(key_ < target)
             {
                 left = mid;
             }
-            else if(key_ == target.Tostring())
+            else if(key_ == target)
             {
                 return true;
             }
-            else if(key_ > target.Tostring())
+            else if(key_ > target)
             {
                 right = mid - 1;
             }
@@ -57,17 +56,8 @@ bool Block::Itear::Seek(const sds &target) {
 
 }
 
-Block::Itear* Block::newIteratr() {
-    if(size_ < sizeof(uint32_t))
-    {
-        return nullptr;
-    }
-    const uint32_t  num_offest = numrestarts();
-    if(num_offest == 0 )
-    {
-        return nullptr;
-    }
-    else {
-        return new Itear(data,offest_,num_offest);
-    }
+std::unique_ptr<Block::Itear> Block::newItear(const std::string &data_) {
+        m_offest = data_.size() -( 1+ DecodeInt32(data_.data()+data_.size() - sizeof(uint32_t))) * sizeof(uint32_t);
+        auto m_iter = std::make_unique<Itear>(data_.data(),m_offest,DecodeInt32(data_.data()+data_.size() - sizeof(uint32_t)));
+        return m_iter;
 }

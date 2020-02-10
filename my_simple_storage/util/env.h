@@ -2,11 +2,10 @@
 // Created by kiosk on 19-10-16.
 //
 
-#ifndef MY_REDIES_ENV_H
-#define MY_REDIES_ENV_H
+#ifndef MY_SIMPLE_STORAGE_BLOOM_ENV_H
+#define MY_SIMPLE_STORAGE_BLOOM_ENV_H
 //对于写入文件的简单接口封装
-#include "../base/state.h"
-#include "../base/sds.h"
+
 class  WritableFile {
         public:
         WritableFile() = default;

@@ -3,7 +3,7 @@
 //
 #include "decondig.h"
 // 短字符串的压缩密码
-const char * Smaz_cb[241] = {
+constexpr  const char * Smaz_cb[241] = {
         "\002s,\266", "\003had\232\002leW", "\003on \216", "", "\001yS",
         "\002ma\255\002li\227", "\003or \260", "", "\002ll\230\003s t\277",
         "\004fromg\002mel", "", "\003its\332", "\001z\333", "\003ingF", "\001>\336",
@@ -54,7 +54,7 @@ const char * Smaz_cb[241] = {
 };
 
 /* Reverse compression codebook, used for decompression */
-const char * Smaz_rcb[254] = {
+constexpr const char * Smaz_rcb[254] = {
         " ", "the", "e", "t", "a", "of", "o", "and", "i", "n", "s", "e ", "r", " th",
         " t", "in", "he", "th", "h", "he ", "to", "\r\n", "l", "s ", "d", " a", "an",
         "er", "c", " o", "d ", "on", " of", "re", "of ", "t ", ", ", "is", "u", "at",
@@ -81,14 +81,13 @@ const char * Smaz_rcb[254] = {
 
 
 void deconding::EncodeInt32(char *intput , uint32_t value) {
-
     //varByte算法，根据数据大小使用不同个数的字节来进行存储
     //varint 编码是对于较小数来进行压缩，但是需要大数可能需要5bytes
     //采用每8bit存入，第一个字节标志为数据是不是已经读取完毕
     //同时在这里还可以使用zigzag 方式，把第一位的符号位往最后挪
     const int B = 128;
     int iEncodeLen = 0;
-     char * ptr =  intput;
+    char * ptr =  intput;
     while(value >= B)
     {
         *(ptr + ( iEncodeLen++)) = static_cast<char>  ((value & (B-1)) | B);
@@ -111,17 +110,14 @@ uint32_t deconding::DecodeInt32(const  char *ptr)
     return b;
 }
 
-std::string deconding::smaz_compress(const char *in, int inlen, std::string * out) {
+void deconding::Smaz_Compress(const char *in, int inlen, std::string &out) {
     unsigned int h1,h2,h3=0;
     int verblen = 0;
     char verb[256];
-
     int out_offest = 0;
-
     while(inlen ) {
-
-        int j = 7, needed;
-        const char *slot;
+        int j = 7, needed = 0;
+        const char *slot = nullptr;
         int flush = -1;
         h1 = h2 = in[0] << 3;
         if (inlen > 1) h2 += in[1];
@@ -151,11 +147,11 @@ std::string deconding::smaz_compress(const char *in, int inlen, std::string * ou
                         flush = out_offest;
                         out_offest += needed;
                     }
-                    if(out_offest >= out->size())
+                    if(out_offest >= out.size())
                     {
-                        out->resize(out_offest+1);
+                        out.resize(out_offest+1);
                     }
-                    out->operator[](out_offest ) = slot[slot[0] + 1];
+                    out[out_offest] = slot[slot[0] + 1];
                     out_offest++;
                     inlen -= j;
                     in += j;
@@ -180,44 +176,42 @@ std::string deconding::smaz_compress(const char *in, int inlen, std::string * ou
         }
         /* Perform a verbatim flush if needed */
         if (flush >= 0 ) {
-            if(flush >= out->size())
+            if(flush >= out.size())
             {
-                out->resize(flush +1 );
+                out.resize(flush +1 );
             }
             if (verblen == 1) {
-                out->operator[] (flush) = static_cast<signed char>(254);
-                out->operator[] (flush+1 )= verb[0];
+                out[flush] = static_cast<signed char>(254);
+                out[flush+1] = verb[0];
             } else {
-                out->operator[] (flush)  = static_cast<signed char>(255);
-                out->operator[] (flush+1 ) = static_cast<signed char>(verblen-1);
-                if(flush + verblen > out->capacity())
+                out[flush]  = static_cast<signed char>(255);
+                out[flush+1] = static_cast<signed char>(verblen-1);
+                if(flush + verblen > out.capacity())
                 {
-                    out->resize(flush + verblen + 1);
+                    out.resize(flush + verblen + 1);
                 }
-                std::copy(verb,verb + verblen,out->begin() + flush + 2);
+                std::copy(verb,verb + verblen,out.begin() + flush + 2);
             }
             flush = -1;
             verblen = 0;
         }
    }
-    return *out;
 }
-std::string deconding::smaz_decompress(const char *in, int inlen,std::string * out) {
-    auto *c = (unsigned char*) in;
+void deconding::Smaz_Decompress(const char *in, int inlen,std::string & out) {
+    auto *c = reinterpret_cast<unsigned  const char *> (in);
     int out_offest = 0;
-    out->resize(inlen * 10);
+    out.resize(inlen * 10);
     while(inlen) {
         if (*c == 254) {
             /* Verbatim byte */
-            out->operator[](out_offest) = *(c+1);
+            out[out_offest] = *(c+1);
             out_offest++;
             c += 2;
             inlen -= 2;
         } else if (*c == 255) {
             /* Verbatim string */
             int len = (*(c+1))+1;
-         //   memcpy(out,c+2,len);
-           std::copy(c + 2, c+ 2+ len,out->begin()+out_offest);
+            std::copy(c + 2, c+ 2+ len,out.begin()+out_offest);
             out_offest += len;
             c += 2+len;
             inlen -= 2+len;
@@ -225,15 +219,12 @@ std::string deconding::smaz_decompress(const char *in, int inlen,std::string * o
             /* Codebook entry */
             const char *s = Smaz_rcb[*c];
             int len = strlen(s);
-           // memcpy(out,s,len);
-            std::copy(s, s+ len,out->begin()+out_offest);
+            std::copy(s, s+ len,out.begin()+out_offest);
             out_offest += len;
             c++;
             inlen--;
         }
     }
-    out->shrink_to_fit();
-    return * out;
 }
 
 

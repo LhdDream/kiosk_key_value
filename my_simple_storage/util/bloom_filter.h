@@ -1,62 +1,54 @@
-#ifndef MY_REDIES_BLOOM_FILTER_H
-#define MY_REDIES_BLOOM_FILTER_H
+#ifndef MY_SIMPLE_STORAGE_BLOOM_FILTER_H
+#define MY_SIMPLE_STORAGE_BLOOM_FILTER_H
 #include "hash.h"
 #include <vector>
-#include "../base/sds.h"
 //this file create bloom
 //bloom 过滤器表示如果不在这个集合之中，则说明不在，在这个集合之后，实时不一定在这个集合之中
 //bloom 参考leveldb 的实现方式来进行实现
 class bloom
 {
 public:
-    explicit bloom( ) : bits_per_key(0) ,h(0){
+    explicit bloom( ) : m_bits_per_key(0) ,m_h(0){
     }
-    void add(const sds &key,std::string * result_){
+    void Add(const std::string &key, std::string & result_){
         //每次调用写入一个key
-        result_->clear();
-        bits_per_key = key.size() * 8;
-//        //有多少位
-//        if(bits_per_key < 64)
-//            bits_per_key = 64;
+        m_bits_per_key = key.size() * 8;
         //对齐，方便内存读写以及后续位置的索引
-        auto bytes = (bits_per_key + 7)/8;
-        bits_per_key = bytes * 8;
+        auto bytes = (m_bits_per_key + 7)/8;
+        m_bits_per_key = bytes * 8;
         //向下取整
-        result_->resize(bytes ,0);
-
-        auto  array = reinterpret_cast<char *> (&(*result_)[0]);
-
-        h = APHash(key.data());
-        auto  delta = (h >> 17) | (h << 15);
+        result_.resize(bytes ,0);
+        m_h = APHash(key.data());
+        auto  delta = (m_h >> 17) | (m_h << 15);
         for (size_t j = 0; j < 4; j++) {
             // 在整个bit 数组的位置
-            auto  bitpos = h % (bits_per_key );
+            auto  bitpos = m_h % (m_bits_per_key );
             // 在char型数组的位置
-            array[bitpos/8] |= (1 << (bitpos % 8));
+            result_[bitpos/8] |= (1 << (bitpos % 8));
             // 更新获得一个新的hash 数值
-            h += delta;
+            m_h += delta;
         }
     }
-    bool key_match(const sds & key,std::string * result_){
-        if (result_->empty()) {
+    bool Key_Match(const  std::string & key,std::string & result_){
+        if (result_.empty()) {
             return false;
         }
-        h = APHash(key.data());
-        auto delta = (h >> 17) | (h << 15);
-        auto array = result_->data();
+        m_h = APHash(key.data());
+        auto delta = (m_h >> 17) | (m_h << 15);
+        auto array = result_.data();
         for (size_t j = 0; j < 4; j++) {
             // 在整个bit 数组的位置
-            auto bitpos = h % (bits_per_key);
+            auto bitpos = m_h % (m_bits_per_key);
             // 在char型数组的位置
             if ((array[bitpos / 8] & (1 << (bitpos % 8))) == 0)
                 return false;
             // 更新获得一个新的hash 数值
-            h += delta;
+            m_h += delta;
         }
         return true;
     }
 private:
-    size_t  bits_per_key;   //每一个key拥有的bit数目 // 一般为１0
-    uint32_t  h ;
+    size_t  m_bits_per_key;   //每一个key拥有的bit数目 // 一般为１0
+    uint32_t  m_h ;
 };
 #endif //MY_REDIES_BLOOM_FILTER_H

@@ -1,4 +1,4 @@
-# Install script for directory: /home/kiosk/CLionProjects/kiosk_key_value/my_redies
+# Install script for directory: /home/kiosk/CLionProjects/kiosk_key_value/my_simple_storage
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/kiosk/CLionProjects/kiosk_key_value/my_redies/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kiosk/CLionProjects/kiosk_key_value/my_simple_storage/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -44,16 +44,16 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kiosk/CLionProjects/kiosk_key_value/my_redies
+CMAKE_SOURCE_DIR = /home/kiosk/CLionProjects/kiosk_key_value/my_simple_storage
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kiosk/CLionProjects/kiosk_key_value/my_redies/cmake-build-debug
+CMAKE_BINARY_DIR = /home/kiosk/CLionProjects/kiosk_key_value/my_simple_storage/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/my_redies.dir/all
+all: CMakeFiles/my_simple_storage.dir/all
 
 .PHONY : all
 
@@ -63,36 +63,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/my_redies.dir/clean
+clean: CMakeFiles/my_simple_storage.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/my_redies.dir
+# Target rules for target CMakeFiles/my_simple_storage.dir
 
 # All Build rule for target.
-CMakeFiles/my_redies.dir/all:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/depend
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kiosk/CLionProjects/kiosk_key_value/my_redies/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target my_redies"
-.PHONY : CMakeFiles/my_redies.dir/all
+CMakeFiles/my_simple_storage.dir/all:
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/depend
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kiosk/CLionProjects/kiosk_key_value/my_simple_storage/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target my_simple_storage"
+.PHONY : CMakeFiles/my_simple_storage.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/my_redies.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kiosk/CLionProjects/kiosk_key_value/my_redies/cmake-build-debug/CMakeFiles 13
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/my_redies.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kiosk/CLionProjects/kiosk_key_value/my_redies/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/my_redies.dir/rule
+CMakeFiles/my_simple_storage.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kiosk/CLionProjects/kiosk_key_value/my_simple_storage/cmake-build-debug/CMakeFiles 9
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/my_simple_storage.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kiosk/CLionProjects/kiosk_key_value/my_simple_storage/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/my_simple_storage.dir/rule
 
 # Convenience name for target.
-my_redies: CMakeFiles/my_redies.dir/rule
+my_simple_storage: CMakeFiles/my_simple_storage.dir/rule
 
-.PHONY : my_redies
+.PHONY : my_simple_storage
 
 # clean rule for target.
-CMakeFiles/my_redies.dir/clean:
-	$(MAKE) -f CMakeFiles/my_redies.dir/build.make CMakeFiles/my_redies.dir/clean
-.PHONY : CMakeFiles/my_redies.dir/clean
+CMakeFiles/my_simple_storage.dir/clean:
+	$(MAKE) -f CMakeFiles/my_simple_storage.dir/build.make CMakeFiles/my_simple_storage.dir/clean
+.PHONY : CMakeFiles/my_simple_storage.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

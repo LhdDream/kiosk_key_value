@@ -2,61 +2,61 @@
 // Created by kiosk on 19-9-15.
 //
 
-#ifndef MY_REDIES_DICT_BUILDER_H
-#define MY_REDIES_DICT_BUILDER_H
-#include <deque>
-#include <queue>
+#ifndef MY_SIMPLE_STORAGE_DICT_BUILDER_H
+#define MY_SIMPLE_STORAGE_DICT_BUILDER_H
+
 #include <algorithm>
-#include <any>
+#include <fstream>
 #include <memory>
 #include <map>
-#include "sds.h"
-#include "options.h"
+#include <set>
+#include <wait.h>
+#include "../log/Log.h"
+#include "../src/core/db.h"
+#include "../config/options.h"
 #include "../table/sstable.h"
 #include "../util/memorypool/memorypool.h"
 #include "../table/block_builder.h"
-#include "../src/lru.h"
+#include "../src/core/lru.h"
 //在这里使用内存表的构建
-//内存表主要是通过pashmap来进行构建，同时提供多线程并发访问
-class options;
 
-class dict
+
+class dict : public  db
 {
 public:
-        explicit dict() : ht_(std::make_unique<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>> >>()),
-         options_(std::make_shared<options>()),
-         lru_(std::make_unique<lru_cache>()),
-         buffer_size{},
-         sstable_(std::make_unique<sstable>(options_)),
-         write_size{},
-         save_flag(false){
+    using Map = std::map<std::string,std::string,std::less<>,MemoryPool<std::pair<std::string,std::string>>>;
+public:
+        explicit dict(const std::string &filename) :m_index(0),m_ht(4),m_lru(std::make_unique<lru_cache>()),
+         m_buffer_size{},
+         m_sstable(std::make_unique<sstable>()),
+         m_write_size{}{
+//            Recover(filename);
+//            Logger::init(filename,true);
         }
         dict(const dict & ) = delete ;
-        dict operator = (const dict &) = delete;
-        ~dict() = default;
-        void Add(const sds& ,const  sds &) ; // 封装的add
-        //引用只能被初始化一次
-        bool Get(const sds&,std::string *);// 查找
-        bool Delete(const sds&);
-        bool save() ;
-        void set_save() {
-            save_flag = true;
-        }
-private:
-    //根据type 来进行反解压
-    std::unique_ptr<std::map<sds,sds,c,MemoryPool<std::pair<sds,sds>> >> ht_;
-    std::shared_ptr<options> options_;
-    std::unique_ptr<lru_cache> lru_;
-    //每一块链表直接缓存它的块
-    //  维护的链表
-    //双线链表维护的缓存内容的使用顺序
-    //在一定时间内进行删除
-    //主动淘汰和被动淘汰
-    //每次进行内存的写入的时候，可以直接进行内存的释放
-    unsigned long long buffer_size ;
-    std::unique_ptr<sstable> sstable_; // sstable
-    unsigned  long long write_size ;
+        dict&operator = (const dict &) = delete;
+        ~dict() override = default;
 
-    bool save_flag ; // 进行内存的装入
+        void Set(const std::string & ,const std::string &) override ;
+        bool Get(const std::string &,std::string &) override ;// 查找
+        void Delete(const std::string &) override ;
+        bool Save() override ;
+
+        static std::unique_ptr<dict> Init(const std::string &filename, const std::string &name){
+            options::GetOptions().SetFilename(name);
+            return std::make_unique<dict>(filename);
+        }
+        void Merge( Map & a ,  Map &b, Map &c);
+        void Recover( const std::string & filename);
+private:
+    Logger m_log;
+    int m_index = 0 ;
+    std::vector<Map>  m_ht;
+    std::unique_ptr<lru_cache> m_lru ;
+    unsigned long long m_buffer_size ;
+    std::unique_ptr<sstable> m_sstable; // sstable
+    unsigned  long long m_write_size ;
 };
+
+
 #endif //MY_REDIES_DICT_BUILDER_H
