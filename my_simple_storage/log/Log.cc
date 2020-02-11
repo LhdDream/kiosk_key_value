@@ -78,7 +78,7 @@ void Logger::Impl::flush() {
 void Logger::Impl::init(const std::string &filename, bool append) {
     if (!filename.empty()) {
         name = filename;
-        Impl::m_fout.open(filename, append ? std::ofstream::out | std::ofstream::app | std::ofstream::trunc : std::ofstream::out);
+        Impl::m_fout.open(filename, append ? std::ofstream::out | std::ofstream::app  : std::ofstream::out);
         if (!Impl::m_fout.is_open()) {
             throw std::runtime_error("ERROR!!: Couldn't open '" + filename + "' for write.\n");
         }
@@ -114,5 +114,5 @@ void Logger::clear() {
 
 void Logger::Impl::clear() {
     m_fout.close();
-    Impl::m_fout.open(name, std::ofstream::out | std::ofstream::app | std::ofstream::trunc);
+    Impl::m_fout.open(name, std::ofstream::out | std::ofstream::app );
 }
