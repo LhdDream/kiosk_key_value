@@ -23,7 +23,7 @@ public:
     bool Read_File();
     bool read_offest(const char * data,size_t len);
     //在每一data块中进行读取
-    bool Find_Value(const std::string &name);
+    bool Find_Value(const char * name,int len);
     //读取索引
     void Get_Vector(std::vector<uint32_t > &index,const std::string& off);
     std::string value()

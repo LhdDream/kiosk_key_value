@@ -5,9 +5,12 @@
 
 void dict::Set(const std::string & key,  const std::string & value ) {
     //bloom 过滤器对于减少磁盘的IO查询起到了作用
-   // Save();
-    //m_log.info()  << key << ' '<< value << ' ';
-   // m_log.flunsh();
+    Save();
+    m_log.info()  << key << ' '<< value << ' ';
+    m_log.flunsh();
+   if(m_lost.find(key) != m_lost.end()){
+       m_lost.erase(key);
+   }
     auto it = m_ht[m_index].find(key) ;
     if( it == m_ht[m_index].end() ) {
         m_buffer_size += key.size();
@@ -21,6 +24,9 @@ void dict::Set(const std::string & key,  const std::string & value ) {
 }
 
 bool dict::Get(const std::string &key, std::string &value) {
+    if(m_lost.find(key) != m_lost.end()){
+        return false;
+    }
     if(m_lru->Exist(key) ) {
           value = m_lru->Get(key);
           return true;
@@ -28,7 +34,7 @@ bool dict::Get(const std::string &key, std::string &value) {
         int i = m_index;
         while(i >= 0) {
             auto c = m_ht[i].find(key);
-            if (c != m_ht[i].end() && !c->second.empty()) {
+            if (c != m_ht[i].end() ) {
                 value = c->second;
                 return true;
             }
@@ -40,7 +46,7 @@ bool dict::Get(const std::string &key, std::string &value) {
 }
 
 void  dict::Delete(const std::string &key) {
-     m_ht[m_index][key] = "";
+    m_lost.emplace(key);
 }
 
 bool dict::Save() {
@@ -67,12 +73,12 @@ bool dict::Save() {
 
 void dict::Merge(Map &a, Map &b, Map &c) {
     for(const auto  & l : b){
-        if(!l.second.empty())
+        if(m_lost.find(l.first) == m_lost.end())
             c.emplace(l.first,l.second);
     }
     for(const auto & l :a){
-        if(!l.second.empty())
-         c.emplace(l.first,l.second);
+        if(m_lost.find(l.first) == m_lost.end())
+             c.emplace(l.first,l.second);
     }
     a.clear();
     b.clear();

@@ -11,6 +11,7 @@
 #include <vector>
 #include <memory>
 #include "../base/decondig.h"
+#include <iostream>
 using namespace deconding;
 
 class Block{
@@ -19,7 +20,7 @@ public:
     ~Block() = default;
     class Itear;
 
-    std::unique_ptr<Itear> newItear(const std::string & data_);
+    std::unique_ptr<Itear> newItear(const char * data_,int len);
 private:
     size_t  m_offest = 0 ;
 };
@@ -42,17 +43,19 @@ public:
 private:
     void ReadOff(){
         std::string everyoff_;
+         uint32_t number = 0 ;
+        off_.emplace_back(number);
         for(size_t i = 0 ; i < num_offest_ ; i++)
         {
-            everyoff_.resize(4);
+            everyoff_.resize(5,'\0');
             std::copy(data_ + offest_ +  i *4,data_+offest_ + (i+1) *4 ,everyoff_.begin());
-            off_.emplace_back(DecodeInt32(everyoff_.data()));
+            number += DecodeInt32(everyoff_.data());
+            off_.emplace_back(number);
             //获取到每一个key_value 的偏移量
         }
     }
 private:
     uint32_t  GetoffestPoint(uint32_t index){
-
         return off_[index - 1];
     }
 public:

@@ -36,6 +36,12 @@ public:
         m_h = APHash(key.data());
         auto delta = (m_h >> 17) | (m_h << 15);
         auto array = result_.data();
+
+        m_bits_per_key = key.size() * 8;
+        //对齐，方便内存读写以及后续位置的索引
+        auto bytes = (m_bits_per_key + 7)/8;
+        m_bits_per_key = bytes * 8;
+
         for (size_t j = 0; j < 4; j++) {
             // 在整个bit 数组的位置
             auto bitpos = m_h % (m_bits_per_key);

@@ -31,11 +31,9 @@ std::string block_builder::Finish() {
 void block_builder::Add(const std::string &key, const std::string &value) {
     std::string buffer;
     m_fifter->Add(key);
-    deconding::Smaz_Compress(key.data(),key.size(),buffer);
-    buffer += '\r' + buffer +'\r';
-    std::string temp;
-    snappy::Compress(value.data(),value.size(),&temp);
-    buffer += temp;
+    buffer = key;
+    buffer = '\r' + buffer +'\r';
+    buffer += value;
     m_buffer.emplace_back(buffer);
     m_offest.emplace_back(buffer.size()) ; //对于key_value的偏移量
 }

@@ -2,8 +2,8 @@
 // Created by kiosk on 19-11-3.
 //
 #include "read_buffer.h"
-bool read_buffer::Find_Value( const std::string &name) {
-    m_iter = m_block->newItear(name);
+bool read_buffer::Find_Value( const char * name,int len) {
+    m_iter = m_block->newItear(name,len);
     if(m_iter->Seek(m_key))
     {
         m_value =  m_iter->Value();
@@ -15,7 +15,7 @@ void read_buffer::Get_Vector(std::vector<uint32_t> &index, const std::string &of
     std::string temp;
     for(size_t i = 0 ; i < off.size()/4 ; i++)
     {
-        temp.resize(4);
+        temp.resize(5,'\0');
         std::copy(off.begin() +  i *4 , off.begin() + (i+1) *4 ,temp.begin());
         index.emplace_back(DecodeInt32(temp.data()));
     }
@@ -31,8 +31,8 @@ bool read_buffer::read_offest(const char *data, size_t len) {
     std::string temp1 , temp2;
     temp1.resize(it);
     temp2.resize(altogether.end() - altogether.begin()  - it);
-    std::copy(altogether.begin(),altogether.begin()+it,temp1.begin());
-    std::copy(altogether.begin()+it+1,altogether.end(),temp2.begin());
+    std::copy(altogether.begin(),altogether.begin()+it - 1,temp1.begin());
+    std::copy(altogether.begin()+it+1,altogether.end() - 1,temp2.begin());
     Get_Vector(m_data_index,temp1);
     Get_Vector(m_fifter_index,temp2);
     //先data块后fifter块
@@ -85,22 +85,25 @@ bool read_buffer::Read_File () {
                len = st.st_size;
                auto re_buffer = reinterpret_cast<const char *> (mmap(nullptr, len, PROT_READ,
                                                                MAP_SHARED | MAP_POPULATE | MAP_NONBLOCK, fd, 0));
+
                if (re_buffer == nullptr) {
                    throw std::invalid_argument(strerror(errno));
                }
-               if (!read_offest(re_buffer, len)) {
+               std::string real_buffer;
+               snappy::Uncompress(re_buffer,len,&real_buffer);
+               if (!read_offest(real_buffer.data(), real_buffer.size())) {
                    break;
                }
                m_block = std::make_unique<Block>();
-               if (Find_Value(m_key)) {
+               if (Find_Value(m_buffer.data(),m_buffer.length())) {
                    m_id = options::GetOptions().Id();
                    break;
                }
                m_id--;
            }
            m_block.release(); // 对象生命周期的问题
+           return   m_id == options::GetOptions().Id();;
        }catch(std::invalid_argument & e){
            puts(e.what());
        }
-        return   m_id == options::GetOptions().Id();;
 }

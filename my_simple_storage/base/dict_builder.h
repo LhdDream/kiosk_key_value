@@ -9,7 +9,7 @@
 #include <fstream>
 #include <memory>
 #include <map>
-#include <set>
+#include <unordered_set>
 #include <wait.h>
 #include "../log/Log.h"
 #include "../src/core/db.h"
@@ -30,8 +30,8 @@ public:
          m_buffer_size{},
          m_sstable(std::make_unique<sstable>()),
          m_write_size{}{
-//            Recover(filename);
-//            Logger::init(filename,true);
+           Recover(filename);
+           Logger::init(filename,true);
         }
         dict(const dict & ) = delete ;
         dict&operator = (const dict &) = delete;
@@ -49,6 +49,7 @@ public:
         void Merge( Map & a ,  Map &b, Map &c);
         void Recover( const std::string & filename);
 private:
+    std::unordered_set<std::string> m_lost;
     Logger m_log;
     int m_index = 0 ;
     std::vector<Map>  m_ht;

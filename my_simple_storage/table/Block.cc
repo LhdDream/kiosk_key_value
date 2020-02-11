@@ -5,24 +5,19 @@
 //这里使用block进行解码等操作
 static bool DecondEntry(std::string &p,std::string &key,std::string &value)
 {
-    try {
-        auto it = p.find_first_of('\r');
+        auto it = p.find('\r');
         if(it == -1){
-            throw std::invalid_argument(strerror(errno));
+           return false;
         }
-        auto it1 = p.find_first_of('\r', it + 1);
+        auto it1 = p.find('\r', it + 1);
         if(it1 == -1){
-            throw std::invalid_argument(strerror(errno));
+            return false;
         }
         std::string temp;
         temp = p.substr(it + 1, it1 - 1);
-        deconding::Smaz_Decompress(temp.data(),temp.size(),key);
+        key = temp;
         temp = p.substr(it1 + 1, p.size());
-        snappy::Uncompress(temp.data(),temp.size(),&value);
-    }catch(std::invalid_argument &e){
-        puts(e.what());
-        return false;
-    }
+        value = temp;
     return true;
 }
 
@@ -37,6 +32,7 @@ bool Block::Itear::Seek(const std::string &target) {
             //这一位的偏移量
             uint32_t  next_off = GetoffestPoint(mid+1);
             std::string p;
+            p.resize(next_off - region_off);
             std::copy(data_ + region_off,data_+ next_off,p.begin());
             DecondEntry(p,key_,value_);
             if(key_ < target)
@@ -56,8 +52,9 @@ bool Block::Itear::Seek(const std::string &target) {
 
 }
 
-std::unique_ptr<Block::Itear> Block::newItear(const std::string &data_) {
-        m_offest = data_.size() -( 1+ DecodeInt32(data_.data()+data_.size() - sizeof(uint32_t))) * sizeof(uint32_t);
-        auto m_iter = std::make_unique<Itear>(data_.data(),m_offest,DecodeInt32(data_.data()+data_.size() - sizeof(uint32_t)));
+std::unique_ptr<Block::Itear> Block::newItear(const char * data_,int len) {
+        m_offest = len  - (  DecodeInt32(data_+len - sizeof(uint32_t))) * sizeof(uint32_t) -
+                sizeof(uint32_t);
+        auto m_iter = std::make_unique<Itear>(data_,m_offest,DecodeInt32(data_+len - sizeof(uint32_t)));
         return m_iter;
 }

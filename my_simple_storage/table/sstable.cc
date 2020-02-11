@@ -61,7 +61,9 @@ void sstable::Write_NameFile() {
         filename << options::GetOptions().Id() ;
         filename << options::GetOptions().GetFilename();
         m_writ = std::make_unique<write_file>(filename.str());
-        m_writ->writeFile(m_buffer.data(),m_buffer.size());
+        std::string real_buffer;
+        snappy::Compress(m_buffer.data(),m_buffer.size(),&real_buffer);
+        m_writ->writeFile(real_buffer.data(),real_buffer.size());
         options::GetOptions().AddId();
         Reset();
 }

@@ -12,100 +12,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="45aba6c4-e73f-45d8-a0b4-c944281d98ee" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/log/Log.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/Log.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/table/read_buffer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/recover.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/write.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/decondig.cc" beforeDir="false" afterPath="$PROJECT_DIR$/base/decondig.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/decondig.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/decondig.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/dict_builder.cc" beforeDir="false" afterPath="$PROJECT_DIR$/base/dict_builder.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/base/dict_builder.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/dict_builder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/options.h" beforeDir="false" afterPath="$PROJECT_DIR$/config/options.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/random.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/sds.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/skiplist.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/skiplist.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/state.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_redies.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_redies.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_redies.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_redies.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_redies.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_redies.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_redies.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/my_redies" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/my_redies.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.10tts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.11tts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.12tts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.13tts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.14tts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.15tts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.1tts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.2tts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.3tts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.4tts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.5tts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.6tts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.7tts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.8tts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.9tts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/base/decondig.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/base/decondig.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/base/dict_builder.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/base/dict_builder.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/table/Block.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/table/Block.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/table/block_builder.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/table/block_builder.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/table/read_buffer.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/table/read_buffer.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/table/sstable.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/table/sstable.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/my_simple_storage" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/my_simple_storage" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/options.h" beforeDir="false" afterPath="$PROJECT_DIR$/config/options.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/net/Timer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Compaction.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Compaction.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Version.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/db.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db_wr.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db_wr.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/log.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/log.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lru.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/lru.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/read_buffer.cc" beforeDir="false" afterPath="$PROJECT_DIR$/table/read_buffer.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/read_buffer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/write_buffer.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/table/Block.cc" beforeDir="false" afterPath="$PROJECT_DIR$/table/Block.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/table/Block.h" beforeDir="false" afterPath="$PROJECT_DIR$/table/Block.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/table/block_builder.cc" beforeDir="false" afterPath="$PROJECT_DIR$/table/block_builder.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/table/block_builder.h" beforeDir="false" afterPath="$PROJECT_DIR$/table/block_builder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/table/fifter_builder.h" beforeDir="false" afterPath="$PROJECT_DIR$/table/fifter_builder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/table/log.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/table/read_buffer.cc" beforeDir="false" afterPath="$PROJECT_DIR$/table/read_buffer.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/table/read_buffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/table/read_buffer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/table/sstable.cc" beforeDir="false" afterPath="$PROJECT_DIR$/table/sstable.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/table/sstable.h" beforeDir="false" afterPath="$PROJECT_DIR$/table/sstable.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/table/write_file.h" beforeDir="false" afterPath="$PROJECT_DIR$/table/write_file.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Timer_test.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/anytest.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/cache.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/coding.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/phmap.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/random.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/skiplisttest.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/smaz.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Allocate.h" beforeDir="false" afterPath="$PROJECT_DIR$/util/Allocate.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Prena.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/Prena.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/util/bloom_filter.h" beforeDir="false" afterPath="$PROJECT_DIR$/util/bloom_filter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/env.h" beforeDir="false" afterPath="$PROJECT_DIR$/util/env.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/hash.h" beforeDir="false" afterPath="$PROJECT_DIR$/util/hash.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/parallel_hashmap/meminfo.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/parallel_hashmap/phmap.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/parallel_hashmap/phmap_base.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/parallel_hashmap/phmap_bits.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/parallel_hashmap/phmap_config.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/parallel_hashmap/phmap_dump.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/parallel_hashmap/phmap_fwd_decl.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/parallel_hashmap/phmap_utils.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/sparsepp/FileSerializer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/sparsepp/spp.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/sparsepp/spp_config.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/sparsepp/spp_dlalloc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/sparsepp/spp_memory.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/sparsepp/spp_smartptr.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/sparsepp/spp_stdint.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/sparsepp/spp_timer.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/sparsepp/spp_traits.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/sparsepp/spp_utils.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +186,7 @@
       <workItem from="1581059625856" duration="4984000" />
       <workItem from="1581072786697" duration="89000" />
       <workItem from="1581072877227" duration="3601000" />
-      <workItem from="1581143214256" duration="84065000" />
+      <workItem from="1581143214256" duration="97413000" />
     </task>
     <servers />
   </component>
@@ -276,42 +220,46 @@
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
     <state x="718" y="260" width="524" height="592" key="FileChooserDialogImpl/50.34.1870.1046@50.34.1870.1046" timestamp="1581347341107" />
-    <state width="1808" height="812" key="GridCell.Tab.0.bottom" timestamp="1581349734787">
+    <state width="1808" height="3" key="GridCell.Tab.0.bottom" timestamp="1581406460069">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
-    <state width="1808" height="812" key="GridCell.Tab.0.bottom/50.34.1870.1046@50.34.1870.1046" timestamp="1581349734787" />
-    <state width="1808" height="812" key="GridCell.Tab.0.center" timestamp="1581349734786">
+    <state width="1808" height="3" key="GridCell.Tab.0.bottom/50.34.1870.1046@50.34.1870.1046" timestamp="1581406460069" />
+    <state width="1808" height="3" key="GridCell.Tab.0.center" timestamp="1581406460069">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
-    <state width="1808" height="812" key="GridCell.Tab.0.center/50.34.1870.1046@50.34.1870.1046" timestamp="1581349734785" />
-    <state width="1808" height="812" key="GridCell.Tab.0.left" timestamp="1581349734785">
+    <state width="1808" height="3" key="GridCell.Tab.0.center/50.34.1870.1046@50.34.1870.1046" timestamp="1581406460069" />
+    <state width="1808" height="3" key="GridCell.Tab.0.left" timestamp="1581406460069">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
-    <state width="1808" height="812" key="GridCell.Tab.0.left/50.34.1870.1046@50.34.1870.1046" timestamp="1581349734785" />
-    <state width="1808" height="812" key="GridCell.Tab.0.right" timestamp="1581349734786">
+    <state width="1808" height="3" key="GridCell.Tab.0.left/50.34.1870.1046@50.34.1870.1046" timestamp="1581406460069" />
+    <state width="1808" height="3" key="GridCell.Tab.0.right" timestamp="1581406460069">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
-    <state width="1808" height="812" key="GridCell.Tab.0.right/50.34.1870.1046@50.34.1870.1046" timestamp="1581349734786" />
-    <state width="1808" height="3" key="GridCell.Tab.1.bottom" timestamp="1581263036789">
+    <state width="1808" height="3" key="GridCell.Tab.0.right/50.34.1870.1046@50.34.1870.1046" timestamp="1581406460069" />
+    <state width="1808" height="3" key="GridCell.Tab.1.bottom" timestamp="1581406460459">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
-    <state width="1808" height="3" key="GridCell.Tab.1.bottom/50.34.1870.1046@50.34.1870.1046" timestamp="1581263036789" />
-    <state width="1808" height="3" key="GridCell.Tab.1.center" timestamp="1581263036788">
+    <state width="1808" height="3" key="GridCell.Tab.1.bottom/50.34.1870.1046@50.34.1870.1046" timestamp="1581406460459" />
+    <state width="1808" height="3" key="GridCell.Tab.1.center" timestamp="1581406460459">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
-    <state width="1808" height="3" key="GridCell.Tab.1.center/50.34.1870.1046@50.34.1870.1046" timestamp="1581263036788" />
-    <state width="1808" height="3" key="GridCell.Tab.1.left" timestamp="1581263036788">
+    <state width="1808" height="3" key="GridCell.Tab.1.center/50.34.1870.1046@50.34.1870.1046" timestamp="1581406460459" />
+    <state width="1808" height="3" key="GridCell.Tab.1.left" timestamp="1581406460458">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
-    <state width="1808" height="3" key="GridCell.Tab.1.left/50.34.1870.1046@50.34.1870.1046" timestamp="1581263036788" />
-    <state width="1808" height="3" key="GridCell.Tab.1.right" timestamp="1581263036789">
+    <state width="1808" height="3" key="GridCell.Tab.1.left/50.34.1870.1046@50.34.1870.1046" timestamp="1581406460458" />
+    <state width="1808" height="3" key="GridCell.Tab.1.right" timestamp="1581406460459">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
-    <state width="1808" height="3" key="GridCell.Tab.1.right/50.34.1870.1046@50.34.1870.1046" timestamp="1581263036789" />
+    <state width="1808" height="3" key="GridCell.Tab.1.right/50.34.1870.1046@50.34.1870.1046" timestamp="1581406460459" />
     <state x="350" y="104" key="SettingsEditor" timestamp="1581061819148">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
     <state x="350" y="104" key="SettingsEditor/50.34.1870.1046@50.34.1870.1046" timestamp="1581061819148" />
+    <state width="935" height="523" key="XDebugger.FullValuePopup" timestamp="1581406169595">
+      <screen x="50" y="34" width="1870" height="1046" />
+    </state>
+    <state width="935" height="523" key="XDebugger.FullValuePopup/50.34.1870.1046@50.34.1870.1046" timestamp="1581406169595" />
     <state x="670" y="132" width="620" height="847" key="refactoring.ChangeSignatureDialog" timestamp="1581253604130">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>

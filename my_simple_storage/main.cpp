@@ -36,24 +36,15 @@ char *rand_str(char *str,const int len)
 int main(){
 
 
-    std::unique_ptr<db> m_db= dict::Init("1.log","tts");
+    std::unique_ptr<db> m_db= dict::Init("1.log","xiaolianlian");
 
 
     chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
 
     /*代码段*/
 
-    std::string c;
-    for(int i = 100000 ;  i >= 99900 ;i--)
-    {
-       m_db->Get(std::to_string(i),c);
-       std::cout << "c  " <<  c << std::endl;
-    }
-
     chrono::steady_clock::time_point t2 = chrono::steady_clock::now();
     chrono::duration<double> time_used = chrono::duration_cast<chrono::duration<double>>(t2-t1);
     std::cout << "time used ：" << time_used.count() << "seconds." << std::endl;
-
-
     return 0;
 }
