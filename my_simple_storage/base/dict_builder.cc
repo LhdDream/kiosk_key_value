@@ -107,5 +107,6 @@ void dict::Recover( const std::string &filename) {
         }
         fin.close();
         fin.clear();
+        remove(filename.c_str());
     }
 }
