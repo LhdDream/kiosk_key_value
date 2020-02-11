@@ -15,8 +15,9 @@ aux_source_directory(src/compaction SOURCE_COMPACTION)
 aux_source_directory(src/core SOURCE_CORE)
 aux_source_directory(src/version SOURCE_VERSION)
 
+LINK_LIBRARIES(snappy)
+LINK_LIBRARIES(tcmalloc)
 
-link_libraries(-lsnappy)
 add_definitions("--std=c++14")
 add_definitions("-g")
 
