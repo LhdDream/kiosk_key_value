@@ -29,7 +29,7 @@
 
   
 
-  ![image](https://github.com/LhdDream/kiosk_key_value/blob/master/img/a.png)
+ ![image](https://github.com/LhdDream/kiosk_key_value/blob/master/img/a.png)
 
   
 
@@ -96,11 +96,9 @@
 
 ​	磁盘写性能:  	
 
-![image](https://github.com/LhdDream/kiosk_key_value/blob/master/img/b.png)
+  ![image](https://github.com/LhdDream/kiosk_key_value/blob/master/img/b.png)
 
 测试代码:
-
-​	
 
 ```
 #include <iostream>
@@ -154,7 +152,7 @@ int main(){
 
 测试性能:	
 
-​	![image](https://github.com/LhdDream/kiosk_key_value/blob/master/img/c.png)
+![image](https://github.com/LhdDream/kiosk_key_value/blob/master/img/c.png)
 
 #### 总结和收获:
 
