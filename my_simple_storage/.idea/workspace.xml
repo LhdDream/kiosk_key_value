@@ -13,43 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="45aba6c4-e73f-45d8-a0b4-c944281d98ee" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/decondig.cc" beforeDir="false" afterPath="$PROJECT_DIR$/base/decondig.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/decondig.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/decondig.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/dict_builder.cc" beforeDir="false" afterPath="$PROJECT_DIR$/base/dict_builder.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/dict_builder.h" beforeDir="false" afterPath="$PROJECT_DIR$/base/dict_builder.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.10tts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.11tts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.12tts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.13tts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.14tts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.15tts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.1tts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.2tts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.3tts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.4tts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.5tts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.6tts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.7tts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.8tts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.9tts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/base/decondig.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/base/decondig.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/base/dict_builder.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/base/dict_builder.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/table/Block.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/table/Block.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/table/block_builder.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/table/block_builder.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/table/read_buffer.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/table/read_buffer.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/table/sstable.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/my_simple_storage.dir/table/sstable.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/my_simple_storage" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/my_simple_storage" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/options.h" beforeDir="false" afterPath="$PROJECT_DIR$/config/options.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/table/Block.cc" beforeDir="false" afterPath="$PROJECT_DIR$/table/Block.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/table/Block.h" beforeDir="false" afterPath="$PROJECT_DIR$/table/Block.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/table/block_builder.cc" beforeDir="false" afterPath="$PROJECT_DIR$/table/block_builder.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/table/read_buffer.cc" beforeDir="false" afterPath="$PROJECT_DIR$/table/read_buffer.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/table/read_buffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/table/read_buffer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/table/sstable.cc" beforeDir="false" afterPath="$PROJECT_DIR$/table/sstable.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/bloom_filter.h" beforeDir="false" afterPath="$PROJECT_DIR$/util/bloom_filter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/table/write_file.h" beforeDir="false" afterPath="$PROJECT_DIR$/table/write_file.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,6 +152,11 @@
       <workItem from="1581072786697" duration="89000" />
       <workItem from="1581072877227" duration="3601000" />
       <workItem from="1581143214256" duration="97413000" />
+      <workItem from="1581418298878" duration="3151000" />
+      <workItem from="1581518118287" duration="13000" />
+      <workItem from="1581766787648" duration="40000" />
+      <workItem from="1581767135341" duration="11000" />
+      <workItem from="1581767292617" duration="13000" />
     </task>
     <servers />
   </component>
@@ -216,26 +186,26 @@
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
     <state x="655" y="248" width="649" height="616" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/50.34.1870.1046@50.34.1870.1046" timestamp="1581320344941" />
-    <state x="718" y="260" width="524" height="592" key="FileChooserDialogImpl" timestamp="1581347341107">
+    <state x="718" y="260" width="524" height="592" key="FileChooserDialogImpl" timestamp="1581767304076">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
-    <state x="718" y="260" width="524" height="592" key="FileChooserDialogImpl/50.34.1870.1046@50.34.1870.1046" timestamp="1581347341107" />
-    <state width="1808" height="3" key="GridCell.Tab.0.bottom" timestamp="1581406460069">
+    <state x="718" y="260" width="524" height="592" key="FileChooserDialogImpl/50.34.1870.1046@50.34.1870.1046" timestamp="1581767304076" />
+    <state width="1808" height="191" key="GridCell.Tab.0.bottom" timestamp="1581420030933">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
-    <state width="1808" height="3" key="GridCell.Tab.0.bottom/50.34.1870.1046@50.34.1870.1046" timestamp="1581406460069" />
-    <state width="1808" height="3" key="GridCell.Tab.0.center" timestamp="1581406460069">
+    <state width="1808" height="191" key="GridCell.Tab.0.bottom/50.34.1870.1046@50.34.1870.1046" timestamp="1581420030933" />
+    <state width="1808" height="191" key="GridCell.Tab.0.center" timestamp="1581420030932">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
-    <state width="1808" height="3" key="GridCell.Tab.0.center/50.34.1870.1046@50.34.1870.1046" timestamp="1581406460069" />
-    <state width="1808" height="3" key="GridCell.Tab.0.left" timestamp="1581406460069">
+    <state width="1808" height="191" key="GridCell.Tab.0.center/50.34.1870.1046@50.34.1870.1046" timestamp="1581420030932" />
+    <state width="1808" height="191" key="GridCell.Tab.0.left" timestamp="1581420030931">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
-    <state width="1808" height="3" key="GridCell.Tab.0.left/50.34.1870.1046@50.34.1870.1046" timestamp="1581406460069" />
-    <state width="1808" height="3" key="GridCell.Tab.0.right" timestamp="1581406460069">
+    <state width="1808" height="191" key="GridCell.Tab.0.left/50.34.1870.1046@50.34.1870.1046" timestamp="1581420030931" />
+    <state width="1808" height="191" key="GridCell.Tab.0.right" timestamp="1581420030933">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
-    <state width="1808" height="3" key="GridCell.Tab.0.right/50.34.1870.1046@50.34.1870.1046" timestamp="1581406460069" />
+    <state width="1808" height="191" key="GridCell.Tab.0.right/50.34.1870.1046@50.34.1870.1046" timestamp="1581420030933" />
     <state width="1808" height="3" key="GridCell.Tab.1.bottom" timestamp="1581406460459">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
@@ -260,6 +230,10 @@
       <screen x="50" y="34" width="1870" height="1046" />
     </state>
     <state width="935" height="523" key="XDebugger.FullValuePopup/50.34.1870.1046@50.34.1870.1046" timestamp="1581406169595" />
+    <state x="566" y="346" key="com.intellij.ide.util.TipDialog" timestamp="1581767294629">
+      <screen x="50" y="34" width="1870" height="1046" />
+    </state>
+    <state x="566" y="346" key="com.intellij.ide.util.TipDialog/50.34.1870.1046@50.34.1870.1046" timestamp="1581767294629" />
     <state x="670" y="132" width="620" height="847" key="refactoring.ChangeSignatureDialog" timestamp="1581253604130">
       <screen x="50" y="34" width="1870" height="1046" />
     </state>

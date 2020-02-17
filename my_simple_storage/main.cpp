@@ -6,45 +6,43 @@
 #include "../base/dict_builder.h"
 #include <memory>
 #include <chrono>
-#include "Log.h"
-#include <cstring>
 using namespace std;
 
-
-char *rand_str(char *str,const int len)
+char* randomstr()
 {
-    srand(time(nullptr));
-    int i;
-    for(i=0;i<len;++i)
-    {
-        switch((rand()%3))
-        {
-            case 1:
-                str[i]='A'+rand()%26;
-                break;
-            case 2:
-                str[i]='a'+rand()%26;
-                break;
-            default:
-                str[i]='0'+rand()%10;
-                break;
-        }
+    static char buf[1024];
+    int len = rand() % 768 + 255;
+    for (int i = 0; i < len; ++i) {
+        buf[i] = 'A' + rand() % 26;
     }
-    str[++i]='\0';
-    return str;
+    buf[len] = '\0';
+    return buf;
 }
+
+
 int main(){
 
 
-    std::unique_ptr<db> m_db= dict::Init("1.log","xiaolianlian");
-
+    std::unique_ptr<db> m_db= dict::Init("1.log","red");
+    long long l = 0;
+    std::string k[100000]{} ;
+    for(int i = 0 ; i < 100000 ;i++){
+        k[i] = randomstr();
+        l += k[i].size();
+    }
+    std::string v = "123456789";
+    l += 900000;
 
     chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
 
     /*代码段*/
+    for(int i = 0 ; i< 100000 ; i++){
+         m_db->Set(k[i],v);
+    }
 
     chrono::steady_clock::time_point t2 = chrono::steady_clock::now();
     chrono::duration<double> time_used = chrono::duration_cast<chrono::duration<double>>(t2-t1);
     std::cout << "time used ：" << time_used.count() << "seconds." << std::endl;
+    std::cout << "data " << l/1024/1024  << " MB"<< std::endl;
     return 0;
 }

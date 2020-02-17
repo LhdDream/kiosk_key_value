@@ -48,8 +48,8 @@ public:
 protected:
     options () = default;
 private:
-    long long  m_write_buf =  1024 * 1024; //  设置写缓冲区的大小
-    long long  m_block_size =  512 * 1024; // 设置每一块的内容的大小
+    long long  m_write_buf =  4 * 1024 * 1024; //  设置写缓冲区的大小
+    long long  m_block_size =  2 * 1024 * 1024; // 设置每一块的内容的大小
     //test 8k and 16k
     long long m_lru_number = 1024000;//lru_中存储多少条数据
     long long  id = 1;

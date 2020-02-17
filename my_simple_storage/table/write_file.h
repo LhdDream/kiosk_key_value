@@ -29,7 +29,7 @@ public:
     write_file operator = (const write_file & ) = delete;
     bool writeFile(const char * data_,size_t size){
         try{
-            fd = open(filename.c_str(),O_DIRECT | O_CREAT | O_RDWR | O_NOATIME | O_APPEND,0666);
+            fd = open(filename.c_str(), O_CREAT | O_RDWR | O_NOATIME | O_APPEND,0666);
         //O_DIRECT 直接与磁盘进行IO操作
              if(fd < 0 )
              {
