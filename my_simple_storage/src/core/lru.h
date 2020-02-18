@@ -27,13 +27,12 @@ public:
     lru_cache() = default;
 
     void Put(const std::string &key, const std::string &value){
-        m_cache.push_front(key_value_pair(key,value));
         // 每次插入到队列首部
         auto it = m_cache_map.find(key);
         if(  it !=m_cache_map.end()){
             m_cache.erase(it->second);
-            m_cache_map.erase(it);  //从hashmap中和list之中进行删除
         }
+        m_cache.push_front(key_value_pair(key,value));
         m_cache_map[key] = m_cache.begin();
         // map之中指向list 的指针
         if(m_cache_map.size() > options::GetOptions().Get_Lru_Number())
