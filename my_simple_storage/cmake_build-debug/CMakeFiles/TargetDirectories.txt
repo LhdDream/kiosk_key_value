@@ -1,0 +1,3 @@
+/home/kiosk/CLionProjects/kiosk_key_value/my_simple_storage/cmake_build-debug/CMakeFiles/rebuild_cache.dir
+/home/kiosk/CLionProjects/kiosk_key_value/my_simple_storage/cmake_build-debug/CMakeFiles/my_simple_storage.dir
+/home/kiosk/CLionProjects/kiosk_key_value/my_simple_storage/cmake_build-debug/CMakeFiles/edit_cache.dir

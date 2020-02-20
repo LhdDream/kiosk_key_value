@@ -1,18 +1,19 @@
 #ifndef MY_SIMPLE_STORAGE_BLOOM_FILTER_H
 #define MY_SIMPLE_STORAGE_BLOOM_FILTER_H
 
-#include "hash.h"
 #include <vector>
 
-//this file create bloom
-//bloom 过滤器表示如果不在这个集合之中，则说明不在，在这个集合之后，实时不一定在这个集合之中
-//bloom 参考leveldb 的实现方式来进行实现
+#include "hash.h"
+
+// this file create bloom
+// bloom 过滤器表示如果不在这个集合之中，则说明不在，在这个集合之后，实时不一定在这个集合之中
+// bloom 参考leveldb 的实现方式来进行实现
 class bloom {
 public:
     explicit bloom() : m_bits_per_key(0), m_h(0) {
     }
 
-    void Add(const std::string &key, std::string &result_) {
+    void Add(const std::string& key, std::string& result_) {
         //每次调用写入一个key
         m_bits_per_key = key.size() * 8;
         //对齐，方便内存读写以及后续位置的索引
@@ -32,7 +33,7 @@ public:
         }
     }
 
-    bool Key_Match(const std::string &key, std::string &result_) {
+    bool Key_Match(const std::string& key, std::string& result_) {
         if (result_.empty()) {
             return false;
         }
@@ -58,8 +59,8 @@ public:
     }
 
 private:
-    size_t m_bits_per_key;   //每一个key拥有的bit数目 // 一般为１0
+    size_t m_bits_per_key;  //每一个key拥有的bit数目 // 一般为１0
     uint32_t m_h;
 };
 
-#endif //MY_REDIES_BLOOM_FILTER_H
+#endif  // MY_REDIES_BLOOM_FILTER_H

@@ -4,18 +4,18 @@
 #include "sstable.h"
 
 void sstable::UnmemtableAdd(
-        const std::map<std::string, std::string, std::less<>, MemoryPool<std::pair<std::string, std::string>>> &value) {
-    for (const auto &it : value) {
+    const std::map<std::string, std::string, std::less<>, MemoryPool<std::pair<std::string, std::string>>>& value) {
+    for (const auto& it : value) {
         m_block->Add(it.first, it.second);
     }
     m_buffer.append(m_block->Finish());
     m_data_index.emplace_back(m_buffer.size());
-    m_fifter_buffer += m_block->To_Fif(); // fiter 过滤器
+    m_fifter_buffer += m_block->To_Fif();  // fiter 过滤器
     m_fifter_index.emplace_back(m_fifter_buffer.size());
     m_block->Reset();
 }
 
-bool sstable::Get(const std::string &key_, std::string &value) {
+bool sstable::Get(const std::string& key_, std::string& value) {
     m_read->Set_Key(key_);
     auto it = m_read->Read_File();
     if (it) {
@@ -25,9 +25,9 @@ bool sstable::Get(const std::string &key_, std::string &value) {
     return false;
 }
 
-void sstable::Offset(std::vector<uint32_t> &index) {
+void sstable::Offset(std::vector<uint32_t>& index) {
     char bufs[4];
-    for (const auto &it : index) {
+    for (const auto& it : index) {
         bzero(bufs, sizeof(bufs));
         EncodeInt32(bufs, it);
         m_offset.append(bufs, sizeof(bufs));

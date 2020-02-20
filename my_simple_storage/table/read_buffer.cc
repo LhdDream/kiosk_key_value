@@ -3,7 +3,7 @@
 //
 #include "read_buffer.h"
 
-bool read_buffer::Find_Value(const char *name, int len) {
+bool read_buffer::Find_Value(const char* name, int len) {
     m_iter = m_block->newItear(name, len);
     if (m_iter->Seek(m_key)) {
         m_value = m_iter->Value();
@@ -12,7 +12,7 @@ bool read_buffer::Find_Value(const char *name, int len) {
     return false;
 }
 
-void read_buffer::Get_Vector(std::vector<uint32_t> &index, const std::string &off) {
+void read_buffer::Get_Vector(std::vector<uint32_t>& index, const std::string& off) {
     std::string temp;
     for (size_t i = 0; i < off.size() / 4; i++) {
         temp.resize(5, '\0');
@@ -22,7 +22,7 @@ void read_buffer::Get_Vector(std::vector<uint32_t> &index, const std::string &of
 }
 
 //偏移量进行加载
-bool read_buffer::Read_Offset(const char *data, size_t len) {
+bool read_buffer::Read_Offset(const char* data, size_t len) {
     uint32_t size = DecodeInt32(data + len - sizeof(uint32_t));
     //得到所有偏移量的长度
     std::string altogether;
@@ -41,10 +41,11 @@ bool read_buffer::Read_Offset(const char *data, size_t len) {
     size_t index_fif = m_fifter_index.size() - 1;
     while (fifter_size <= index_fif) {
         m_fifter.resize(m_fifter_index[fifter_size + 1] - m_fifter_index[fifter_size]);
-        std::copy(data + len - (size + 1) * sizeof(uint32_t) - 2 - m_fifter_index[index_fif] +
-                  m_fifter_index[fifter_size],
-                  data + len - (size + 1) * sizeof(uint32_t) - 2 - m_fifter_index[index_fif] +
-                  m_fifter_index[fifter_size + 1], m_fifter.begin());
+        std::copy(data + len - (size + 1) * sizeof(uint32_t) - 2 - m_fifter_index[index_fif]
+                      + m_fifter_index[fifter_size],
+                  data + len - (size + 1) * sizeof(uint32_t) - 2 - m_fifter_index[index_fif]
+                      + m_fifter_index[fifter_size + 1],
+                  m_fifter.begin());
         m_fif = std::make_unique<fifter>();
         m_fif->SplitString(m_fifter);
         if (m_fif->Match(m_key)) {
@@ -54,10 +55,11 @@ bool read_buffer::Read_Offset(const char *data, size_t len) {
     }
     if (fifter_size <= index_fif) {
         m_buffer.resize(m_data_index[fifter_size + 1] - m_data_index[fifter_size]);
-        std::copy(data + len - (size + 1) * sizeof(uint32_t) - m_fifter_index[index_fif] -
-                  m_data_index[m_data_index.size() - 1] - 2 + m_data_index[fifter_size],
-                  data + len - 2 - (size + 1) * sizeof(uint32_t) - m_fifter_index[index_fif] -
-                  m_data_index[m_data_index.size() - 1] + m_data_index[fifter_size + 1], m_buffer.begin());
+        std::copy(data + len - (size + 1) * sizeof(uint32_t) - m_fifter_index[index_fif]
+                      - m_data_index[m_data_index.size() - 1] - 2 + m_data_index[fifter_size],
+                  data + len - 2 - (size + 1) * sizeof(uint32_t) - m_fifter_index[index_fif]
+                      - m_data_index[m_data_index.size() - 1] + m_data_index[fifter_size + 1],
+                  m_buffer.begin());
         return true;
     }
     return false;
@@ -70,18 +72,18 @@ bool read_buffer::Read_File() {
             m_filename = "." + std::to_string(m_id) + options::GetOptions().GetFilename();
             fd = open(m_filename.c_str(), O_RDONLY | O_CLOEXEC | O_DIRECT, 0666);
             if (fd == -1) {
-                m_id--;//查看下一个文件是不是存在
+                m_id--;  //查看下一个文件是不是存在
                 continue;
             }
-            struct stat st{};
+            struct stat st {};
             auto r = fstat(fd, &st);
             if (r == -1) {
                 close(fd);
                 return false;
             }
             len = st.st_size;
-            auto re_buffer = reinterpret_cast<const char *> (mmap(nullptr, len, PROT_READ,
-                                                                  MAP_SHARED | MAP_POPULATE | MAP_NONBLOCK, fd, 0));
+            auto re_buffer = reinterpret_cast<const char*>(
+                mmap(nullptr, len, PROT_READ, MAP_SHARED | MAP_POPULATE | MAP_NONBLOCK, fd, 0));
 
             if (re_buffer == nullptr) {
                 throw std::invalid_argument(strerror(errno));
@@ -98,9 +100,10 @@ bool read_buffer::Read_File() {
             }
             m_id--;
         }
-        m_block.release(); // 对象生命周期的问题
-        return m_id == options::GetOptions().Id();;
-    } catch (std::invalid_argument &e) {
+        m_block.release();  // 对象生命周期的问题
+        return m_id == options::GetOptions().Id();
+        ;
+    } catch (std::invalid_argument& e) {
         puts(e.what());
     }
 }

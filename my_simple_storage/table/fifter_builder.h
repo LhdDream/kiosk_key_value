@@ -16,7 +16,7 @@ public:
 
     ~fifter() = default;
 
-    void Add(const std::string &key_) {
+    void Add(const std::string& key_) {
         std::string result_;
         m_bloom->Add(key_, result_);
         m_fifter.emplace_back(result_);
@@ -24,7 +24,7 @@ public:
 
     std::string To_string() {
         std::string result_;
-        for (auto &it : m_fifter) {
+        for (auto& it : m_fifter) {
             it += '\r';
             result_ += it;
         }
@@ -32,8 +32,8 @@ public:
         return result_;
     }
 
-    //read 函数
-    void SplitString(const std::string &s) {
+    // read 函数
+    void SplitString(const std::string& s) {
         if (!m_fifter.empty()) {
             m_fifter.clear();
         }
@@ -50,8 +50,8 @@ public:
         }
     }
 
-    bool Match(std::string &key_) {
-        for (auto &it : m_fifter) {
+    bool Match(std::string& key_) {
+        for (auto& it : m_fifter) {
             if (m_bloom->Key_Match(key_, it)) {
                 return true;
             }
@@ -64,4 +64,4 @@ private:
     std::vector<std::string> m_fifter;
 };
 
-#endif //MY_REDIES_m_fifterBUILDER_H
+#endif  // MY_REDIES_m_fifterBUILDER_H

@@ -5,13 +5,15 @@
 #ifndef MY_SIMPLE_STORAGE_BLOCK_BUILDER_H
 #define MY_SIMPLE_STORAGE_BLOCK_BUILDER_H
 // 组织块的大小
-#include <memory>
-#include <cstdint>
-#include <vector>
-#include "../config/options.h"
-#include "../base/decondig.h"
-#include "fifter_builder.h"
 #include <snappy.h>
+
+#include <cstdint>
+#include <memory>
+#include <vector>
+
+#include "../base/decondig.h"
+#include "../config/options.h"
+#include "fifter_builder.h"
 
 using namespace deconding;
 
@@ -23,11 +25,11 @@ public:
 
     ~block_builder() = default;
 
-    block_builder(const block_builder &) = delete;
+    block_builder(const block_builder&) = delete;
 
-    block_builder &operator=(const block_builder &) = delete;
+    block_builder& operator=(const block_builder&) = delete;
 
-    void Add(const std::string &key, const std::string &value);
+    void Add(const std::string& key, const std::string& value);
 
     void Reset();
 
@@ -38,14 +40,14 @@ public:
     }
 
     std::string To_Fif() const {
-        return m_fifter->To_string(); // 表示转化
+        return m_fifter->To_string();  // 表示转化
     }
 
 private:
-    bool m_finished; // 写入完成
-    std::unique_ptr<fifter> m_fifter; // 对于每一块的fifter 过滤器
-    std::vector<std::string> m_buffer; // 一整块的内容
+    bool m_finished;                    // 写入完成
+    std::unique_ptr<fifter> m_fifter;   // 对于每一块的fifter 过滤器
+    std::vector<std::string> m_buffer;  // 一整块的内容
     std::vector<uint32_t> m_offset;
 };
 
-#endif //MY_REDIES_BLOCK_BUILDER_H
+#endif  // MY_REDIES_BLOCK_BUILDER_H

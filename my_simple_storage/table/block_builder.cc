@@ -2,6 +2,7 @@
 // Created by kiosk on 19-10-18.
 //
 #include "block_builder.h"
+
 #include <sstream>
 
 void block_builder::Reset() {
@@ -12,11 +13,11 @@ void block_builder::Reset() {
 
 std::string block_builder::Finish() {
     std::string temp;
-    for (const auto &it :m_buffer) {
+    for (const auto& it : m_buffer) {
         temp += it;
     }
     char bufs[4];
-    for (auto &it : m_offset) {
+    for (auto& it : m_offset) {
         bzero(bufs, sizeof(bufs));
         EncodeInt32(bufs, it);
         temp.append(bufs, sizeof(bufs));
@@ -28,15 +29,13 @@ std::string block_builder::Finish() {
     return temp;
 }
 
-//Entry 定义
-void block_builder::Add(const std::string &key, const std::string &value) {
+// Entry 定义
+void block_builder::Add(const std::string& key, const std::string& value) {
     std::string buffer;
     m_fifter->Add(key);
     buffer = key;
     buffer = '\r' + buffer + '\r';
     buffer += value;
     m_buffer.emplace_back(buffer);
-    m_offset.emplace_back(buffer.size()); //对于key_value的偏移量
+    m_offset.emplace_back(buffer.size());  //对于key_value的偏移量
 }
-
-

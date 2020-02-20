@@ -3,8 +3,8 @@
 //
 #include "dict_builder.h"
 
-void dict::Set(const std::string &key, const std::string &value) {
-    //bloom 过滤器对于减少磁盘的IO查询起到了作用
+void dict::Set(const std::string& key, const std::string& value) {
+    // bloom 过滤器对于减少磁盘的IO查询起到了作用
     Save();
     m_log.info() << key << ' ' << value << ' ';
     m_log.flunsh();
@@ -23,7 +23,7 @@ void dict::Set(const std::string &key, const std::string &value) {
     }
 }
 
-bool dict::Get(const std::string &key, std::string &value) {
+bool dict::Get(const std::string& key, std::string& value) {
     if (m_lost.find(key) != m_lost.end()) {
         return false;
     }
@@ -45,7 +45,7 @@ bool dict::Get(const std::string &key, std::string &value) {
     }
 }
 
-void dict::Delete(const std::string &key) {
+void dict::Delete(const std::string& key) {
     m_lost.emplace(key);
 }
 
@@ -71,12 +71,12 @@ bool dict::Save() {
     return true;
 }
 
-void dict::Merge(Map &a, Map &b, Map &c) {
-    for (const auto &l : b) {
+void dict::Merge(Map& a, Map& b, Map& c) {
+    for (const auto& l : b) {
         if (m_lost.find(l.first) == m_lost.end())
             c.emplace(l.first, l.second);
     }
-    for (const auto &l :a) {
+    for (const auto& l : a) {
         if (m_lost.find(l.first) == m_lost.end())
             c.emplace(l.first, l.second);
     }
@@ -84,7 +84,7 @@ void dict::Merge(Map &a, Map &b, Map &c) {
     b.clear();
 }
 
-void dict::Recover(const std::string &filename) {
+void dict::Recover(const std::string& filename) {
     if (!access(filename.data(), 0)) {
         //创建一个文件流对象，并打开文件
         std::ifstream fin(filename.c_str());

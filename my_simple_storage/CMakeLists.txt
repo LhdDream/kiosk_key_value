@@ -3,7 +3,7 @@ project(my_simple_storage)
 
 set(CMAKE_CXX_STANDARD 14)
 
-include_directories(base net src  log table  util config )
+include_directories(base net src log table util config)
 
 aux_source_directory(base SOURCE_BASE)
 aux_source_directory(net SOURCE_NET)
@@ -30,4 +30,4 @@ add_executable(my_simple_storage main.cpp
         ${SOURCE_COMPACTION}
         ${SOURCE_CORE}
         ${SOURCE_VERSION}
-       )
+        )
