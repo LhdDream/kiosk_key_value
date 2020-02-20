@@ -19,6 +19,7 @@
 #include "../util/memorypool/memorypool.h"
 #include "write_file.h"
 #include "read_buffer.h"
+
 using namespace deconding;
 
 //总目录
@@ -31,21 +32,22 @@ using namespace deconding;
 //首先把然后通过判断每一个索引块来进行编写
 
 
-class sstable{
+class sstable {
 public:
-    explicit sstable() :m_read(std::make_unique<read_buffer>()),
-    m_write (nullptr),m_block(std::make_unique<block_builder>())
-    {
+    explicit sstable() : m_read(std::make_unique<read_buffer>()),
+                         m_write(nullptr), m_block(std::make_unique<block_builder>()) {
         m_data_index.emplace_back(0);
         m_fifter_index.emplace_back(0);
     }
 
-    void UnmemtableAdd( const std::map<std::string,std::string,std::less<> ,MemoryPool<std::pair<std::string,std::string>>>  &value);
+    void UnmemtableAdd(
+            const std::map<std::string, std::string, std::less<>, MemoryPool<std::pair<std::string, std::string>>> &value);
 
-    bool Get(const std::string & key_,std::string &value);
+    bool Get(const std::string &key_, std::string &value);
 
     //每一个数据块的偏移量
-    void Offset(std::vector <uint32_t > &index);
+    void Offset(std::vector<uint32_t> &index);
+
     void Write_NameFile();
 
     void Reset();
@@ -56,10 +58,10 @@ private:
     std::unique_ptr<block_builder> m_block;
     // 转化为有序的map进行存储
     std::string m_buffer; // 写入文件的内容
-    std::string m_offset ; //偏移量的offest
+    std::string m_offset; //偏移量的offest
     std::string m_fifter_buffer; // fifter 中的buffer
-    std::vector<uint32_t > m_data_index; //　每一个数据块的index
-    std::vector<uint32_t > m_fifter_index; // index 标记
+    std::vector<uint32_t> m_data_index; //　每一个数据块的index
+    std::vector<uint32_t> m_fifter_index; // index 标记
 };
 
 #endif //MY_REDIES_SSTABLE_H
