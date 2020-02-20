@@ -26,16 +26,15 @@ using namespace deconding;
 //先进行顺序读取
 //索引加具体内容
 //总索引
-//fifter
-//data m_bolck = restart
-//思路，先读取所有的整个索引，如果不满48字节，进行补充到 48 字节
+//data m_block = restart
+//思路，先读取所有的整个索引
 //首先把然后通过判断每一个索引块来进行编写
 
 
 class sstable{
 public:
-    sstable() :m_read(std::make_unique<read_buffer>()),
-    m_writ (nullptr),m_bol(std::make_unique<block_builder>())
+    explicit sstable() :m_read(std::make_unique<read_buffer>()),
+    m_write (nullptr),m_block(std::make_unique<block_builder>())
     {
         m_data_index.emplace_back(0);
         m_fifter_index.emplace_back(0);
@@ -46,25 +45,21 @@ public:
     bool Get(const std::string & key_,std::string &value);
 
     //每一个数据块的偏移量
-    void CompostionOffest(std::vector <uint32_t > &index);
+    void Offset(std::vector <uint32_t > &index);
     void Write_NameFile();
 
     void Reset();
 
 private:
     std::unique_ptr<read_buffer> m_read;
-    std::unique_ptr<write_file> m_writ;
-    std::unique_ptr<block_builder> m_bol;
+    std::unique_ptr<write_file> m_write;
+    std::unique_ptr<block_builder> m_block;
     // 转化为有序的map进行存储
     std::string m_buffer; // 写入文件的内容
-private:
-    std::vector<uint32_t > m_data_index; //　每一个数据块的index
-private:
+    std::string m_offset ; //偏移量的offest
     std::string m_fifter_buffer; // fifter 中的buffer
+    std::vector<uint32_t > m_data_index; //　每一个数据块的index
     std::vector<uint32_t > m_fifter_index; // index 标记
-private:
-    std::string m_offest ; //偏移量的offest
-
 };
 
 #endif //MY_REDIES_SSTABLE_H

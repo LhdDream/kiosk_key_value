@@ -49,7 +49,7 @@ public:
     }
     bool Match(std::string & key_)
     {
-        for(auto & it : m_fifter)
+        for( auto & it : m_fifter)
         {
             if(m_bloom->Key_Match(key_,it))
             {

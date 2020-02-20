@@ -21,7 +21,7 @@ void read_buffer::Get_Vector(std::vector<uint32_t> &index, const std::string &of
     }
 }
 //偏移量进行加载
-bool read_buffer::read_offest(const char *data, size_t len) {
+bool read_buffer::Read_Offset(const char *data, size_t len) {
     uint32_t size = DecodeInt32(data+len-sizeof(uint32_t));
     //得到所有偏移量的长度
     std::string altogether ;
@@ -35,17 +35,10 @@ bool read_buffer::read_offest(const char *data, size_t len) {
     std::copy(altogether.begin()+it+1,altogether.end() - 1,temp2.begin());
     Get_Vector(m_data_index,temp1);
     Get_Vector(m_fifter_index,temp2);
-    //先data块后fifter块
-    //在这里使用一个循环判断处于那个块之中
     size_t  fifter_size = 0;
     size_t  index_fif = m_fifter_index.size() - 1;
     while(fifter_size <= index_fif)
     {
-        //每一个数据块进行匹配
-        //找出每一大块的内容多少
-        //计算出大小
-        //先是fifter
-        //如果找到则退出//之后进行数据块的读取
         m_fifter.resize(m_fifter_index[fifter_size + 1] - m_fifter_index[fifter_size]);
         std::copy(data+len-(size + 1) * sizeof(uint32_t)  - 2 - m_fifter_index[index_fif] + m_fifter_index[fifter_size],data+len-(size + 1) * sizeof(uint32_t) - 2 - m_fifter_index[index_fif ] + m_fifter_index[fifter_size + 1],m_fifter.begin());
         m_fif = std::make_unique<fifter>();
@@ -58,8 +51,6 @@ bool read_buffer::read_offest(const char *data, size_t len) {
     }
     if(fifter_size  <= index_fif)
     {
-        //找到
-        //给我相应的data块放入解析之中
         m_buffer.resize(m_data_index[fifter_size + 1]-m_data_index[fifter_size]);
         std::copy(data+len - (size +1 ) *sizeof(uint32_t) - m_fifter_index[index_fif] - m_data_index[m_data_index.size() - 1] - 2 + m_data_index[fifter_size],data+len - 2 - (size + 1)*sizeof(uint32_t) - m_fifter_index[index_fif] - m_data_index[m_data_index.size() - 1] + m_data_index[fifter_size + 1],m_buffer.begin());
         return true;
@@ -91,7 +82,7 @@ bool read_buffer::Read_File () {
                }
                std::string real_buffer;
                snappy::Uncompress(re_buffer,len,&real_buffer);
-               if (!read_offest(real_buffer.data(), real_buffer.size())) {
+               if (!Read_Offset(real_buffer.data(), real_buffer.size())) {
                    break;
                }
                m_block = std::make_unique<Block>();

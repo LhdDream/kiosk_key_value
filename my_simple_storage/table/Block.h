@@ -22,46 +22,43 @@ public:
 
     std::unique_ptr<Itear> newItear(const char * data_,int len);
 private:
-    size_t  m_offest = 0 ;
+    size_t  m_offset = 0 ;
 };
 
 class Block::Itear {
-private:
-    const char* const data_;
-    uint32_t const offest_;  //块中的偏移量开始的地方
-    uint32_t const num_offest_;// 有多少个块的偏移量
-    uint32_t offest_index_; //读取第几个的key_value
-    std::string key_;
-    std::string value_;
-    std::vector<uint32_t > off_ ; // 表示所有的key_value的键值偏移量
+
 public:
     Itear(const char * data,uint32_t off,uint32_t num):
-            data_(data),offest_(off),num_offest_(num),
-            offest_index_(num)
+            m_data(data),m_offset(off),m_num_offset(num)
     {   ReadOff();}
+    std::string Key() { return m_key;}
+    std::string Value() {return m_value;}
+    bool Seek(const std::string &target);
 
 private:
+    const char* const m_data;
+    uint32_t const m_offset;  //块中的偏移量开始的地方
+    uint32_t const m_num_offset;// 有多少个块的偏移量
+    std::string m_key;
+    std::string m_value;
+    std::vector<uint32_t > m_off ; // 表示所有的key_value的键值偏移量
+
     void ReadOff(){
         std::string everyoff_;
-         uint32_t number = 0 ;
-        off_.emplace_back(number);
-        for(size_t i = 0 ; i < num_offest_ ; i++)
+        uint32_t number = 0 ;
+        m_off.emplace_back(number);
+        for(size_t i = 0 ; i < m_num_offset ; i++)
         {
             everyoff_.resize(5,'\0');
-            std::copy(data_ + offest_ +  i *4,data_+offest_ + (i+1) *4 ,everyoff_.begin());
+            std::copy(m_data + m_offset +  i *4,m_data + m_offset + (i+1) *4 ,everyoff_.begin());
             number += DecodeInt32(everyoff_.data());
-            off_.emplace_back(number);
+            m_off.emplace_back(number);
             //获取到每一个key_value 的偏移量
         }
     }
-private:
     uint32_t  GetoffestPoint(uint32_t index){
-        return off_[index - 1];
+        return m_off[index - 1];
     }
-public:
-    std::string Key() { return key_;}
-    std::string Value() {return value_;}
-    bool Seek(const std::string &target);
 };
 
 

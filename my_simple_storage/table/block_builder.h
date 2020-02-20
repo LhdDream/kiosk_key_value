@@ -25,15 +25,15 @@ public:
      void Reset();
      std::string Finish();
      size_t  Buffer_Size() const {
-        return  m_buffer.size() + (m_offest.size() *4) ;
-    }
-    std::string To_Fif() const {
-        return m_fifter->To_string(); // 表示转化
-    }
+        return  m_buffer.size() + (m_offset.size() *4) ;
+     }
+     std::string To_Fif() const {
+      return m_fifter->To_string(); // 表示转化
+     }
 private:
-    std::vector<std::string>  m_buffer; // 一整块的内容
     bool m_finished; // 写入完成
     std::unique_ptr<fifter> m_fifter; // 对于每一块的fifter 过滤器
-    std::vector<uint32_t > m_offest;
+    std::vector<std::string>  m_buffer; // 一整块的内容
+    std::vector<uint32_t > m_offset;
 };
 #endif //MY_REDIES_BLOCK_BUILDER_H

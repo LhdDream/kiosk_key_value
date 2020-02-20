@@ -24,7 +24,7 @@ static bool DecondEntry(std::string &p,std::string &key,std::string &value)
 bool Block::Itear::Seek(const std::string &target) {
         // 使用二分查找
         uint32_t  left = 0 ;
-        uint32_t  right = off_.size() - 1;
+        uint32_t  right = m_off.size() - 1;
         while(left < right)
         {
             uint32_t mid = (left + right + 1) / 2;
@@ -33,17 +33,17 @@ bool Block::Itear::Seek(const std::string &target) {
             uint32_t  next_off = GetoffestPoint(mid+1);
             std::string p;
             p.resize(next_off - region_off);
-            std::copy(data_ + region_off,data_+ next_off,p.begin());
-            DecondEntry(p,key_,value_);
-            if(key_ < target)
+            std::copy(m_data + region_off,m_data+ next_off,p.begin());
+            DecondEntry(p,m_key,m_value);
+            if(m_key < target)
             {
                 left = mid;
             }
-            else if(key_ == target)
+            else if(m_key == target)
             {
                 return true;
             }
-            else if(key_ > target)
+            else if(m_key > target)
             {
                 right = mid - 1;
             }
@@ -53,8 +53,8 @@ bool Block::Itear::Seek(const std::string &target) {
 }
 
 std::unique_ptr<Block::Itear> Block::newItear(const char * data_,int len) {
-        m_offest = len  - (  DecodeInt32(data_+len - sizeof(uint32_t))) * sizeof(uint32_t) -
+        m_offset = len  - (  DecodeInt32(data_+len - sizeof(uint32_t))) * sizeof(uint32_t) -
                 sizeof(uint32_t);
-        auto m_iter = std::make_unique<Itear>(data_,m_offest,DecodeInt32(data_+len - sizeof(uint32_t)));
+        auto m_iter = std::make_unique<Itear>(data_,m_offset,DecodeInt32(data_+len - sizeof(uint32_t)));
         return m_iter;
 }

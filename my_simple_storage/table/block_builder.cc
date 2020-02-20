@@ -5,9 +5,9 @@
 #include <sstream>
 
 void block_builder::Reset() {
-    m_buffer.clear();
     m_finished = false;
-    m_offest.clear();
+    m_buffer.clear();
+    m_offset.clear();
 }
 std::string block_builder::Finish() {
     std::string temp ;
@@ -15,14 +15,14 @@ std::string block_builder::Finish() {
         temp += it;
     }
     char bufs[4];
-    for(auto & it : m_offest)
+    for(auto & it : m_offset)
     {
         bzero(bufs,sizeof(bufs));
         EncodeInt32(bufs,it);
         temp.append(bufs,sizeof(bufs));
     }
     bzero(bufs,sizeof(bufs));
-    EncodeInt32(bufs,m_offest.size());
+    EncodeInt32(bufs,m_offset.size());
     temp.append(bufs,sizeof(bufs));
     m_finished = true;
     return temp;
@@ -35,7 +35,7 @@ void block_builder::Add(const std::string &key, const std::string &value) {
     buffer = '\r' + buffer +'\r';
     buffer += value;
     m_buffer.emplace_back(buffer);
-    m_offest.emplace_back(buffer.size()) ; //对于key_value的偏移量
+    m_offset.emplace_back(buffer.size()) ; //对于key_value的偏移量
 }
 
 
