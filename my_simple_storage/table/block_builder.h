@@ -50,4 +50,4 @@ private:
     std::vector<uint32_t> m_offset;
 };
 
-#endif  // MY_REDIES_BLOCK_BUILDER_H
+#endif

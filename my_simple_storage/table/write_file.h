@@ -62,4 +62,4 @@ private:
     std::string m_filename;  // 写入的文件名称
 };
 
-#endif  // MY_REDIES_WRITE_FILE_H
+#endif

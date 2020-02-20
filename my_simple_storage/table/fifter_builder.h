@@ -64,4 +64,4 @@ private:
     std::vector<std::string> m_fifter;
 };
 
-#endif  // MY_REDIES_m_fifterBUILDER_H
+#endif
