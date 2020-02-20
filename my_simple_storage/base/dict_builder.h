@@ -51,7 +51,7 @@ public:
 private:
     std::unordered_set<std::string> m_lost;
     Logger m_log;
-    int m_index = 0 ;
+    int m_index  ;
     std::vector<Map>  m_ht;
     std::unique_ptr<lru_cache> m_lru ;
     unsigned long long m_buffer_size ;
