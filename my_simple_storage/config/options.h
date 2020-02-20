@@ -53,4 +53,4 @@ private:
     std::string name = "";
 };
 
-#endif  // MY_REDIES_OPTIONS_H
+#endif
