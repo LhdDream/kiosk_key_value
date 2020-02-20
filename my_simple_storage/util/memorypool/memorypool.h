@@ -115,4 +115,4 @@ template <typename T, size_t BlockSize> template <class U> inline void MemoryPoo
     p->~U();
 }
 
-#endif  // MY_REDIES_MEMORYBLOCK_H
+#endif

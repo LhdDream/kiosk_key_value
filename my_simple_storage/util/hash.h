@@ -19,4 +19,4 @@ static unsigned int APHash(const char* str) {
     return (hash & 0x7fffffff) % MOD;
 }
 
-#endif  // MY_REDIES_HASH_H
+#endif

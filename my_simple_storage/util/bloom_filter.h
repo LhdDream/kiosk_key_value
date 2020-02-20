@@ -63,4 +63,4 @@ private:
     uint32_t m_h;
 };
 
-#endif  // MY_REDIES_BLOOM_FILTER_H
+#endif
