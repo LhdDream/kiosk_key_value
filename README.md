@@ -94,7 +94,9 @@
 
 ​	CPU:  Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
 
-​	磁盘写性能:  	
+磁盘写性能: 
+
+​	测试命令  `sudo fio -filename=/dev/sda -direct=1 -iodepth 1 -thread -rw=write -ioengine=psync -bs=16k -size=12G -numjobs=30 -runtime=1000 -group_reporting -name=mytest`	
 
   ![image](https://github.com/LhdDream/kiosk_key_value/blob/master/img/b.png)
 
